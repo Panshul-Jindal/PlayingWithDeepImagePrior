@@ -1,0 +1,17 @@
+[project]
+name = "playingwithdeepimageprior"
+version = "0.1.0"
+description = "This assignment aims to play with deep image prior to get more understanding into the method and possibly addressing things which haven't been addressed till now"
+readme = "README.md"
+authors = [
+    { name = "Panshul-Jindal", email = "panshul.jindal7@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+playingwithdeepimageprior = "playingwithdeepimageprior:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
