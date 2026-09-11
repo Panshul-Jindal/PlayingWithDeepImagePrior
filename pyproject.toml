@@ -7,7 +7,9 @@ authors = [
     { name = "Panshul-Jindal", email = "panshul.jindal7@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "nbstripout>=0.9.1",
+]
 
 [project.scripts]
 playingwithdeepimageprior = "playingwithdeepimageprior:main"
