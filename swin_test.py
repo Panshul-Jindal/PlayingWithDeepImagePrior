@@ -5,6 +5,7 @@ in their target: the clean image, a noisy image, a pixel permutation of the
 clean image, or uniform noise.
 """
 
+import os
 from pathlib import Path
 import sys
 import wandb
@@ -64,7 +65,14 @@ def parameter_count(model):
 	return sum(parameter.numel() for parameter in model.parameters())
 
 
-def train(target_name, target, net_input, device, run):
+def calculate_psnr(img1, img2, max_val=1.0):
+	mse = torch.mean((img1.detach() - img2.detach()) ** 2)
+	if mse == 0:
+		return 100.0
+	return (10.0 * torch.log10((max_val ** 2) / mse)).item()
+
+
+def train(target_name, target, orig_image, net_input, device, run):
 	model = swin(
 		INPUT_DEPTH,
 		output_channels=target.shape[1],
@@ -78,6 +86,7 @@ def train(target_name, target, net_input, device, run):
 	optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
 	criterion = torch.nn.MSELoss()
 	losses = []
+	psnrs = []
 
 	print(f"{target_name}: {parameter_count(model):,} trainable parameters")
 	for iteration in range(1, STEPS + 1):
@@ -86,22 +95,37 @@ def train(target_name, target, net_input, device, run):
 		loss = criterion(output, target)
 		loss.backward()
 		optimizer.step()
-		losses.append(loss.item())
+		loss_val = loss.item()
+		losses.append(loss_val)
+
+		with torch.no_grad():
+			psnr_val = calculate_psnr(output, orig_image)
+		psnrs.append(psnr_val)
+
 		run.log({
-    		f"loss/{target_name}": loss.item(),
-    		"iteration": iteration,
+			f"loss/{target_name}": loss_val,
+			f"psnr/{target_name}": psnr_val,
+			"iteration": iteration,
 		})
 		if iteration == 1 or iteration % 100 == 0:
-			print(f"  iteration {iteration:05d}/{STEPS}: loss={loss.item():.6f}")
+			print(f"  iteration {iteration:05d}/{STEPS}: loss={loss_val:.6f}, psnr={psnr_val:.2f} dB")
 
-	return losses, model
+	return losses, psnrs, model
 
 
 def main():
+	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+	image_path = PROJECT_DIR / "data/denoising/F16_GT.png"
+	image_name = image_path.stem.replace("_GT", "")
+	architecture = "swin"
+	run_name = f"{architecture}-{image_name}-seed-{SEED}"
+
 	run = wandb.init(
-		project="swin-image-prior",
-		name=f"F16-seed-{SEED}",
+		project=os.environ.get("WANDB_PROJECT", "swin-image-prior"),
+		name=run_name,
 		config={
+			"architecture": architecture,
+			"image": image_name,
 			"seed": SEED,
 			"steps": STEPS,
 			"input_depth": INPUT_DEPTH,
@@ -114,8 +138,12 @@ def main():
 			"noise_sigma": NOISE_SIGMA,
 		},
 	)
-	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-	image_path = PROJECT_DIR / "data/denoising/F16_GT.png"
+
+	# Pin all target metrics to the explicit iteration axis so curves overlay
+	wandb.define_metric("iteration")
+	wandb.define_metric("loss/*", step_metric="iteration")
+	wandb.define_metric("psnr/*", step_metric="iteration")
+
 	image = load_image(image_path).to(device)
 
 	input_generator = torch.Generator(device="cpu").manual_seed(SEED)
@@ -132,28 +160,83 @@ def main():
 	print(f"Tensor shape: {tuple(image.shape)}")
 	print(f"Shared input shape: {tuple(net_input.shape)}")
 
-	results = {}
+	loss_results = {}
+	psnr_results = {}
 	for target_name, target in targets.items():
-		results[target_name], _ = train(target_name, target, net_input, device, run)
+		losses, psnrs, _ = train(target_name, target, image, net_input, device, run)
+		loss_results[target_name] = losses
+		psnr_results[target_name] = psnrs
 
-	fig, axis = plt.subplots(figsize=(10, 6))
 	iterations = np.arange(1, STEPS + 1)
-	for target_name, losses in results.items():
-		axis.plot(iterations, losses, label=target_name)
-	axis.set_xscale("log")
-	axis.set_yscale("log")
-	axis.set_xlabel("Iteration (log scale)")
-	axis.set_ylabel("MSE loss")
-	axis.set_title("Swin image-prior fitting")
-	axis.grid(True, which="both", alpha=0.25)
-	axis.legend()
-	fig.tight_layout()
-	output_path = Path(__file__).resolve().parent / "swin_loss_comparison.png"
-	fig.savefig(output_path, dpi=150)
-	print(f"Saved loss plot to {output_path}")
-	#plt.show()
+
+	output_dir = Path(__file__).resolve().parent / "output_swin_test"
+	output_dir.mkdir(parents=True, exist_ok=True)
+
+	# 1. Loss comparison plot
+	fig_loss, ax_loss = plt.subplots(figsize=(10, 6))
+	for target_name, losses in loss_results.items():
+		ax_loss.plot(iterations, losses, label=target_name)
+	ax_loss.set_xscale("log")
+	ax_loss.set_yscale("log")
+	ax_loss.set_xlabel("Iteration (log scale)")
+	ax_loss.set_ylabel("MSE loss")
+	ax_loss.set_title("Swin image-prior fitting (MSE Loss)")
+	ax_loss.grid(True, which="both", alpha=0.25)
+	ax_loss.legend()
+	fig_loss.tight_layout()
+	loss_output_path = output_dir / "swin_loss_comparison.png"
+	fig_loss.savefig(loss_output_path, dpi=150)
+	plt.close(fig_loss)
+	print(f"Saved loss plot to {loss_output_path}")
+
+	# 2. PSNR comparison plot
+	fig_psnr, ax_psnr = plt.subplots(figsize=(10, 6))
+	for target_name, psnrs in psnr_results.items():
+		ax_psnr.plot(iterations, psnrs, label=target_name)
+	ax_psnr.set_xscale("log")
+	ax_psnr.set_xlabel("Iteration (log scale)")
+	ax_psnr.set_ylabel("PSNR with original image (dB)")
+	ax_psnr.set_title("Swin image-prior fitting (PSNR with original image)")
+	ax_psnr.grid(True, which="both", alpha=0.25)
+	ax_psnr.legend()
+	fig_psnr.tight_layout()
+	psnr_output_path = output_dir / "swin_psnr_comparison.png"
+	fig_psnr.savefig(psnr_output_path, dpi=150)
+	plt.close(fig_psnr)
+	print(f"Saved PSNR plot to {psnr_output_path}")
+
+	# 3. Combined comparison plot (Side-by-side like DIP paper Fig. 2)
+	fig_comb, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+	for target_name, losses in loss_results.items():
+		ax1.plot(iterations, losses, label=target_name)
+	ax1.set_xscale("log")
+	ax1.set_yscale("log")
+	ax1.set_xlabel("Iteration (log scale)")
+	ax1.set_ylabel("MSE loss")
+	ax1.set_title("Reconstruction Error")
+	ax1.grid(True, which="both", alpha=0.25)
+	ax1.legend()
+
+	for target_name, psnrs in psnr_results.items():
+		ax2.plot(iterations, psnrs, label=target_name)
+	ax2.set_xscale("log")
+	ax2.set_xlabel("Iteration (log scale)")
+	ax2.set_ylabel("PSNR with original image (dB)")
+	ax2.set_title("PSNR with Original Image")
+	ax2.grid(True, which="both", alpha=0.25)
+	ax2.legend()
+
+	fig_comb.suptitle("Swin Image Prior Comparison", fontsize=14)
+	fig_comb.tight_layout()
+	comb_output_path = output_dir / "swin_comparison.png"
+	fig_comb.savefig(comb_output_path, dpi=150)
+	plt.close(fig_comb)
+	print(f"Saved combined comparison plot to {comb_output_path}")
+
 	run.log({
-    	"loss_comparison": wandb.Image(str(output_path))
+		"loss_comparison": wandb.Image(str(loss_output_path)),
+		"psnr_comparison": wandb.Image(str(psnr_output_path)),
+		"comparison": wandb.Image(str(comb_output_path)),
 	})
 	run.finish()
 
