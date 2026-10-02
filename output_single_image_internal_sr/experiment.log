@@ -1,0 +1,121 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 6plfvmrp
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_181140-6plfvmrp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run zssr_internal_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/6plfvmrp
+HR and LR resolutions: (576, 384), (144, 96)
+Loaded vanilla DIP reference (PSNR: 24.74 dB)
+Generating internal training dataset strictly from input image y...
+Dataset generated: 256 internal patch pairs (patch_size=48 -> 12).
+==========================================================
+ Experiment 2: Single-Image Internal Learning (ZSSR UNet)
+ Device: cuda
+ Input y Resolution:  (144, 96) (W x H)
+ Target X Resolution: (576, 384) (W x H) [NOT used during training]
+ Baseline Bicubic PSNR: 23.10 dB
+ Vanilla DIP Baseline:  24.74 dB
+==========================================================
+
+Starting internal training...
+  Epoch 0001/1000: loss=0.124116, internal_patch_PSNR=15.38 dB, LR_consistency=31.73 dB, HR_PSNR=23.42 dB
+  Epoch 0020/1000: loss=0.110753, internal_patch_PSNR=15.87 dB, LR_consistency=31.43 dB, HR_PSNR=22.41 dB
+  Epoch 0040/1000: loss=0.103013, internal_patch_PSNR=16.33 dB, LR_consistency=31.80 dB, HR_PSNR=21.57 dB
+  Epoch 0060/1000: loss=0.095794, internal_patch_PSNR=16.84 dB, LR_consistency=32.06 dB, HR_PSNR=21.57 dB
+  Epoch 0080/1000: loss=0.088499, internal_patch_PSNR=17.33 dB, LR_consistency=30.64 dB, HR_PSNR=20.50 dB
+  Epoch 0100/1000: loss=0.082832, internal_patch_PSNR=17.84 dB, LR_consistency=31.32 dB, HR_PSNR=21.11 dB
+  Epoch 0120/1000: loss=0.078947, internal_patch_PSNR=18.25 dB, LR_consistency=30.81 dB, HR_PSNR=21.09 dB
+  Epoch 0140/1000: loss=0.072345, internal_patch_PSNR=18.93 dB, LR_consistency=31.30 dB, HR_PSNR=21.02 dB
+  Epoch 0160/1000: loss=0.067410, internal_patch_PSNR=19.55 dB, LR_consistency=31.35 dB, HR_PSNR=20.99 dB
+  Epoch 0180/1000: loss=0.063558, internal_patch_PSNR=20.07 dB, LR_consistency=31.30 dB, HR_PSNR=20.66 dB
+  Epoch 0200/1000: loss=0.059519, internal_patch_PSNR=20.73 dB, LR_consistency=30.98 dB, HR_PSNR=20.52 dB
+  Epoch 0220/1000: loss=0.055499, internal_patch_PSNR=21.39 dB, LR_consistency=31.19 dB, HR_PSNR=20.61 dB
+  Epoch 0240/1000: loss=0.052622, internal_patch_PSNR=21.93 dB, LR_consistency=30.97 dB, HR_PSNR=20.44 dB
+  Epoch 0260/1000: loss=0.049955, internal_patch_PSNR=22.41 dB, LR_consistency=31.37 dB, HR_PSNR=20.65 dB
+  Epoch 0280/1000: loss=0.048151, internal_patch_PSNR=22.74 dB, LR_consistency=30.99 dB, HR_PSNR=20.55 dB
+  Epoch 0300/1000: loss=0.046079, internal_patch_PSNR=23.14 dB, LR_consistency=31.19 dB, HR_PSNR=20.67 dB
+  Epoch 0320/1000: loss=0.044028, internal_patch_PSNR=23.52 dB, LR_consistency=31.08 dB, HR_PSNR=20.55 dB
+  Epoch 0340/1000: loss=0.043075, internal_patch_PSNR=23.75 dB, LR_consistency=31.19 dB, HR_PSNR=20.43 dB
+  Epoch 0360/1000: loss=0.041735, internal_patch_PSNR=24.01 dB, LR_consistency=31.03 dB, HR_PSNR=20.45 dB
+  Epoch 0380/1000: loss=0.040310, internal_patch_PSNR=24.30 dB, LR_consistency=30.85 dB, HR_PSNR=20.49 dB
+  Epoch 0400/1000: loss=0.039827, internal_patch_PSNR=24.44 dB, LR_consistency=30.93 dB, HR_PSNR=20.46 dB
+  Epoch 0420/1000: loss=0.039439, internal_patch_PSNR=24.57 dB, LR_consistency=30.85 dB, HR_PSNR=20.65 dB
+  Epoch 0440/1000: loss=0.037493, internal_patch_PSNR=24.95 dB, LR_consistency=30.86 dB, HR_PSNR=20.50 dB
+  Epoch 0460/1000: loss=0.036592, internal_patch_PSNR=25.15 dB, LR_consistency=30.90 dB, HR_PSNR=20.41 dB
+  Epoch 0480/1000: loss=0.036184, internal_patch_PSNR=25.27 dB, LR_consistency=30.76 dB, HR_PSNR=20.28 dB
+  Epoch 0500/1000: loss=0.035041, internal_patch_PSNR=25.52 dB, LR_consistency=30.88 dB, HR_PSNR=20.29 dB
+  Epoch 0520/1000: loss=0.034895, internal_patch_PSNR=25.58 dB, LR_consistency=30.78 dB, HR_PSNR=20.28 dB
+  Epoch 0540/1000: loss=0.034123, internal_patch_PSNR=25.76 dB, LR_consistency=30.85 dB, HR_PSNR=20.34 dB
+  Epoch 0560/1000: loss=0.033386, internal_patch_PSNR=25.93 dB, LR_consistency=30.73 dB, HR_PSNR=20.25 dB
+  Epoch 0580/1000: loss=0.032663, internal_patch_PSNR=26.08 dB, LR_consistency=30.90 dB, HR_PSNR=20.27 dB
+  Epoch 0600/1000: loss=0.032277, internal_patch_PSNR=26.19 dB, LR_consistency=30.78 dB, HR_PSNR=20.29 dB
+  Epoch 0620/1000: loss=0.031672, internal_patch_PSNR=26.32 dB, LR_consistency=30.75 dB, HR_PSNR=20.25 dB
+  Epoch 0640/1000: loss=0.031222, internal_patch_PSNR=26.44 dB, LR_consistency=30.73 dB, HR_PSNR=20.23 dB
+  Epoch 0660/1000: loss=0.030930, internal_patch_PSNR=26.51 dB, LR_consistency=30.69 dB, HR_PSNR=20.18 dB
+  Epoch 0680/1000: loss=0.030518, internal_patch_PSNR=26.62 dB, LR_consistency=30.71 dB, HR_PSNR=20.25 dB
+  Epoch 0700/1000: loss=0.030150, internal_patch_PSNR=26.71 dB, LR_consistency=30.72 dB, HR_PSNR=20.18 dB
+  Epoch 0720/1000: loss=0.029765, internal_patch_PSNR=26.79 dB, LR_consistency=30.67 dB, HR_PSNR=20.22 dB
+  Epoch 0740/1000: loss=0.029522, internal_patch_PSNR=26.86 dB, LR_consistency=30.66 dB, HR_PSNR=20.16 dB
+  Epoch 0760/1000: loss=0.029147, internal_patch_PSNR=26.94 dB, LR_consistency=30.59 dB, HR_PSNR=20.11 dB
+  Epoch 0780/1000: loss=0.028999, internal_patch_PSNR=26.98 dB, LR_consistency=30.56 dB, HR_PSNR=20.13 dB
+  Epoch 0800/1000: loss=0.028719, internal_patch_PSNR=27.06 dB, LR_consistency=30.56 dB, HR_PSNR=20.11 dB
+  Epoch 0820/1000: loss=0.028636, internal_patch_PSNR=27.09 dB, LR_consistency=30.57 dB, HR_PSNR=20.10 dB
+  Epoch 0840/1000: loss=0.028369, internal_patch_PSNR=27.13 dB, LR_consistency=30.55 dB, HR_PSNR=20.08 dB
+  Epoch 0860/1000: loss=0.028241, internal_patch_PSNR=27.17 dB, LR_consistency=30.50 dB, HR_PSNR=20.06 dB
+  Epoch 0880/1000: loss=0.028115, internal_patch_PSNR=27.20 dB, LR_consistency=30.47 dB, HR_PSNR=20.04 dB
+  Epoch 0900/1000: loss=0.028005, internal_patch_PSNR=27.23 dB, LR_consistency=30.45 dB, HR_PSNR=20.03 dB
+  Epoch 0920/1000: loss=0.027905, internal_patch_PSNR=27.24 dB, LR_consistency=30.47 dB, HR_PSNR=20.06 dB
+  Epoch 0940/1000: loss=0.027827, internal_patch_PSNR=27.27 dB, LR_consistency=30.45 dB, HR_PSNR=20.03 dB
+  Epoch 0960/1000: loss=0.027747, internal_patch_PSNR=27.29 dB, LR_consistency=30.44 dB, HR_PSNR=20.03 dB
+  Epoch 0980/1000: loss=0.027694, internal_patch_PSNR=27.30 dB, LR_consistency=30.44 dB, HR_PSNR=20.03 dB
+  Epoch 1000/1000: loss=0.027637, internal_patch_PSNR=27.32 dB, LR_consistency=30.44 dB, HR_PSNR=20.03 dB
+
+==========================================================
+ Single-Image Internal Learning Complete!
+ Final Internal UNet PSNR: 20.96 dB
+ Vanilla DIP Baseline:     24.74 dB
+ Diff vs DIP:              -3.78 dB
+ Baseline Bicubic PSNR:    23.10 dB
+ Gain over Bicubic:        -2.14 dB
+==========================================================
+Saved new approach HR to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_internal_sr/zebra_hr_with_new_approach.png
+Saved comparison figure to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_internal_sr/zebra_sr_comparison.png
+Saved training curves to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_internal_sr/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading media/images/real_HR_image_1000_a92b4b1a54158559bcc8.png; uploading media/images/downsampled_LR_image_1000_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_1000_ac4c3967fbdf733b6be6.png; uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png; uploading media/images/hr_with_dip_1000_4deae5dc86a5ce9a9f79.png (+ 4 more)
+wandb: uploading media/images/real_HR_image_1000_a92b4b1a54158559bcc8.png; uploading media/images/downsampled_LR_image_1000_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_1000_ac4c3967fbdf733b6be6.png; uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png; uploading media/images/hr_with_dip_1000_4deae5dc86a5ce9a9f79.png (+ 3 more)
+wandb: uploading media/images/real_HR_image_1000_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_new_approach_1000_ac4c3967fbdf733b6be6.png; uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png; uploading media/images/hr_with_dip_1000_4deae5dc86a5ce9a9f79.png; uploading media/images/metrics_curves_1000_39593b375db5878e22af.png
+wandb: uploading media/images/real_HR_image_1000_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_new_approach_1000_ac4c3967fbdf733b6be6.png; uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png; uploading media/images/hr_with_dip_1000_4deae5dc86a5ce9a9f79.png
+wandb: uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png; uploading media/images/hr_with_dip_1000_4deae5dc86a5ce9a9f79.png
+wandb: uploading media/images/visual_comparison_1000_0b017b13091de9c674b9.png
+wandb: uploading history steps 999-1000, summary, console lines 64-76
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▂▂▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▆▇▇▇▇█████
+wandb:    loss/charbonnier █▇▆▆▅▅▄▄▄▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          loss/total █▇▇▆▆▄▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:             loss/tv ▁▂▃▃▄▅▅▅▆▆▇▇▇▇▇▇▇▇▇▇████████████████████
+wandb:        psnr/HR_eval █▆▄▄▂▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: psnr/LR_consistency ▇▅▇█▅▅▅▅▃▄▅▃▄▄▄▃▃▃▃▂▂▃▂▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁
+wandb: psnr/internal_patch ▁▁▁▁▂▃▃▃▃▄▅▅▆▆▆▆▇▇▇▇▇▇▇▇▇███████████████
+wandb: 
+wandb: Run summary:
+wandb:               epoch 1000
+wandb:       final_psnr_hr 20.96169
+wandb:   gain_over_bicubic -2.1431
+wandb:       gain_over_dip -3.77598
+wandb:    loss/charbonnier 0.02764
+wandb:          loss/total 0.02764
+wandb:             loss/tv 0.2093
+wandb:        psnr/HR_eval 20.02733
+wandb: psnr/LR_consistency 30.43731
+wandb: psnr/internal_patch 27.32029
+wandb:                  +2 ...
+wandb: 
+wandb: 🚀 View run zssr_internal_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/6plfvmrp
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_181140-6plfvmrp/logs

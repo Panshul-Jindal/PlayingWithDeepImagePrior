@@ -1,0 +1,122 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run y35ruv57
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_135318-y35ruv57
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dip_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/y35ruv57
+HR and LR resolutions: (576, 384), (144, 96)
+==========================================================
+ Deep Image Prior: Super-Resolution Reproduction
+ Device: cuda
+ Ground Truth HR Resolution: (576, 384) (W x H)
+ Downsampled LR Resolution:  (144, 96) (W x H)
+ Factor: 4x
+ Baseline PSNR (Bicubic): 23.10 dB
+ Baseline PSNR (Nearest): 20.82 dB
+==========================================================
+Network parameters: 2,217,831
+
+Starting optimization...
+  Iteration 00001/6000: loss=0.059103, PSNR_LR=12.28 dB, PSNR_HR=11.81 dB
+  Iteration 00100/6000: loss=0.012350, PSNR_LR=19.08 dB, PSNR_HR=17.48 dB
+  Iteration 00200/6000: loss=0.005106, PSNR_LR=22.92 dB, PSNR_HR=20.16 dB
+  Iteration 00300/6000: loss=0.003372, PSNR_LR=24.72 dB, PSNR_HR=21.23 dB
+  Iteration 00400/6000: loss=0.002530, PSNR_LR=25.97 dB, PSNR_HR=21.78 dB
+  Iteration 00500/6000: loss=0.002007, PSNR_LR=26.98 dB, PSNR_HR=22.24 dB
+  Iteration 00600/6000: loss=0.001620, PSNR_LR=27.90 dB, PSNR_HR=22.61 dB
+  Iteration 00700/6000: loss=0.001474, PSNR_LR=28.31 dB, PSNR_HR=22.83 dB
+  Iteration 00800/6000: loss=0.001261, PSNR_LR=28.99 dB, PSNR_HR=22.99 dB
+  Iteration 00900/6000: loss=0.001122, PSNR_LR=29.50 dB, PSNR_HR=23.17 dB
+  Iteration 01000/6000: loss=0.001040, PSNR_LR=29.83 dB, PSNR_HR=23.30 dB
+  Iteration 01100/6000: loss=0.000960, PSNR_LR=30.18 dB, PSNR_HR=23.36 dB
+  Iteration 01200/6000: loss=0.000834, PSNR_LR=30.79 dB, PSNR_HR=23.44 dB
+  Iteration 01300/6000: loss=0.000782, PSNR_LR=31.07 dB, PSNR_HR=23.54 dB
+  Iteration 01400/6000: loss=0.000730, PSNR_LR=31.37 dB, PSNR_HR=23.61 dB
+  Iteration 01500/6000: loss=0.000666, PSNR_LR=31.76 dB, PSNR_HR=23.67 dB
+  Iteration 01600/6000: loss=0.000613, PSNR_LR=32.13 dB, PSNR_HR=23.82 dB
+  Iteration 01700/6000: loss=0.000589, PSNR_LR=32.30 dB, PSNR_HR=23.78 dB
+  Iteration 01800/6000: loss=0.000567, PSNR_LR=32.46 dB, PSNR_HR=23.87 dB
+  Iteration 01900/6000: loss=0.000529, PSNR_LR=32.76 dB, PSNR_HR=23.95 dB
+  Iteration 02000/6000: loss=0.000477, PSNR_LR=33.22 dB, PSNR_HR=24.07 dB
+  Iteration 02100/6000: loss=0.000469, PSNR_LR=33.29 dB, PSNR_HR=24.06 dB
+  Iteration 02200/6000: loss=0.000454, PSNR_LR=33.43 dB, PSNR_HR=24.03 dB
+  Iteration 02300/6000: loss=0.000426, PSNR_LR=33.71 dB, PSNR_HR=24.13 dB
+  Iteration 02400/6000: loss=0.000423, PSNR_LR=33.74 dB, PSNR_HR=24.15 dB
+  Iteration 02500/6000: loss=0.000373, PSNR_LR=34.29 dB, PSNR_HR=24.26 dB
+  Iteration 02600/6000: loss=0.000349, PSNR_LR=34.57 dB, PSNR_HR=24.27 dB
+  Iteration 02700/6000: loss=0.000328, PSNR_LR=34.85 dB, PSNR_HR=24.33 dB
+  Iteration 02800/6000: loss=0.000331, PSNR_LR=34.80 dB, PSNR_HR=24.26 dB
+  Iteration 02900/6000: loss=0.000311, PSNR_LR=35.07 dB, PSNR_HR=24.25 dB
+  Iteration 03000/6000: loss=0.000303, PSNR_LR=35.19 dB, PSNR_HR=24.35 dB
+  Iteration 03100/6000: loss=0.000280, PSNR_LR=35.53 dB, PSNR_HR=24.35 dB
+  Iteration 03200/6000: loss=0.000283, PSNR_LR=35.48 dB, PSNR_HR=24.37 dB
+  Iteration 03300/6000: loss=0.000281, PSNR_LR=35.51 dB, PSNR_HR=24.34 dB
+  Iteration 03400/6000: loss=0.000259, PSNR_LR=35.87 dB, PSNR_HR=24.41 dB
+  Iteration 03500/6000: loss=0.000237, PSNR_LR=36.25 dB, PSNR_HR=24.50 dB
+  Iteration 03600/6000: loss=0.000229, PSNR_LR=36.41 dB, PSNR_HR=24.44 dB
+  Iteration 03700/6000: loss=0.000216, PSNR_LR=36.66 dB, PSNR_HR=24.48 dB
+  Iteration 03800/6000: loss=0.000208, PSNR_LR=36.81 dB, PSNR_HR=24.48 dB
+  Iteration 03900/6000: loss=0.000202, PSNR_LR=36.95 dB, PSNR_HR=24.54 dB
+  Iteration 04000/6000: loss=0.000207, PSNR_LR=36.84 dB, PSNR_HR=24.50 dB
+  Iteration 04100/6000: loss=0.000194, PSNR_LR=37.11 dB, PSNR_HR=24.49 dB
+  Iteration 04200/6000: loss=0.000183, PSNR_LR=37.38 dB, PSNR_HR=24.55 dB
+  Iteration 04300/6000: loss=0.000166, PSNR_LR=37.81 dB, PSNR_HR=24.59 dB
+  Iteration 04400/6000: loss=0.000157, PSNR_LR=38.03 dB, PSNR_HR=24.59 dB
+  Iteration 04500/6000: loss=0.000166, PSNR_LR=37.79 dB, PSNR_HR=24.62 dB
+  Iteration 04600/6000: loss=0.000141, PSNR_LR=38.52 dB, PSNR_HR=24.60 dB
+  Iteration 04700/6000: loss=0.000158, PSNR_LR=38.00 dB, PSNR_HR=24.61 dB
+  Iteration 04800/6000: loss=0.000140, PSNR_LR=38.54 dB, PSNR_HR=24.63 dB
+  Iteration 04900/6000: loss=0.000140, PSNR_LR=38.54 dB, PSNR_HR=24.62 dB
+  Iteration 05000/6000: loss=0.000135, PSNR_LR=38.70 dB, PSNR_HR=24.63 dB
+  Iteration 05100/6000: loss=0.000126, PSNR_LR=39.01 dB, PSNR_HR=24.68 dB
+  Iteration 05200/6000: loss=0.000142, PSNR_LR=38.48 dB, PSNR_HR=24.65 dB
+  Iteration 05300/6000: loss=0.000132, PSNR_LR=38.79 dB, PSNR_HR=24.61 dB
+  Iteration 05400/6000: loss=0.000121, PSNR_LR=39.17 dB, PSNR_HR=24.64 dB
+  Iteration 05500/6000: loss=0.000117, PSNR_LR=39.30 dB, PSNR_HR=24.65 dB
+  Iteration 05600/6000: loss=0.000107, PSNR_LR=39.71 dB, PSNR_HR=24.68 dB
+  Iteration 05700/6000: loss=0.000095, PSNR_LR=40.24 dB, PSNR_HR=24.71 dB
+  Iteration 05800/6000: loss=0.000092, PSNR_LR=40.37 dB, PSNR_HR=24.70 dB
+  Iteration 05900/6000: loss=0.000096, PSNR_LR=40.16 dB, PSNR_HR=24.71 dB
+  Iteration 06000/6000: loss=0.000100, PSNR_LR=40.00 dB, PSNR_HR=24.67 dB
+
+==========================================================
+ Training Complete after 6000 steps!
+ Final DIP SR PSNR:    24.74 dB
+ Baseline Bicubic PSNR: 23.10 dB
+ Improvement:           +1.63 dB
+==========================================================
+Saved real HR image to:             /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_sr/zebra_real_HR.png
+Saved downsampled LR image to:      /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_sr/zebra_downsampled_LR.png
+Saved super-resolved image to:      /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_sr/zebra_super_resolution_HR.png
+Saved visual comparison figure to:  /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_sr/zebra_sr_comparison.png
+Saved training curves to:           /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_sr/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading wandb-summary.json; uploading config.yaml; uploading media/images/real_HR_image_6000_a92b4b1a54158559bcc8.png; uploading media/images/downsampled_LR_image_6000_346c8e0110f2d86a7e42.png; uploading media/images/bicubic_baseline_6000_74970319e7c81d494f9c.png (+ 4 more)
+wandb: uploading media/images/real_HR_image_6000_a92b4b1a54158559bcc8.png; uploading media/images/downsampled_LR_image_6000_346c8e0110f2d86a7e42.png; uploading media/images/bicubic_baseline_6000_74970319e7c81d494f9c.png; uploading media/images/super_resolved_HR_6000_4deae5dc86a5ce9a9f79.png; uploading media/images/metrics_curves_6000_6728d8a216db37cabd90.png (+ 1 more)
+wandb: uploading media/images/real_HR_image_6000_a92b4b1a54158559bcc8.png; uploading media/images/bicubic_baseline_6000_74970319e7c81d494f9c.png; uploading media/images/super_resolved_HR_6000_4deae5dc86a5ce9a9f79.png; uploading media/images/metrics_curves_6000_6728d8a216db37cabd90.png; uploading media/images/visual_comparison_6000_cc68ed234a022c8e012a.png
+wandb: uploading media/images/real_HR_image_6000_a92b4b1a54158559bcc8.png; uploading media/images/super_resolved_HR_6000_4deae5dc86a5ce9a9f79.png
+wandb: uploading history steps 5925-6000, summary, console lines 73-85
+wandb: 
+wandb: Run history:
+wandb:  iteration ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇█
+wandb: loss/total ██▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:    psnr/HR ▁▂▂▄▄▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇███████████████
+wandb:    psnr/LR ▁▃▅▅▆▆▆▆▆▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇████████████
+wandb: 
+wandb: Run summary:
+wandb: final_psnr_hr 24.73882
+wandb:     iteration 6000
+wandb:    loss/total 0.0001
+wandb:       psnr/HR 24.67378
+wandb:       psnr/LR 40.00331
+wandb:  psnr_bicubic 23.10479
+wandb:     psnr_gain 1.63403
+wandb:  psnr_nearest 20.82122
+wandb: 
+wandb: 🚀 View run dip_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/y35ruv57
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_135318-y35ruv57/logs
