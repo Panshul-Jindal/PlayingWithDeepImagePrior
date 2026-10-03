@@ -1,0 +1,128 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run wykz5o6d
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_190156-wykz5o6d
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dip_egnc_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/wykz5o6d
+HR and LR resolutions: (576, 384), (144, 96)
+Loaded vanilla DIP reference (PSNR: 24.74 dB)
+==========================================================
+ Experiment 5: Edge-Guided Null-Space & Contour DIP (EGNC-DIP)
+ Device: cuda
+ Resolution: LR=(144, 96) -> HR=(576, 384)
+ Lambda Flat: 0.02, Lambda Contour: 0.001
+ Baselines: Bicubic=23.10 dB, Nearest=20.82 dB
+ Vanilla DIP Baseline: 24.74 dB
+==========================================================
+
+Starting EGNC-DIP optimization...
+  Iteration 00001/6000: loss_data=0.058219, loss_flat=0.000087, loss_contour=0.008891, PSNR_LR=12.35 dB, PSNR_HR=11.88 dB (best=11.88 dB)
+  Iteration 00100/6000: loss_data=0.011361, loss_flat=0.000012, loss_contour=0.007648, PSNR_LR=19.45 dB, PSNR_HR=17.74 dB (best=17.77 dB)
+  Iteration 00200/6000: loss_data=0.005765, loss_flat=0.000017, loss_contour=0.007287, PSNR_LR=22.39 dB, PSNR_HR=19.76 dB (best=19.87 dB)
+  Iteration 00300/6000: loss_data=0.003591, loss_flat=0.000032, loss_contour=0.008191, PSNR_LR=24.45 dB, PSNR_HR=21.02 dB (best=21.02 dB)
+  Iteration 00400/6000: loss_data=0.002761, loss_flat=0.000039, loss_contour=0.008713, PSNR_LR=25.59 dB, PSNR_HR=21.62 dB (best=21.65 dB)
+  Iteration 00500/6000: loss_data=0.002127, loss_flat=0.000046, loss_contour=0.008737, PSNR_LR=26.72 dB, PSNR_HR=22.12 dB (best=22.22 dB)
+  Iteration 00600/6000: loss_data=0.001712, loss_flat=0.000047, loss_contour=0.008985, PSNR_LR=27.66 dB, PSNR_HR=22.50 dB (best=22.51 dB)
+  Iteration 00700/6000: loss_data=0.001485, loss_flat=0.000048, loss_contour=0.008834, PSNR_LR=28.28 dB, PSNR_HR=22.78 dB (best=22.84 dB)
+  Iteration 00800/6000: loss_data=0.001275, loss_flat=0.000050, loss_contour=0.008770, PSNR_LR=28.95 dB, PSNR_HR=23.05 dB (best=23.09 dB)
+  Iteration 00900/6000: loss_data=0.001173, loss_flat=0.000050, loss_contour=0.008595, PSNR_LR=29.31 dB, PSNR_HR=23.17 dB (best=23.26 dB)
+  Iteration 01000/6000: loss_data=0.001025, loss_flat=0.000052, loss_contour=0.008399, PSNR_LR=29.89 dB, PSNR_HR=23.36 dB (best=23.44 dB)
+  Iteration 01100/6000: loss_data=0.000975, loss_flat=0.000053, loss_contour=0.008383, PSNR_LR=30.11 dB, PSNR_HR=23.46 dB (best=23.60 dB)
+  Iteration 01200/6000: loss_data=0.000846, loss_flat=0.000055, loss_contour=0.008429, PSNR_LR=30.73 dB, PSNR_HR=23.56 dB (best=23.69 dB)
+  Iteration 01300/6000: loss_data=0.000817, loss_flat=0.000053, loss_contour=0.008110, PSNR_LR=30.88 dB, PSNR_HR=23.73 dB (best=23.79 dB)
+  Iteration 01400/6000: loss_data=0.000772, loss_flat=0.000053, loss_contour=0.008226, PSNR_LR=31.13 dB, PSNR_HR=23.80 dB (best=23.87 dB)
+  Iteration 01500/6000: loss_data=0.000694, loss_flat=0.000056, loss_contour=0.008142, PSNR_LR=31.59 dB, PSNR_HR=23.83 dB (best=23.95 dB)
+  Iteration 01600/6000: loss_data=0.000642, loss_flat=0.000055, loss_contour=0.007992, PSNR_LR=31.93 dB, PSNR_HR=23.99 dB (best=24.00 dB)
+  Iteration 01700/6000: loss_data=0.000583, loss_flat=0.000057, loss_contour=0.008092, PSNR_LR=32.34 dB, PSNR_HR=24.00 dB (best=24.10 dB)
+  Iteration 01800/6000: loss_data=0.000575, loss_flat=0.000055, loss_contour=0.007934, PSNR_LR=32.40 dB, PSNR_HR=24.04 dB (best=24.15 dB)
+  Iteration 01900/6000: loss_data=0.000552, loss_flat=0.000056, loss_contour=0.007930, PSNR_LR=32.58 dB, PSNR_HR=24.13 dB (best=24.21 dB)
+  Iteration 02000/6000: loss_data=0.000498, loss_flat=0.000058, loss_contour=0.007948, PSNR_LR=33.03 dB, PSNR_HR=24.14 dB (best=24.23 dB)
+  Iteration 02100/6000: loss_data=0.000502, loss_flat=0.000057, loss_contour=0.007866, PSNR_LR=32.99 dB, PSNR_HR=24.22 dB (best=24.31 dB)
+  Iteration 02200/6000: loss_data=0.000465, loss_flat=0.000055, loss_contour=0.007616, PSNR_LR=33.33 dB, PSNR_HR=24.31 dB (best=24.34 dB)
+  Iteration 02300/6000: loss_data=0.000433, loss_flat=0.000056, loss_contour=0.007726, PSNR_LR=33.63 dB, PSNR_HR=24.28 dB (best=24.39 dB)
+  Iteration 02400/6000: loss_data=0.000380, loss_flat=0.000057, loss_contour=0.007687, PSNR_LR=34.20 dB, PSNR_HR=24.33 dB (best=24.41 dB)
+  Iteration 02500/6000: loss_data=0.000400, loss_flat=0.000058, loss_contour=0.007703, PSNR_LR=33.98 dB, PSNR_HR=24.40 dB (best=24.46 dB)
+  Iteration 02600/6000: loss_data=0.000357, loss_flat=0.000056, loss_contour=0.007520, PSNR_LR=34.47 dB, PSNR_HR=24.40 dB (best=24.49 dB)
+  Iteration 02700/6000: loss_data=0.000348, loss_flat=0.000058, loss_contour=0.007634, PSNR_LR=34.58 dB, PSNR_HR=24.44 dB (best=24.51 dB)
+  Iteration 02800/6000: loss_data=0.000345, loss_flat=0.000058, loss_contour=0.007696, PSNR_LR=34.62 dB, PSNR_HR=24.44 dB (best=24.54 dB)
+  Iteration 02900/6000: loss_data=0.000316, loss_flat=0.000056, loss_contour=0.007449, PSNR_LR=35.00 dB, PSNR_HR=24.51 dB (best=24.57 dB)
+  Iteration 03000/6000: loss_data=0.000306, loss_flat=0.000059, loss_contour=0.007677, PSNR_LR=35.14 dB, PSNR_HR=24.47 dB (best=24.59 dB)
+  Iteration 03100/6000: loss_data=0.000272, loss_flat=0.000059, loss_contour=0.007518, PSNR_LR=35.65 dB, PSNR_HR=24.57 dB (best=24.61 dB)
+  Iteration 03200/6000: loss_data=0.000273, loss_flat=0.000057, loss_contour=0.007397, PSNR_LR=35.63 dB, PSNR_HR=24.59 dB (best=24.62 dB)
+  Iteration 03300/6000: loss_data=0.000267, loss_flat=0.000058, loss_contour=0.007482, PSNR_LR=35.74 dB, PSNR_HR=24.60 dB (best=24.67 dB)
+  Iteration 03400/6000: loss_data=0.000262, loss_flat=0.000058, loss_contour=0.007399, PSNR_LR=35.81 dB, PSNR_HR=24.60 dB (best=24.70 dB)
+  Iteration 03500/6000: loss_data=0.000247, loss_flat=0.000058, loss_contour=0.007512, PSNR_LR=36.06 dB, PSNR_HR=24.54 dB (best=24.70 dB)
+  Iteration 03600/6000: loss_data=0.000238, loss_flat=0.000057, loss_contour=0.007384, PSNR_LR=36.23 dB, PSNR_HR=24.62 dB (best=24.70 dB)
+  Iteration 03700/6000: loss_data=0.000213, loss_flat=0.000056, loss_contour=0.007367, PSNR_LR=36.71 dB, PSNR_HR=24.68 dB (best=24.71 dB)
+  Iteration 03800/6000: loss_data=0.000199, loss_flat=0.000058, loss_contour=0.007397, PSNR_LR=37.02 dB, PSNR_HR=24.67 dB (best=24.74 dB)
+  Iteration 03900/6000: loss_data=0.000197, loss_flat=0.000058, loss_contour=0.007442, PSNR_LR=37.06 dB, PSNR_HR=24.69 dB (best=24.75 dB)
+  Iteration 04000/6000: loss_data=0.000181, loss_flat=0.000057, loss_contour=0.007381, PSNR_LR=37.43 dB, PSNR_HR=24.71 dB (best=24.75 dB)
+  Iteration 04100/6000: loss_data=0.000195, loss_flat=0.000058, loss_contour=0.007422, PSNR_LR=37.10 dB, PSNR_HR=24.62 dB (best=24.76 dB)
+  Iteration 04200/6000: loss_data=0.000178, loss_flat=0.000056, loss_contour=0.007300, PSNR_LR=37.50 dB, PSNR_HR=24.74 dB (best=24.77 dB)
+  Iteration 04300/6000: loss_data=0.000171, loss_flat=0.000057, loss_contour=0.007321, PSNR_LR=37.66 dB, PSNR_HR=24.74 dB (best=24.79 dB)
+  Iteration 04400/6000: loss_data=0.000158, loss_flat=0.000057, loss_contour=0.007255, PSNR_LR=38.01 dB, PSNR_HR=24.76 dB (best=24.80 dB)
+  Iteration 04500/6000: loss_data=0.000153, loss_flat=0.000056, loss_contour=0.007311, PSNR_LR=38.14 dB, PSNR_HR=24.72 dB (best=24.80 dB)
+  Iteration 04600/6000: loss_data=0.000147, loss_flat=0.000055, loss_contour=0.007197, PSNR_LR=38.34 dB, PSNR_HR=24.76 dB (best=24.80 dB)
+  Iteration 04700/6000: loss_data=0.000150, loss_flat=0.000057, loss_contour=0.007268, PSNR_LR=38.25 dB, PSNR_HR=24.72 dB (best=24.83 dB)
+  Iteration 04800/6000: loss_data=0.000139, loss_flat=0.000057, loss_contour=0.007283, PSNR_LR=38.58 dB, PSNR_HR=24.78 dB (best=24.83 dB)
+  Iteration 04900/6000: loss_data=0.000120, loss_flat=0.000057, loss_contour=0.007327, PSNR_LR=39.20 dB, PSNR_HR=24.82 dB (best=24.84 dB)
+  Iteration 05000/6000: loss_data=0.000134, loss_flat=0.000056, loss_contour=0.007176, PSNR_LR=38.73 dB, PSNR_HR=24.78 dB (best=24.84 dB)
+  Iteration 05100/6000: loss_data=0.000122, loss_flat=0.000057, loss_contour=0.007311, PSNR_LR=39.13 dB, PSNR_HR=24.78 dB (best=24.84 dB)
+  Iteration 05200/6000: loss_data=0.000168, loss_flat=0.000056, loss_contour=0.007274, PSNR_LR=37.75 dB, PSNR_HR=24.71 dB (best=24.84 dB)
+  Iteration 05300/6000: loss_data=0.000104, loss_flat=0.000056, loss_contour=0.007228, PSNR_LR=39.83 dB, PSNR_HR=24.81 dB (best=24.85 dB)
+  Iteration 05400/6000: loss_data=0.000110, loss_flat=0.000056, loss_contour=0.007231, PSNR_LR=39.58 dB, PSNR_HR=24.83 dB (best=24.86 dB)
+  Iteration 05500/6000: loss_data=0.000098, loss_flat=0.000057, loss_contour=0.007332, PSNR_LR=40.09 dB, PSNR_HR=24.81 dB (best=24.87 dB)
+  Iteration 05600/6000: loss_data=0.000111, loss_flat=0.000057, loss_contour=0.007283, PSNR_LR=39.56 dB, PSNR_HR=24.80 dB (best=24.87 dB)
+  Iteration 05700/6000: loss_data=0.000101, loss_flat=0.000057, loss_contour=0.007245, PSNR_LR=39.97 dB, PSNR_HR=24.83 dB (best=24.87 dB)
+  Iteration 05800/6000: loss_data=0.000090, loss_flat=0.000056, loss_contour=0.007232, PSNR_LR=40.47 dB, PSNR_HR=24.80 dB (best=24.87 dB)
+  Iteration 05900/6000: loss_data=0.000090, loss_flat=0.000056, loss_contour=0.007243, PSNR_LR=40.46 dB, PSNR_HR=24.84 dB (best=24.87 dB)
+  Iteration 06000/6000: loss_data=0.000124, loss_flat=0.000056, loss_contour=0.007210, PSNR_LR=39.08 dB, PSNR_HR=24.84 dB (best=24.88 dB)
+
+==========================================================
+ EGNC-DIP Optimization Complete!
+ Final EGNC-DIP PSNR:  24.88 dB
+ Vanilla DIP Baseline: 24.74 dB
+ Gain over DIP:        +0.14 dB
+ Baseline Bicubic PSNR:23.10 dB
+ Gain over Bicubic:    +1.77 dB
+==========================================================
+Saved new approach HR to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_contour_sr/zebra_hr_with_new_approach.png
+Saved comparison figure to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_contour_sr/zebra_sr_comparison.png
+Saved training curves to:   /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_contour_sr/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading media/images/downsampled_LR_image_61_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_61_14bb56051734beb5a406.png; uploading media/images/metrics_curves_61_cc79ba20fefec8b9da07.png; uploading output.log; uploading config.yaml (+ 4 more)
+wandb: uploading media/images/downsampled_LR_image_61_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_61_14bb56051734beb5a406.png; uploading media/images/metrics_curves_61_cc79ba20fefec8b9da07.png; uploading media/images/visual_comparison_61_3f35c981cc3a29b0dc9b.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png (+ 1 more)
+wandb: uploading media/images/hr_with_new_approach_61_14bb56051734beb5a406.png; uploading media/images/metrics_curves_61_cc79ba20fefec8b9da07.png; uploading media/images/visual_comparison_61_3f35c981cc3a29b0dc9b.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png
+wandb: uploading media/images/hr_with_new_approach_61_14bb56051734beb5a406.png; uploading media/images/visual_comparison_61_3f35c981cc3a29b0dc9b.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png
+wandb: uploading media/images/visual_comparison_61_3f35c981cc3a29b0dc9b.png
+wandb: uploading history steps 61-61, summary, console lines 84-84
+wandb: 
+wandb: Run history:
+wandb:            iteration ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇███
+wandb: loss/contour_tangent █▃▁▅▇█▇▆▆▅▄▅▄▄▃▃▃▂▃▂▂▂▂▂▂▂▁▁▂▁▁▁▂▁▁▂▁▁▁▁
+wandb:        loss/data_mse █▅▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  loss/flat_nullspace █▁▂▃▄▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅
+wandb:           loss/total █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              psnr/HR ▁▄▅▆▇▇▇▇▇▇▇▇████████████████████████████
+wandb:              psnr/LR ▁▃▃▄▄▅▅▅▆▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇██▇█████
+wandb: 
+wandb: Run summary:
+wandb:         best_psnr_hr 24.87513
+wandb:        final_psnr_hr 24.87513
+wandb:    gain_over_bicubic 1.77034
+wandb:        gain_over_dip 0.13746
+wandb:            iteration 6000
+wandb: loss/contour_tangent 0.00721
+wandb:        loss/data_mse 0.00012
+wandb:  loss/flat_nullspace 6e-05
+wandb:           loss/total 0.00013
+wandb:              psnr/HR 24.83583
+wandb:                   +3 ...
+wandb: 
+wandb: 🚀 View run dip_egnc_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/wykz5o6d
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_190156-wykz5o6d/logs
