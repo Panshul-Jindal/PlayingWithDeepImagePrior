@@ -1,0 +1,138 @@
+HR and LR resolutions: (576, 384), (144, 96)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run g26zqhmm
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261013_163124-g26zqhmm
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run skip_attn_zebra
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr/runs/g26zqhmm
+================================================================================
+ DIP Skip-Attention Super-Resolution | Device: cuda | 576x384 (221,184 px)
+ Baselines: Bicubic=23.10 dB | Bilinear=22.17 dB
+================================================================================
+
+[SKIP-ATTENTION | L2] 6000 steps | Params: 2,375,156 | Input Pixels: 221,184
+  [        l2] step 0001/6000 | Loss: 0.064203 | PSNR_HR: 11.51 dB (Best: 11.51) | 0.6s
+  [        l2] step 0500/6000 | Loss: 0.001684 | PSNR_HR: 22.69 dB (Best: 22.71) | 34.6s
+HR and LR resolutions: (576, 384), (144, 96)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run n9cwt5ek
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261013_163715-n9cwt5ek
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run skip_attn_zebra
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr/runs/n9cwt5ek
+================================================================================
+ DIP Skip-Attention Super-Resolution | Device: cuda | 576x384 (221,184 px)
+ Baselines: Bicubic=23.10 dB | Bilinear=22.17 dB
+================================================================================
+
+[SKIP-ATTENTION | L2] 6000 steps | Params: 2,375,156 | Input Pixels: 221,184
+  [        l2] step 0001/6000 | Loss: 0.062017 | PSNR_HR: 11.65 dB (Best: 11.65) | 0.6s
+  [        l2] step 0500/6000 | Loss: 0.001780 | PSNR_HR: 22.58 dB (Best: 22.60) | 34.6s
+  [        l2] step 1000/6000 | Loss: 0.000571 | PSNR_HR: 24.02 dB (Best: 24.12) | 68.7s
+  [        l2] step 1500/6000 | Loss: 0.000293 | PSNR_HR: 24.60 dB (Best: 24.61) | 102.8s
+  [        l2] step 2000/6000 | Loss: 0.000166 | PSNR_HR: 24.79 dB (Best: 24.86) | 137.0s
+  [        l2] step 2500/6000 | Loss: 0.000110 | PSNR_HR: 24.90 dB (Best: 24.95) | 171.2s
+  [        l2] step 3000/6000 | Loss: 0.000083 | PSNR_HR: 25.00 dB (Best: 25.01) | 205.4s
+  [        l2] step 3500/6000 | Loss: 0.000057 | PSNR_HR: 25.03 dB (Best: 25.05) | 239.5s
+  [        l2] step 4000/6000 | Loss: 0.000051 | PSNR_HR: 25.03 dB (Best: 25.07) | 273.7s
+  [        l2] step 4500/6000 | Loss: 0.000044 | PSNR_HR: 25.03 dB (Best: 25.08) | 307.9s
+  [        l2] step 5000/6000 | Loss: 0.000039 | PSNR_HR: 25.05 dB (Best: 25.09) | 342.1s
+  [        l2] step 5500/6000 | Loss: 0.000040 | PSNR_HR: 25.02 dB (Best: 25.09) | 376.2s
+  [        l2] step 6000/6000 | Loss: 0.000027 | PSNR_HR: 25.02 dB (Best: 25.09) | 410.4s
+
+[SKIP-ATTENTION | TV] 6000 steps | Params: 2,375,156 | Input Pixels: 221,184
+  [        tv] step 0001/6000 | Loss: 0.062710 | PSNR_HR: 11.60 dB (Best: 11.60) | 0.1s
+  [        tv] step 0500/6000 | Loss: 0.001732 | PSNR_HR: 22.63 dB (Best: 22.78) | 34.3s
+  [        tv] step 1000/6000 | Loss: 0.000564 | PSNR_HR: 24.19 dB (Best: 24.19) | 68.5s
+  [        tv] step 1500/6000 | Loss: 0.000297 | PSNR_HR: 24.64 dB (Best: 24.70) | 102.7s
+  [        tv] step 2000/6000 | Loss: 0.000165 | PSNR_HR: 24.81 dB (Best: 24.90) | 137.0s
+  [        tv] step 2500/6000 | Loss: 0.000136 | PSNR_HR: 24.95 dB (Best: 24.99) | 171.2s
+  [        tv] step 3000/6000 | Loss: 0.000088 | PSNR_HR: 25.00 dB (Best: 25.02) | 205.4s
+  [        tv] step 3500/6000 | Loss: 0.000081 | PSNR_HR: 25.00 dB (Best: 25.07) | 239.6s
+  [        tv] step 4000/6000 | Loss: 0.000053 | PSNR_HR: 25.06 dB (Best: 25.07) | 273.9s
+  [        tv] step 4500/6000 | Loss: 0.000050 | PSNR_HR: 25.04 dB (Best: 25.08) | 308.1s
+  [        tv] step 5000/6000 | Loss: 0.000042 | PSNR_HR: 25.04 dB (Best: 25.10) | 342.3s
+  [        tv] step 5500/6000 | Loss: 0.000033 | PSNR_HR: 25.08 dB (Best: 25.10) | 376.5s
+  [        tv] step 6000/6000 | Loss: 0.000031 | PSNR_HR: 25.05 dB (Best: 25.10) | 410.8s
+
+[SKIP-ATTENTION | DEEPRED_L1] 6000 steps | Params: 2,375,156 | Input Pixels: 221,184
+  [deepred_l1] step 0001/6000 | Loss: 0.235163 | PSNR_HR: 10.80 dB (Best: 10.80) | 0.1s
+  [deepred_l1] step 0500/6000 | Loss: 0.027375 | PSNR_HR: 22.80 dB (Best: 22.87) | 34.9s
+  [deepred_l1] step 1000/6000 | Loss: 0.013555 | PSNR_HR: 24.35 dB (Best: 24.43) | 69.8s
+  [deepred_l1] step 1500/6000 | Loss: 0.008069 | PSNR_HR: 24.78 dB (Best: 24.88) | 104.7s
+  [deepred_l1] step 2000/6000 | Loss: 0.006365 | PSNR_HR: 24.95 dB (Best: 25.02) | 139.6s
+  [deepred_l1] step 2500/6000 | Loss: 0.004843 | PSNR_HR: 25.05 dB (Best: 25.07) | 174.5s
+  [deepred_l1] step 3000/6000 | Loss: 0.004264 | PSNR_HR: 25.08 dB (Best: 25.09) | 209.4s
+  [deepred_l1] step 3500/6000 | Loss: 0.003682 | PSNR_HR: 25.05 dB (Best: 25.11) | 244.3s
+  [deepred_l1] step 4000/6000 | Loss: 0.003485 | PSNR_HR: 25.07 dB (Best: 25.11) | 279.2s
+  [deepred_l1] step 4500/6000 | Loss: 0.003211 | PSNR_HR: 25.08 dB (Best: 25.12) | 314.2s
+  [deepred_l1] step 5000/6000 | Loss: 0.003014 | PSNR_HR: 25.08 dB (Best: 25.12) | 349.2s
+  [deepred_l1] step 5500/6000 | Loss: 0.002714 | PSNR_HR: 25.10 dB (Best: 25.12) | 384.1s
+  [deepred_l1] step 6000/6000 | Loss: 0.002632 | PSNR_HR: 25.06 dB (Best: 25.12) | 419.1s
+
+[SKIP-ATTENTION | DEEPRED_L2] 6000 steps | Params: 2,375,156 | Input Pixels: 221,184
+  [deepred_l2] step 0001/6000 | Loss: 0.066390 | PSNR_HR: 11.38 dB (Best: 11.38) | 0.1s
+  [deepred_l2] step 0500/6000 | Loss: 0.001647 | PSNR_HR: 22.68 dB (Best: 22.74) | 34.9s
+  [deepred_l2] step 1000/6000 | Loss: 0.000556 | PSNR_HR: 24.14 dB (Best: 24.18) | 69.9s
+  [deepred_l2] step 1500/6000 | Loss: 0.000306 | PSNR_HR: 24.58 dB (Best: 24.65) | 104.8s
+  [deepred_l2] step 2000/6000 | Loss: 0.000156 | PSNR_HR: 24.82 dB (Best: 24.85) | 139.7s
+  [deepred_l2] step 2500/6000 | Loss: 0.000101 | PSNR_HR: 24.92 dB (Best: 24.96) | 174.7s
+  [deepred_l2] step 3000/6000 | Loss: 0.000081 | PSNR_HR: 24.95 dB (Best: 25.00) | 209.6s
+  [deepred_l2] step 3500/6000 | Loss: 0.000059 | PSNR_HR: 24.98 dB (Best: 25.03) | 244.5s
+  [deepred_l2] step 4000/6000 | Loss: 0.000054 | PSNR_HR: 25.00 dB (Best: 25.05) | 279.3s
+  [deepred_l2] step 4500/6000 | Loss: 0.000035 | PSNR_HR: 25.01 dB (Best: 25.06) | 314.2s
+  [deepred_l2] step 5000/6000 | Loss: 0.000040 | PSNR_HR: 25.02 dB (Best: 25.07) | 349.0s
+  [deepred_l2] step 5500/6000 | Loss: 0.000027 | PSNR_HR: 25.03 dB (Best: 25.08) | 383.9s
+  [deepred_l2] step 6000/6000 | Loss: 0.000025 | PSNR_HR: 25.04 dB (Best: 25.08) | 418.7s
+
+================================================================================
+Approach       | Params       | Input Pixels   | Loss         | Final PSNR   | Gain vs Bicubic
+--------------------------------------------------------------------------------
+Bicubic        | N/A          | 221,184        | N/A          | 23.10        | Baseline
+Bilinear       | N/A          | 221,184        | N/A          | 22.17        | -0.94 dB
+l2             | 2,375,156    | 221,184        | 0.000027     | 25.07        | +1.97 dB
+tv             | 2,375,156    | 221,184        | 0.000031     | 25.08        | +1.98 dB
+deepred_l1     | 2,375,156    | 221,184        | 0.002632     | 25.11        | +2.00 dB
+deepred_l2     | 2,375,156    | 221,184        | 0.000025     | 25.07        | +1.96 dB
+================================================================================
+wandb: updating run metadata
+wandb: uploading wandb-summary.json; uploading config.yaml; uploading output.log
+wandb: uploading wandb-summary.json; uploading output.log
+wandb: uploading history steps 23858-23999, summary, console lines 63-74
+wandb: 
+wandb: Run history:
+wandb: loss/deepred_l1 █▆▄▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/deepred_l2 █▆▆▅▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/l2 █▃▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/tv █▅▄▄▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: psnr/deepred_l1 ▁▃▄▄▅▆▇▇▇▇██████████████████████████████
+wandb: psnr/deepred_l2 ▁▂▃▃▅▆▆▆▆▇▇▇█▇██████████████████████████
+wandb:         psnr/l2 ▁▄▄▆▆▆▇▇▇▇▇▇▇███████████████████████████
+wandb:         psnr/tv ▁▅▆▇▇▇▇▇████████████████████████████████
+wandb:            step ▂▂▃▃▃▄▇▇███▁▃▃▄▇▇█▁▁▂▃▃▄▄▅▅▆▇▇▂▃▄▄▅▆▆▆▇█
+wandb: 
+wandb: Run summary:
+wandb: loss/deepred_l1 0.00263
+wandb: loss/deepred_l2 3e-05
+wandb:         loss/l2 3e-05
+wandb:         loss/tv 3e-05
+wandb: psnr/deepred_l1 25.05831
+wandb: psnr/deepred_l2 25.03862
+wandb:         psnr/l2 25.01833
+wandb:         psnr/tv 25.04541
+wandb:            step 6000
+wandb: 
+wandb: 🚀 View run skip_attn_zebra at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr/runs/n9cwt5ek
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-attention-sr
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261013_163715-n9cwt5ek/logs
+
+Experiment complete! Outputs saved in: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_attention_sr
