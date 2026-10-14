@@ -1,0 +1,1458 @@
+Found 12 images in /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/sr/Set14: ['img_001_SRF_4_HR.png', 'img_002_SRF_4_HR.png', 'img_004_SRF_4_HR.png', 'img_005_SRF_4_HR.png', 'img_006_SRF_4_HR.png', 'img_007_SRF_4_HR.png', 'img_008_SRF_4_HR.png', 'img_009_SRF_4_HR.png', 'img_011_SRF_4_HR.png', 'img_012_SRF_4_HR.png', 'img_013_SRF_4_HR.png', 'img_014_SRF_4_HR.png']
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run 4j8td275
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261013_235516-4j8td275
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run set14_skip_vs_dpwise
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr/runs/4j8td275
+HR and LR resolutions: (480, 480), (120, 120)
+
+[1/12] img_001_SRF_4_HR (480x480) | Bicubic: 20.31 dB
+Found 12 images in /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/sr/Set14: ['img_001_SRF_4_HR.png', 'img_002_SRF_4_HR.png', 'img_004_SRF_4_HR.png', 'img_005_SRF_4_HR.png', 'img_006_SRF_4_HR.png', 'img_007_SRF_4_HR.png', 'img_008_SRF_4_HR.png', 'img_009_SRF_4_HR.png', 'img_011_SRF_4_HR.png', 'img_012_SRF_4_HR.png', 'img_013_SRF_4_HR.png', 'img_014_SRF_4_HR.png']
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run dlsati7e
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261013_235916-dlsati7e
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run set14_skip_vs_dpwise
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr/runs/dlsati7e
+HR and LR resolutions: (480, 480), (120, 120)
+
+[1/12] img_001_SRF_4_HR (480x480) | Bicubic: 20.31 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_001_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.006071 | PSNR: 18.07 dB | 5.3s
+  [                 skip_l2] step 0200/2500 | Loss: 0.004372 | PSNR: 18.57 dB | 10.1s
+  [                 skip_l2] step 0300/2500 | Loss: 0.003159 | PSNR: 18.97 dB | 14.9s
+  [                 skip_l2] step 0400/2500 | Loss: 0.002571 | PSNR: 19.19 dB | 19.7s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001966 | PSNR: 19.41 dB | 24.6s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001637 | PSNR: 19.56 dB | 29.4s
+  [                 skip_l2] step 0700/2500 | Loss: 0.001402 | PSNR: 19.66 dB | 34.2s
+  [                 skip_l2] step 0800/2500 | Loss: 0.001221 | PSNR: 19.75 dB | 39.1s
+  [                 skip_l2] step 0900/2500 | Loss: 0.001050 | PSNR: 19.82 dB | 43.9s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000896 | PSNR: 19.91 dB | 48.7s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000796 | PSNR: 19.95 dB | 53.5s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000726 | PSNR: 19.98 dB | 58.4s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000662 | PSNR: 20.03 dB | 63.2s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000590 | PSNR: 20.07 dB | 68.0s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000537 | PSNR: 20.09 dB | 72.9s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000510 | PSNR: 20.13 dB | 77.7s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000447 | PSNR: 20.16 dB | 82.5s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000430 | PSNR: 20.17 dB | 87.3s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000392 | PSNR: 20.20 dB | 92.2s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000356 | PSNR: 20.24 dB | 97.0s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000356 | PSNR: 20.24 dB | 101.8s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000329 | PSNR: 20.27 dB | 106.6s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000291 | PSNR: 20.28 dB | 111.5s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000296 | PSNR: 20.30 dB | 116.3s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000259 | PSNR: 20.32 dB | 121.1s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_001_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.006200 | PSNR: 18.04 dB | 5.0s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.004326 | PSNR: 18.60 dB | 9.9s
+Found 12 images in /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/sr/Set14: ['img_001_SRF_4_HR.png', 'img_002_SRF_4_HR.png', 'img_004_SRF_4_HR.png', 'img_005_SRF_4_HR.png', 'img_006_SRF_4_HR.png', 'img_007_SRF_4_HR.png', 'img_008_SRF_4_HR.png', 'img_009_SRF_4_HR.png', 'img_011_SRF_4_HR.png', 'img_012_SRF_4_HR.png', 'img_013_SRF_4_HR.png', 'img_014_SRF_4_HR.png']
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run kwfml24t
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261014_000407-kwfml24t
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run set14_skip_vs_dpwise
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr/runs/kwfml24t
+HR and LR resolutions: (480, 480), (120, 120)
+
+[1/12] img_001_SRF_4_HR (480x480) | Bicubic: 20.31 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_001_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.006118 | PSNR: 18.06 dB | 5.3s
+  [                 skip_l2] step 0200/2500 | Loss: 0.004429 | PSNR: 18.55 dB | 10.1s
+  [                 skip_l2] step 0300/2500 | Loss: 0.003157 | PSNR: 18.98 dB | 14.9s
+  [                 skip_l2] step 0400/2500 | Loss: 0.002487 | PSNR: 19.22 dB | 19.8s
+  [                 skip_l2] step 0500/2500 | Loss: 0.002017 | PSNR: 19.42 dB | 24.6s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001641 | PSNR: 19.56 dB | 29.4s
+  [                 skip_l2] step 0700/2500 | Loss: 0.001360 | PSNR: 19.69 dB | 34.2s
+  [                 skip_l2] step 0800/2500 | Loss: 0.001173 | PSNR: 19.76 dB | 39.1s
+  [                 skip_l2] step 0900/2500 | Loss: 0.001030 | PSNR: 19.84 dB | 43.9s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000930 | PSNR: 19.87 dB | 48.7s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000775 | PSNR: 19.95 dB | 53.6s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000732 | PSNR: 19.97 dB | 58.4s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000627 | PSNR: 20.03 dB | 63.2s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000589 | PSNR: 20.04 dB | 68.0s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000547 | PSNR: 20.09 dB | 72.9s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000486 | PSNR: 20.12 dB | 77.7s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000460 | PSNR: 20.14 dB | 82.5s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000420 | PSNR: 20.17 dB | 87.4s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000383 | PSNR: 20.19 dB | 92.2s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000358 | PSNR: 20.22 dB | 97.0s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000341 | PSNR: 20.24 dB | 101.8s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000330 | PSNR: 20.25 dB | 106.7s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000308 | PSNR: 20.27 dB | 111.5s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000269 | PSNR: 20.28 dB | 116.3s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000264 | PSNR: 20.30 dB | 121.2s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_001_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.005910 | PSNR: 18.12 dB | 5.0s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.004195 | PSNR: 18.64 dB | 9.9s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.002965 | PSNR: 19.05 dB | 14.8s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.002361 | PSNR: 19.27 dB | 19.8s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001871 | PSNR: 19.47 dB | 24.7s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001565 | PSNR: 19.60 dB | 29.6s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.001291 | PSNR: 19.72 dB | 34.6s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.001157 | PSNR: 19.78 dB | 39.5s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000971 | PSNR: 19.88 dB | 44.4s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000866 | PSNR: 19.91 dB | 49.3s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000793 | PSNR: 19.98 dB | 54.3s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000681 | PSNR: 20.02 dB | 59.2s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000601 | PSNR: 20.07 dB | 64.1s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000543 | PSNR: 20.11 dB | 69.0s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000510 | PSNR: 20.13 dB | 74.0s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000489 | PSNR: 20.15 dB | 78.9s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000439 | PSNR: 20.18 dB | 83.8s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000414 | PSNR: 20.20 dB | 88.8s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000373 | PSNR: 20.21 dB | 93.7s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000341 | PSNR: 20.23 dB | 98.6s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000325 | PSNR: 20.26 dB | 103.6s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000320 | PSNR: 20.27 dB | 108.5s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000300 | PSNR: 20.27 dB | 113.4s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000284 | PSNR: 20.29 dB | 118.4s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000283 | PSNR: 20.30 dB | 123.3s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_001_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.010577 | PSNR: 16.93 dB | 3.7s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.007756 | PSNR: 17.59 dB | 7.5s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.006124 | PSNR: 18.03 dB | 11.2s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.005005 | PSNR: 18.35 dB | 14.9s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.004388 | PSNR: 18.52 dB | 18.6s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.003752 | PSNR: 18.70 dB | 22.4s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.003150 | PSNR: 18.90 dB | 26.1s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.002807 | PSNR: 19.01 dB | 29.8s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.002437 | PSNR: 19.13 dB | 33.5s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.002303 | PSNR: 19.18 dB | 37.3s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.002030 | PSNR: 19.28 dB | 41.0s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.001919 | PSNR: 19.34 dB | 44.7s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.001653 | PSNR: 19.45 dB | 48.4s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.001592 | PSNR: 19.45 dB | 52.2s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.001351 | PSNR: 19.59 dB | 55.9s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.001247 | PSNR: 19.63 dB | 59.6s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.001150 | PSNR: 19.68 dB | 63.3s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.001068 | PSNR: 19.74 dB | 67.1s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000996 | PSNR: 19.76 dB | 70.8s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000901 | PSNR: 19.81 dB | 74.5s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000839 | PSNR: 19.86 dB | 78.2s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000799 | PSNR: 19.88 dB | 82.0s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000760 | PSNR: 19.91 dB | 85.7s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000724 | PSNR: 19.93 dB | 89.4s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000649 | PSNR: 19.97 dB | 93.1s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_001_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.011151 | PSNR: 16.82 dB | 3.9s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.007244 | PSNR: 17.73 dB | 7.7s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.005863 | PSNR: 18.09 dB | 11.5s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.004860 | PSNR: 18.38 dB | 15.4s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.004309 | PSNR: 18.53 dB | 19.2s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.003806 | PSNR: 18.68 dB | 23.1s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.003326 | PSNR: 18.83 dB | 26.9s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.002962 | PSNR: 18.96 dB | 30.7s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.002509 | PSNR: 19.13 dB | 34.6s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.002399 | PSNR: 19.17 dB | 38.4s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.002034 | PSNR: 19.31 dB | 42.2s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.001969 | PSNR: 19.33 dB | 46.1s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.001691 | PSNR: 19.45 dB | 49.9s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.001524 | PSNR: 19.53 dB | 53.7s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.001348 | PSNR: 19.61 dB | 57.6s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.001257 | PSNR: 19.66 dB | 61.4s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.001186 | PSNR: 19.70 dB | 65.3s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.001118 | PSNR: 19.73 dB | 69.1s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000973 | PSNR: 19.80 dB | 72.9s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000962 | PSNR: 19.83 dB | 76.8s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000861 | PSNR: 19.86 dB | 80.6s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000782 | PSNR: 19.92 dB | 84.4s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000748 | PSNR: 19.94 dB | 88.3s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000687 | PSNR: 19.97 dB | 92.1s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000672 | PSNR: 20.00 dB | 95.9s
+HR and LR resolutions: (704, 576), (176, 144)
+
+[2/12] img_002_SRF_4_HR (704x576) | Bicubic: 23.58 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_002_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.006208 | PSNR: 19.67 dB | 8.3s
+  [                 skip_l2] step 0200/2500 | Loss: 0.003319 | PSNR: 21.05 dB | 16.5s
+  [                 skip_l2] step 0300/2500 | Loss: 0.002296 | PSNR: 21.67 dB | 24.7s
+  [                 skip_l2] step 0400/2500 | Loss: 0.001718 | PSNR: 22.09 dB | 33.0s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001330 | PSNR: 22.40 dB | 41.2s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001178 | PSNR: 22.52 dB | 49.5s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000899 | PSNR: 22.73 dB | 57.7s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000654 | PSNR: 23.11 dB | 66.0s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000550 | PSNR: 23.26 dB | 74.2s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000454 | PSNR: 23.39 dB | 82.4s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000429 | PSNR: 23.44 dB | 90.7s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000366 | PSNR: 23.54 dB | 98.9s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000332 | PSNR: 23.58 dB | 107.2s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000308 | PSNR: 23.59 dB | 115.4s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000258 | PSNR: 23.68 dB | 123.6s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000269 | PSNR: 23.65 dB | 131.9s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000249 | PSNR: 23.68 dB | 140.1s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000219 | PSNR: 23.72 dB | 148.4s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000203 | PSNR: 23.73 dB | 156.6s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000181 | PSNR: 23.78 dB | 164.9s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000186 | PSNR: 23.79 dB | 173.1s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000167 | PSNR: 23.79 dB | 181.3s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000156 | PSNR: 23.81 dB | 189.6s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000149 | PSNR: 23.82 dB | 197.8s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000156 | PSNR: 23.80 dB | 206.1s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_002_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.005850 | PSNR: 19.83 dB | 8.3s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.003127 | PSNR: 21.15 dB | 16.7s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.002118 | PSNR: 21.79 dB | 25.0s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.001521 | PSNR: 22.23 dB | 33.4s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001266 | PSNR: 22.44 dB | 41.7s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001091 | PSNR: 22.61 dB | 50.1s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000831 | PSNR: 22.87 dB | 58.4s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000622 | PSNR: 23.18 dB | 66.7s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000549 | PSNR: 23.28 dB | 75.1s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000468 | PSNR: 23.39 dB | 83.4s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000405 | PSNR: 23.50 dB | 91.8s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000342 | PSNR: 23.55 dB | 100.1s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000329 | PSNR: 23.58 dB | 108.5s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000303 | PSNR: 23.66 dB | 116.8s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000280 | PSNR: 23.68 dB | 125.2s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000257 | PSNR: 23.69 dB | 133.5s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000240 | PSNR: 23.73 dB | 141.9s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000212 | PSNR: 23.77 dB | 150.2s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000195 | PSNR: 23.78 dB | 158.6s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000197 | PSNR: 23.78 dB | 166.9s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000178 | PSNR: 23.82 dB | 175.3s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000163 | PSNR: 23.83 dB | 183.7s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000149 | PSNR: 23.85 dB | 192.0s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000146 | PSNR: 23.85 dB | 200.4s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000136 | PSNR: 23.88 dB | 208.7s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_002_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.014159 | PSNR: 17.20 dB | 6.4s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.009275 | PSNR: 18.51 dB | 12.7s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.006460 | PSNR: 19.49 dB | 19.1s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.004880 | PSNR: 20.17 dB | 25.4s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.004000 | PSNR: 20.61 dB | 31.8s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.003090 | PSNR: 21.11 dB | 38.1s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.002610 | PSNR: 21.40 dB | 44.5s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.002334 | PSNR: 21.58 dB | 50.8s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.002012 | PSNR: 21.80 dB | 57.2s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001667 | PSNR: 22.03 dB | 63.6s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.001554 | PSNR: 22.10 dB | 69.9s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.001430 | PSNR: 22.20 dB | 76.3s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.001254 | PSNR: 22.29 dB | 82.6s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.001118 | PSNR: 22.36 dB | 89.0s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.001041 | PSNR: 22.48 dB | 95.3s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000866 | PSNR: 22.61 dB | 101.7s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000840 | PSNR: 22.67 dB | 108.0s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000716 | PSNR: 22.82 dB | 114.4s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000645 | PSNR: 22.95 dB | 120.7s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000642 | PSNR: 22.95 dB | 127.1s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000553 | PSNR: 23.07 dB | 133.4s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000540 | PSNR: 23.09 dB | 139.8s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000470 | PSNR: 23.19 dB | 146.1s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000457 | PSNR: 23.22 dB | 152.5s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000447 | PSNR: 23.24 dB | 158.9s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_002_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.013921 | PSNR: 17.30 dB | 6.5s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.008858 | PSNR: 18.68 dB | 12.9s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.006061 | PSNR: 19.69 dB | 19.4s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.004708 | PSNR: 20.29 dB | 25.9s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.003590 | PSNR: 20.84 dB | 32.3s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.003076 | PSNR: 21.13 dB | 38.8s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.002458 | PSNR: 21.50 dB | 45.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.002107 | PSNR: 21.74 dB | 51.7s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.001696 | PSNR: 22.03 dB | 58.2s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001607 | PSNR: 22.08 dB | 64.6s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.001539 | PSNR: 22.14 dB | 71.1s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.001257 | PSNR: 22.34 dB | 77.6s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.001128 | PSNR: 22.39 dB | 84.0s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.001029 | PSNR: 22.49 dB | 90.5s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000934 | PSNR: 22.59 dB | 96.9s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000872 | PSNR: 22.62 dB | 103.4s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000740 | PSNR: 22.78 dB | 109.9s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000663 | PSNR: 22.80 dB | 116.3s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000614 | PSNR: 22.89 dB | 122.8s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000567 | PSNR: 22.95 dB | 129.3s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000553 | PSNR: 22.96 dB | 135.8s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000485 | PSNR: 23.05 dB | 142.2s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000428 | PSNR: 23.15 dB | 150.1s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000435 | PSNR: 23.17 dB | 156.8s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000416 | PSNR: 23.16 dB | 163.2s
+HR and LR resolutions: (352, 288), (88, 72)
+
+[3/12] img_004_SRF_4_HR (352x288) | Bicubic: 24.05 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_004_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.002345 | PSNR: 21.94 dB | 3.2s
+  [                 skip_l2] step 0200/2500 | Loss: 0.001315 | PSNR: 22.83 dB | 6.3s
+  [                 skip_l2] step 0300/2500 | Loss: 0.000941 | PSNR: 23.29 dB | 9.5s
+  [                 skip_l2] step 0400/2500 | Loss: 0.000684 | PSNR: 23.66 dB | 12.7s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000529 | PSNR: 23.89 dB | 15.9s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000423 | PSNR: 24.02 dB | 19.1s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000354 | PSNR: 24.08 dB | 22.3s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000297 | PSNR: 24.19 dB | 25.4s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000263 | PSNR: 24.24 dB | 28.6s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000244 | PSNR: 24.29 dB | 31.8s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000209 | PSNR: 24.35 dB | 35.0s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000192 | PSNR: 24.36 dB | 38.1s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000149 | PSNR: 24.44 dB | 41.3s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000148 | PSNR: 24.45 dB | 44.5s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000130 | PSNR: 24.49 dB | 47.7s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000117 | PSNR: 24.47 dB | 50.9s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000115 | PSNR: 24.49 dB | 54.1s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000108 | PSNR: 24.49 dB | 57.2s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000092 | PSNR: 24.51 dB | 60.4s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000090 | PSNR: 24.54 dB | 63.6s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000079 | PSNR: 24.56 dB | 66.8s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000072 | PSNR: 24.56 dB | 70.0s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000072 | PSNR: 24.60 dB | 73.1s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000063 | PSNR: 24.56 dB | 76.3s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000062 | PSNR: 24.59 dB | 79.5s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_004_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.002310 | PSNR: 21.99 dB | 3.5s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.001312 | PSNR: 22.80 dB | 6.9s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.000877 | PSNR: 23.31 dB | 10.4s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.000657 | PSNR: 23.56 dB | 13.9s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.000525 | PSNR: 23.75 dB | 17.4s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000435 | PSNR: 23.88 dB | 20.8s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000365 | PSNR: 23.99 dB | 24.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000323 | PSNR: 24.05 dB | 27.8s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000256 | PSNR: 24.15 dB | 31.2s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000227 | PSNR: 24.21 dB | 34.7s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000207 | PSNR: 24.23 dB | 38.2s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000185 | PSNR: 24.28 dB | 41.6s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000163 | PSNR: 24.32 dB | 45.1s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000154 | PSNR: 24.32 dB | 48.6s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000138 | PSNR: 24.37 dB | 52.1s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000120 | PSNR: 24.41 dB | 55.5s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000116 | PSNR: 24.42 dB | 59.0s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000110 | PSNR: 24.41 dB | 62.5s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000095 | PSNR: 24.41 dB | 65.9s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000094 | PSNR: 24.45 dB | 69.4s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000086 | PSNR: 24.47 dB | 72.9s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000081 | PSNR: 24.50 dB | 76.4s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000077 | PSNR: 24.48 dB | 79.8s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000073 | PSNR: 24.49 dB | 83.3s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000069 | PSNR: 24.52 dB | 86.8s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_004_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.006566 | PSNR: 19.67 dB | 3.4s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.003069 | PSNR: 21.45 dB | 6.9s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.002038 | PSNR: 22.19 dB | 10.3s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.001557 | PSNR: 22.58 dB | 13.8s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.001226 | PSNR: 22.90 dB | 17.2s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.001038 | PSNR: 23.08 dB | 20.6s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.000888 | PSNR: 23.23 dB | 23.7s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.000735 | PSNR: 23.46 dB | 26.8s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.000648 | PSNR: 23.55 dB | 29.9s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.000646 | PSNR: 23.53 dB | 33.0s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000556 | PSNR: 23.65 dB | 36.1s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000499 | PSNR: 23.74 dB | 39.2s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000455 | PSNR: 23.80 dB | 42.3s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000405 | PSNR: 23.89 dB | 45.5s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000366 | PSNR: 23.96 dB | 48.6s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000356 | PSNR: 24.00 dB | 51.7s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000317 | PSNR: 24.03 dB | 54.8s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000287 | PSNR: 24.09 dB | 57.9s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000270 | PSNR: 24.11 dB | 61.0s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000238 | PSNR: 24.18 dB | 64.1s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000226 | PSNR: 24.20 dB | 67.2s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000209 | PSNR: 24.21 dB | 70.4s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000191 | PSNR: 24.25 dB | 73.5s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000173 | PSNR: 24.24 dB | 76.6s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000169 | PSNR: 24.31 dB | 79.7s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_004_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.007175 | PSNR: 19.39 dB | 3.3s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.003200 | PSNR: 21.35 dB | 6.6s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.002146 | PSNR: 22.11 dB | 9.9s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.001657 | PSNR: 22.50 dB | 13.2s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.001441 | PSNR: 22.70 dB | 16.5s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.001093 | PSNR: 23.02 dB | 19.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.000924 | PSNR: 23.24 dB | 23.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.000795 | PSNR: 23.37 dB | 26.5s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.000683 | PSNR: 23.50 dB | 29.8s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.000612 | PSNR: 23.60 dB | 33.1s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000609 | PSNR: 23.55 dB | 36.4s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000500 | PSNR: 23.74 dB | 39.7s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000431 | PSNR: 23.83 dB | 43.1s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000394 | PSNR: 23.84 dB | 46.4s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000337 | PSNR: 23.97 dB | 49.6s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000319 | PSNR: 24.00 dB | 52.9s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000310 | PSNR: 24.06 dB | 56.2s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000280 | PSNR: 24.09 dB | 59.5s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000242 | PSNR: 24.09 dB | 62.8s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000235 | PSNR: 24.13 dB | 66.1s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000216 | PSNR: 24.20 dB | 69.4s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000203 | PSNR: 24.22 dB | 72.7s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000175 | PSNR: 24.26 dB | 76.0s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000174 | PSNR: 24.28 dB | 79.2s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000156 | PSNR: 24.31 dB | 82.5s
+HR and LR resolutions: (224, 352), (56, 88)
+
+[4/12] img_005_SRF_4_HR (224x352) | Bicubic: 20.27 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_005_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.008364 | PSNR: 17.44 dB | 2.9s
+  [                 skip_l2] step 0200/2500 | Loss: 0.004232 | PSNR: 18.66 dB | 5.8s
+  [                 skip_l2] step 0300/2500 | Loss: 0.002575 | PSNR: 19.32 dB | 8.6s
+  [                 skip_l2] step 0400/2500 | Loss: 0.001799 | PSNR: 19.69 dB | 11.5s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001354 | PSNR: 19.96 dB | 14.3s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001082 | PSNR: 20.12 dB | 17.2s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000843 | PSNR: 20.28 dB | 20.0s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000758 | PSNR: 20.41 dB | 22.9s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000576 | PSNR: 20.53 dB | 25.7s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000485 | PSNR: 20.58 dB | 28.6s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000457 | PSNR: 20.64 dB | 31.5s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000399 | PSNR: 20.69 dB | 34.3s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000356 | PSNR: 20.76 dB | 37.2s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000291 | PSNR: 20.84 dB | 40.0s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000275 | PSNR: 20.85 dB | 42.9s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000260 | PSNR: 20.87 dB | 45.7s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000251 | PSNR: 20.88 dB | 48.6s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000205 | PSNR: 20.94 dB | 51.5s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000212 | PSNR: 20.95 dB | 54.3s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000189 | PSNR: 20.95 dB | 57.2s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000187 | PSNR: 20.98 dB | 60.0s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000158 | PSNR: 21.01 dB | 62.9s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000155 | PSNR: 21.03 dB | 65.8s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000141 | PSNR: 21.05 dB | 68.6s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000151 | PSNR: 21.03 dB | 71.5s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_005_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.008269 | PSNR: 17.47 dB | 3.0s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.004391 | PSNR: 18.61 dB | 6.1s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.002598 | PSNR: 19.33 dB | 9.1s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.001838 | PSNR: 19.71 dB | 12.2s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001384 | PSNR: 19.99 dB | 15.2s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001114 | PSNR: 20.17 dB | 18.2s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000848 | PSNR: 20.35 dB | 21.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000756 | PSNR: 20.41 dB | 24.3s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000649 | PSNR: 20.51 dB | 27.3s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000521 | PSNR: 20.63 dB | 30.4s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000453 | PSNR: 20.66 dB | 33.4s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000403 | PSNR: 20.71 dB | 36.4s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000391 | PSNR: 20.74 dB | 39.5s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000309 | PSNR: 20.83 dB | 42.5s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000288 | PSNR: 20.85 dB | 45.5s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000275 | PSNR: 20.89 dB | 48.6s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000233 | PSNR: 20.91 dB | 51.6s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000239 | PSNR: 20.93 dB | 54.7s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000197 | PSNR: 20.98 dB | 57.7s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000208 | PSNR: 20.98 dB | 60.7s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000175 | PSNR: 20.99 dB | 63.8s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000164 | PSNR: 21.01 dB | 66.8s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000166 | PSNR: 21.02 dB | 69.8s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000153 | PSNR: 21.05 dB | 72.9s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000147 | PSNR: 21.05 dB | 75.9s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_005_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.018779 | PSNR: 15.41 dB | 3.1s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.009652 | PSNR: 17.06 dB | 6.1s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.006454 | PSNR: 17.86 dB | 9.2s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.004489 | PSNR: 18.45 dB | 12.3s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.003549 | PSNR: 18.78 dB | 15.3s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.002483 | PSNR: 19.25 dB | 18.4s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.001967 | PSNR: 19.51 dB | 21.5s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.001551 | PSNR: 19.75 dB | 24.5s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.001205 | PSNR: 19.98 dB | 27.6s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001035 | PSNR: 20.10 dB | 30.7s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000801 | PSNR: 20.26 dB | 33.7s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000830 | PSNR: 20.26 dB | 36.8s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000602 | PSNR: 20.42 dB | 39.9s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000531 | PSNR: 20.47 dB | 42.9s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000435 | PSNR: 20.58 dB | 46.0s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000416 | PSNR: 20.60 dB | 49.1s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000381 | PSNR: 20.61 dB | 52.1s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000337 | PSNR: 20.66 dB | 55.5s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000291 | PSNR: 20.69 dB | 58.9s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000262 | PSNR: 20.73 dB | 62.3s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000213 | PSNR: 20.75 dB | 65.7s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000225 | PSNR: 20.77 dB | 69.1s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000182 | PSNR: 20.81 dB | 72.5s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000170 | PSNR: 20.83 dB | 75.9s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000161 | PSNR: 20.82 dB | 79.3s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_005_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.018640 | PSNR: 15.41 dB | 3.5s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.010643 | PSNR: 16.82 dB | 7.0s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.006832 | PSNR: 17.72 dB | 10.5s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.004475 | PSNR: 18.44 dB | 14.0s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.003289 | PSNR: 18.89 dB | 17.5s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.002541 | PSNR: 19.19 dB | 21.0s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.001925 | PSNR: 19.49 dB | 24.5s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.001507 | PSNR: 19.75 dB | 28.0s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.001393 | PSNR: 19.79 dB | 31.5s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001104 | PSNR: 19.97 dB | 35.0s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000957 | PSNR: 20.09 dB | 38.4s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000842 | PSNR: 20.18 dB | 41.9s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000700 | PSNR: 20.29 dB | 45.1s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000589 | PSNR: 20.39 dB | 48.4s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000529 | PSNR: 20.44 dB | 51.6s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000503 | PSNR: 20.49 dB | 54.8s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000421 | PSNR: 20.54 dB | 58.1s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000410 | PSNR: 20.57 dB | 61.3s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000348 | PSNR: 20.61 dB | 64.6s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000326 | PSNR: 20.62 dB | 67.9s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000281 | PSNR: 20.66 dB | 71.1s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000283 | PSNR: 20.69 dB | 74.4s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000274 | PSNR: 20.68 dB | 77.6s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000253 | PSNR: 20.71 dB | 80.9s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000200 | PSNR: 20.73 dB | 84.2s
+HR and LR resolutions: (256, 256), (64, 64)
+
+[5/12] img_006_SRF_4_HR (256x256) | Bicubic: 28.83 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_006_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.002059 | PSNR: 24.68 dB | 3.0s
+  [                 skip_l2] step 0200/2500 | Loss: 0.001254 | PSNR: 25.85 dB | 5.9s
+  [                 skip_l2] step 0300/2500 | Loss: 0.000848 | PSNR: 26.62 dB | 8.9s
+  [                 skip_l2] step 0400/2500 | Loss: 0.000597 | PSNR: 27.19 dB | 11.8s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000487 | PSNR: 27.46 dB | 14.7s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000386 | PSNR: 27.74 dB | 17.6s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000328 | PSNR: 27.91 dB | 20.6s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000269 | PSNR: 28.11 dB | 23.5s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000257 | PSNR: 28.13 dB | 26.4s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000221 | PSNR: 28.25 dB | 29.4s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000205 | PSNR: 28.33 dB | 32.3s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000176 | PSNR: 28.44 dB | 35.3s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000168 | PSNR: 28.46 dB | 38.2s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000148 | PSNR: 28.56 dB | 41.2s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000141 | PSNR: 28.53 dB | 44.1s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000123 | PSNR: 28.60 dB | 47.1s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000115 | PSNR: 28.61 dB | 50.0s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000106 | PSNR: 28.66 dB | 53.0s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000105 | PSNR: 28.69 dB | 56.0s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000092 | PSNR: 28.76 dB | 58.9s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000093 | PSNR: 28.75 dB | 61.9s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000090 | PSNR: 28.74 dB | 64.8s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000076 | PSNR: 28.83 dB | 67.8s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000083 | PSNR: 28.81 dB | 70.7s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000076 | PSNR: 28.83 dB | 73.7s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_006_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.002452 | PSNR: 24.20 dB | 3.1s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.001211 | PSNR: 25.93 dB | 6.2s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.000847 | PSNR: 26.62 dB | 9.3s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.000569 | PSNR: 27.26 dB | 12.3s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.000501 | PSNR: 27.42 dB | 15.6s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000389 | PSNR: 27.75 dB | 18.9s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000367 | PSNR: 27.78 dB | 22.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000289 | PSNR: 28.02 dB | 25.6s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000242 | PSNR: 28.17 dB | 28.9s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000220 | PSNR: 28.22 dB | 32.3s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000199 | PSNR: 28.31 dB | 35.6s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000176 | PSNR: 28.39 dB | 38.9s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000162 | PSNR: 28.47 dB | 42.3s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000152 | PSNR: 28.50 dB | 45.6s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000128 | PSNR: 28.61 dB | 48.9s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000119 | PSNR: 28.64 dB | 52.3s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000127 | PSNR: 28.57 dB | 55.6s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000096 | PSNR: 28.75 dB | 59.0s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000108 | PSNR: 28.68 dB | 62.3s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000095 | PSNR: 28.74 dB | 65.6s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000082 | PSNR: 28.81 dB | 69.0s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000077 | PSNR: 28.85 dB | 72.3s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000072 | PSNR: 28.87 dB | 75.6s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000070 | PSNR: 28.89 dB | 79.0s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000072 | PSNR: 28.87 dB | 82.3s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_006_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.004286 | PSNR: 22.43 dB | 3.4s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.003134 | PSNR: 23.42 dB | 6.9s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.002084 | PSNR: 24.59 dB | 10.3s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.001771 | PSNR: 24.98 dB | 13.7s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.001328 | PSNR: 25.66 dB | 17.1s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.001100 | PSNR: 26.03 dB | 20.5s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.000927 | PSNR: 26.33 dB | 24.0s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.000730 | PSNR: 26.73 dB | 27.4s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.000665 | PSNR: 26.94 dB | 30.8s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.000558 | PSNR: 27.15 dB | 34.2s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000499 | PSNR: 27.30 dB | 37.6s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000471 | PSNR: 27.30 dB | 41.0s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000403 | PSNR: 27.50 dB | 44.5s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000384 | PSNR: 27.64 dB | 47.9s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000309 | PSNR: 27.83 dB | 51.3s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000324 | PSNR: 27.82 dB | 54.7s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000244 | PSNR: 28.08 dB | 58.1s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000257 | PSNR: 28.04 dB | 61.5s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000195 | PSNR: 28.24 dB | 64.9s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000198 | PSNR: 28.29 dB | 68.3s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000173 | PSNR: 28.38 dB | 71.7s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000151 | PSNR: 28.46 dB | 75.1s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000171 | PSNR: 28.43 dB | 78.5s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000149 | PSNR: 28.50 dB | 81.9s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000133 | PSNR: 28.61 dB | 85.3s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_006_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.005169 | PSNR: 21.76 dB | 3.5s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.002827 | PSNR: 23.67 dB | 7.0s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.001943 | PSNR: 24.69 dB | 10.4s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.001755 | PSNR: 24.95 dB | 13.9s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.001276 | PSNR: 25.70 dB | 17.4s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.001144 | PSNR: 25.96 dB | 20.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.000985 | PSNR: 26.19 dB | 24.4s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.000708 | PSNR: 26.77 dB | 27.8s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.000656 | PSNR: 26.94 dB | 31.2s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.000600 | PSNR: 27.09 dB | 34.4s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000451 | PSNR: 27.47 dB | 37.6s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000444 | PSNR: 27.49 dB | 40.9s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000378 | PSNR: 27.68 dB | 44.1s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000324 | PSNR: 27.84 dB | 47.3s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000292 | PSNR: 27.95 dB | 50.6s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000256 | PSNR: 28.10 dB | 53.8s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000233 | PSNR: 28.17 dB | 57.0s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000224 | PSNR: 28.19 dB | 60.3s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000195 | PSNR: 28.33 dB | 63.5s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000184 | PSNR: 28.38 dB | 66.7s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000166 | PSNR: 28.43 dB | 70.0s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000153 | PSNR: 28.50 dB | 73.2s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000149 | PSNR: 28.52 dB | 76.5s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000128 | PSNR: 28.60 dB | 79.7s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000130 | PSNR: 28.65 dB | 82.9s
+HR and LR resolutions: (480, 352), (120, 88)
+
+[6/12] img_007_SRF_4_HR (480x352) | Bicubic: 23.78 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_007_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.008135 | PSNR: 19.03 dB | 3.7s
+  [                 skip_l2] step 0200/2500 | Loss: 0.004243 | PSNR: 20.74 dB | 7.4s
+  [                 skip_l2] step 0300/2500 | Loss: 0.002816 | PSNR: 21.68 dB | 11.0s
+  [                 skip_l2] step 0400/2500 | Loss: 0.002035 | PSNR: 22.28 dB | 14.6s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001551 | PSNR: 22.79 dB | 18.3s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001233 | PSNR: 23.12 dB | 21.9s
+  [                 skip_l2] step 0700/2500 | Loss: 0.001043 | PSNR: 23.36 dB | 25.6s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000874 | PSNR: 23.58 dB | 29.2s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000778 | PSNR: 23.71 dB | 32.8s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000674 | PSNR: 23.87 dB | 36.5s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000610 | PSNR: 23.99 dB | 40.1s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000537 | PSNR: 24.13 dB | 43.8s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000502 | PSNR: 24.17 dB | 47.4s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000452 | PSNR: 24.29 dB | 51.0s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000392 | PSNR: 24.34 dB | 54.7s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000391 | PSNR: 24.37 dB | 58.3s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000324 | PSNR: 24.47 dB | 62.0s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000316 | PSNR: 24.51 dB | 65.6s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000293 | PSNR: 24.59 dB | 69.2s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000258 | PSNR: 24.64 dB | 72.9s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000252 | PSNR: 24.69 dB | 76.5s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000229 | PSNR: 24.72 dB | 80.2s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000203 | PSNR: 24.78 dB | 83.8s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000201 | PSNR: 24.78 dB | 87.5s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000191 | PSNR: 24.83 dB | 91.1s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_007_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.008698 | PSNR: 18.84 dB | 3.8s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.004287 | PSNR: 20.71 dB | 7.5s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.002867 | PSNR: 21.62 dB | 11.3s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.002089 | PSNR: 22.22 dB | 15.0s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001592 | PSNR: 22.71 dB | 18.8s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001298 | PSNR: 23.05 dB | 22.5s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.001074 | PSNR: 23.32 dB | 26.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000898 | PSNR: 23.55 dB | 30.0s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000797 | PSNR: 23.69 dB | 33.8s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000707 | PSNR: 23.79 dB | 37.5s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000600 | PSNR: 23.97 dB | 41.3s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000553 | PSNR: 24.07 dB | 45.0s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000486 | PSNR: 24.15 dB | 48.8s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000431 | PSNR: 24.26 dB | 52.5s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000407 | PSNR: 24.27 dB | 56.3s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000362 | PSNR: 24.38 dB | 60.0s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000345 | PSNR: 24.43 dB | 63.8s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000305 | PSNR: 24.50 dB | 67.5s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000297 | PSNR: 24.48 dB | 71.3s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000261 | PSNR: 24.64 dB | 75.1s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000251 | PSNR: 24.67 dB | 78.8s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000247 | PSNR: 24.67 dB | 82.6s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000211 | PSNR: 24.73 dB | 86.3s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000219 | PSNR: 24.74 dB | 90.1s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000198 | PSNR: 24.77 dB | 93.9s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_007_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.018595 | PSNR: 16.36 dB | 3.2s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.010700 | PSNR: 18.18 dB | 6.3s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.007780 | PSNR: 19.12 dB | 9.5s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.005880 | PSNR: 19.88 dB | 12.6s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.004457 | PSNR: 20.52 dB | 15.8s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.003406 | PSNR: 21.18 dB | 19.0s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.002778 | PSNR: 21.60 dB | 22.1s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.002410 | PSNR: 21.87 dB | 25.2s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.002030 | PSNR: 22.22 dB | 28.4s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001753 | PSNR: 22.51 dB | 31.5s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.001569 | PSNR: 22.67 dB | 34.7s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.001405 | PSNR: 22.83 dB | 37.8s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.001226 | PSNR: 23.05 dB | 40.9s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.001069 | PSNR: 23.23 dB | 44.1s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000951 | PSNR: 23.38 dB | 47.2s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000827 | PSNR: 23.56 dB | 50.3s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000824 | PSNR: 23.56 dB | 53.4s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000689 | PSNR: 23.75 dB | 56.6s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000613 | PSNR: 23.91 dB | 59.7s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000602 | PSNR: 23.91 dB | 62.8s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000515 | PSNR: 24.01 dB | 65.9s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000474 | PSNR: 24.12 dB | 69.0s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000446 | PSNR: 24.18 dB | 72.1s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000380 | PSNR: 24.29 dB | 75.3s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000369 | PSNR: 24.31 dB | 78.4s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_007_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.020360 | PSNR: 16.03 dB | 3.5s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.011594 | PSNR: 17.91 dB | 7.0s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.007936 | PSNR: 19.05 dB | 10.5s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.006085 | PSNR: 19.76 dB | 13.9s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.004512 | PSNR: 20.51 dB | 17.4s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.003647 | PSNR: 20.99 dB | 20.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.003010 | PSNR: 21.40 dB | 24.4s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.002407 | PSNR: 21.84 dB | 27.8s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.002081 | PSNR: 22.09 dB | 31.3s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001899 | PSNR: 22.27 dB | 34.8s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.001628 | PSNR: 22.51 dB | 38.3s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.001473 | PSNR: 22.65 dB | 41.8s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.001236 | PSNR: 22.94 dB | 45.2s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.001060 | PSNR: 23.11 dB | 48.7s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.001013 | PSNR: 23.19 dB | 52.2s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000917 | PSNR: 23.31 dB | 55.7s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000866 | PSNR: 23.37 dB | 59.2s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000751 | PSNR: 23.54 dB | 62.7s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000653 | PSNR: 23.70 dB | 66.2s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000599 | PSNR: 23.82 dB | 69.7s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000568 | PSNR: 23.85 dB | 73.2s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000514 | PSNR: 23.91 dB | 76.6s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000482 | PSNR: 23.95 dB | 80.1s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000431 | PSNR: 24.05 dB | 83.6s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000395 | PSNR: 24.10 dB | 87.1s
+HR and LR resolutions: (352, 288), (88, 72)
+
+[7/12] img_008_SRF_4_HR (352x288) | Bicubic: 26.12 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_008_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.004666 | PSNR: 21.51 dB | 2.9s
+  [                 skip_l2] step 0200/2500 | Loss: 0.001603 | PSNR: 24.31 dB | 5.8s
+  [                 skip_l2] step 0300/2500 | Loss: 0.000975 | PSNR: 25.49 dB | 8.7s
+  [                 skip_l2] step 0400/2500 | Loss: 0.000660 | PSNR: 26.22 dB | 11.6s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000484 | PSNR: 26.61 dB | 14.5s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000337 | PSNR: 27.03 dB | 17.3s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000321 | PSNR: 27.26 dB | 20.2s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000260 | PSNR: 27.38 dB | 23.1s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000223 | PSNR: 27.55 dB | 26.0s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000234 | PSNR: 27.52 dB | 28.9s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000190 | PSNR: 27.62 dB | 31.8s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000161 | PSNR: 27.74 dB | 34.7s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000144 | PSNR: 27.81 dB | 37.5s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000139 | PSNR: 27.87 dB | 40.4s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000125 | PSNR: 27.81 dB | 43.3s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000115 | PSNR: 27.91 dB | 46.2s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000108 | PSNR: 28.01 dB | 49.1s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000112 | PSNR: 27.88 dB | 52.0s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000097 | PSNR: 28.02 dB | 54.9s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000095 | PSNR: 28.04 dB | 57.8s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000090 | PSNR: 28.01 dB | 60.7s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000081 | PSNR: 28.09 dB | 63.5s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000070 | PSNR: 28.11 dB | 66.4s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000076 | PSNR: 28.04 dB | 69.3s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000069 | PSNR: 28.17 dB | 72.2s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_008_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.004042 | PSNR: 21.89 dB | 3.2s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.001445 | PSNR: 24.43 dB | 6.3s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.000817 | PSNR: 25.63 dB | 9.4s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.000601 | PSNR: 26.14 dB | 12.6s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.000488 | PSNR: 26.44 dB | 15.7s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000339 | PSNR: 27.02 dB | 18.9s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000287 | PSNR: 27.15 dB | 21.9s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000246 | PSNR: 27.27 dB | 25.1s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000220 | PSNR: 27.30 dB | 28.5s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000206 | PSNR: 27.45 dB | 31.9s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000161 | PSNR: 27.67 dB | 35.3s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000160 | PSNR: 27.69 dB | 38.7s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000144 | PSNR: 27.75 dB | 42.1s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000144 | PSNR: 27.70 dB | 45.5s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000122 | PSNR: 27.79 dB | 48.9s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000119 | PSNR: 27.84 dB | 52.0s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000112 | PSNR: 27.87 dB | 55.2s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000095 | PSNR: 27.94 dB | 58.3s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000097 | PSNR: 27.91 dB | 61.5s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000082 | PSNR: 28.03 dB | 64.6s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000082 | PSNR: 27.95 dB | 67.8s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000084 | PSNR: 27.94 dB | 71.0s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000071 | PSNR: 28.01 dB | 74.1s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000070 | PSNR: 28.04 dB | 77.3s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000064 | PSNR: 28.02 dB | 80.4s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_008_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.013083 | PSNR: 17.93 dB | 3.1s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.006245 | PSNR: 20.62 dB | 6.2s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.003720 | PSNR: 22.03 dB | 9.3s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.002211 | PSNR: 23.28 dB | 12.4s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.001523 | PSNR: 24.14 dB | 15.5s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.001122 | PSNR: 24.71 dB | 18.6s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.000918 | PSNR: 25.09 dB | 21.7s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.000809 | PSNR: 25.22 dB | 24.8s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.000585 | PSNR: 25.76 dB | 28.1s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.000530 | PSNR: 25.97 dB | 31.6s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000512 | PSNR: 26.00 dB | 35.1s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000405 | PSNR: 26.26 dB | 38.5s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000355 | PSNR: 26.39 dB | 41.9s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000366 | PSNR: 26.30 dB | 45.4s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000340 | PSNR: 26.38 dB | 48.9s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000247 | PSNR: 26.61 dB | 52.4s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000244 | PSNR: 26.72 dB | 55.8s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000247 | PSNR: 26.63 dB | 59.3s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000218 | PSNR: 26.85 dB | 62.8s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000188 | PSNR: 26.83 dB | 66.3s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000174 | PSNR: 26.89 dB | 69.7s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000160 | PSNR: 26.94 dB | 73.2s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000158 | PSNR: 26.91 dB | 76.7s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000151 | PSNR: 26.92 dB | 80.1s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000148 | PSNR: 26.91 dB | 83.6s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_008_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.013201 | PSNR: 17.88 dB | 3.7s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.007373 | PSNR: 19.84 dB | 7.1s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.003256 | PSNR: 22.25 dB | 10.4s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.002390 | PSNR: 22.97 dB | 13.8s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.001601 | PSNR: 23.91 dB | 17.1s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.001209 | PSNR: 24.35 dB | 20.4s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.000884 | PSNR: 24.91 dB | 23.8s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.000759 | PSNR: 25.15 dB | 27.1s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.000657 | PSNR: 25.35 dB | 30.4s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.000614 | PSNR: 25.36 dB | 33.8s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000491 | PSNR: 25.66 dB | 37.1s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000405 | PSNR: 25.86 dB | 40.5s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000391 | PSNR: 25.86 dB | 43.8s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000396 | PSNR: 25.83 dB | 47.1s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000303 | PSNR: 26.14 dB | 50.4s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000275 | PSNR: 26.21 dB | 53.7s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000264 | PSNR: 26.22 dB | 57.0s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000267 | PSNR: 26.20 dB | 60.4s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000221 | PSNR: 26.37 dB | 63.7s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000239 | PSNR: 26.28 dB | 67.0s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000180 | PSNR: 26.46 dB | 70.3s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000176 | PSNR: 26.52 dB | 73.6s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000166 | PSNR: 26.50 dB | 76.9s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000165 | PSNR: 26.51 dB | 80.3s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000192 | PSNR: 26.43 dB | 83.6s
+HR and LR resolutions: (512, 512), (128, 128)
+
+[8/12] img_009_SRF_4_HR (512x512) | Bicubic: 28.56 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_009_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.003849 | PSNR: 22.77 dB | 5.6s
+  [                 skip_l2] step 0200/2500 | Loss: 0.001773 | PSNR: 25.00 dB | 11.2s
+  [                 skip_l2] step 0300/2500 | Loss: 0.001128 | PSNR: 26.09 dB | 16.9s
+  [                 skip_l2] step 0400/2500 | Loss: 0.000819 | PSNR: 26.72 dB | 22.5s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000642 | PSNR: 27.15 dB | 28.1s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000535 | PSNR: 27.43 dB | 33.7s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000446 | PSNR: 27.74 dB | 39.3s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000396 | PSNR: 27.91 dB | 44.9s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000351 | PSNR: 28.07 dB | 50.5s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000313 | PSNR: 28.20 dB | 56.1s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000258 | PSNR: 28.41 dB | 61.8s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000242 | PSNR: 28.50 dB | 67.4s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000201 | PSNR: 28.65 dB | 73.0s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000203 | PSNR: 28.66 dB | 78.6s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000184 | PSNR: 28.74 dB | 84.2s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000161 | PSNR: 28.88 dB | 89.8s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000161 | PSNR: 28.86 dB | 95.4s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000143 | PSNR: 28.96 dB | 101.1s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000140 | PSNR: 28.96 dB | 106.7s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000127 | PSNR: 29.07 dB | 112.3s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000116 | PSNR: 29.13 dB | 117.9s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000117 | PSNR: 29.09 dB | 123.5s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000100 | PSNR: 29.19 dB | 129.1s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000099 | PSNR: 29.20 dB | 134.7s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000096 | PSNR: 29.26 dB | 140.4s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_009_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.003564 | PSNR: 23.03 dB | 5.6s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.001819 | PSNR: 24.94 dB | 11.3s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.001252 | PSNR: 25.85 dB | 16.9s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.000878 | PSNR: 26.58 dB | 22.5s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.000705 | PSNR: 27.00 dB | 28.1s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000551 | PSNR: 27.40 dB | 33.8s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000473 | PSNR: 27.68 dB | 39.4s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000395 | PSNR: 27.96 dB | 45.0s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000359 | PSNR: 28.08 dB | 50.6s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000322 | PSNR: 28.17 dB | 56.2s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000266 | PSNR: 28.46 dB | 61.9s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000257 | PSNR: 28.52 dB | 67.5s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000231 | PSNR: 28.60 dB | 73.1s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000211 | PSNR: 28.64 dB | 78.7s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000200 | PSNR: 28.76 dB | 84.4s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000181 | PSNR: 28.81 dB | 90.0s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000168 | PSNR: 28.90 dB | 95.6s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000152 | PSNR: 28.95 dB | 101.2s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000139 | PSNR: 29.04 dB | 106.9s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000133 | PSNR: 29.08 dB | 112.5s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000117 | PSNR: 29.16 dB | 118.1s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000112 | PSNR: 29.18 dB | 123.7s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000113 | PSNR: 29.17 dB | 129.3s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000105 | PSNR: 29.23 dB | 135.0s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000095 | PSNR: 29.27 dB | 140.6s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_009_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.009110 | PSNR: 19.72 dB | 4.2s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.005703 | PSNR: 21.39 dB | 8.4s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.003440 | PSNR: 23.03 dB | 12.6s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.002465 | PSNR: 24.01 dB | 16.7s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.001844 | PSNR: 24.83 dB | 20.9s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.001512 | PSNR: 25.31 dB | 25.1s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.001311 | PSNR: 25.61 dB | 29.3s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.001139 | PSNR: 25.96 dB | 33.5s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.001038 | PSNR: 26.15 dB | 37.6s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.000855 | PSNR: 26.48 dB | 41.8s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000764 | PSNR: 26.72 dB | 46.0s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000699 | PSNR: 26.88 dB | 50.2s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000585 | PSNR: 27.20 dB | 54.4s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000538 | PSNR: 27.35 dB | 58.6s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000486 | PSNR: 27.51 dB | 62.7s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000472 | PSNR: 27.54 dB | 66.9s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000390 | PSNR: 27.88 dB | 71.1s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000363 | PSNR: 27.90 dB | 75.3s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000336 | PSNR: 28.09 dB | 79.5s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000342 | PSNR: 28.03 dB | 83.7s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000283 | PSNR: 28.25 dB | 87.8s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000304 | PSNR: 28.21 dB | 92.0s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000260 | PSNR: 28.33 dB | 96.2s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000240 | PSNR: 28.48 dB | 100.4s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000221 | PSNR: 28.53 dB | 104.6s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_009_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.009800 | PSNR: 19.43 dB | 4.3s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.005584 | PSNR: 21.44 dB | 8.6s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.003646 | PSNR: 22.83 dB | 12.9s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.002585 | PSNR: 23.86 dB | 17.2s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.002123 | PSNR: 24.39 dB | 21.5s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.001811 | PSNR: 24.79 dB | 25.8s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.001457 | PSNR: 25.30 dB | 30.1s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.001271 | PSNR: 25.62 dB | 34.3s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.001023 | PSNR: 26.02 dB | 38.6s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.000891 | PSNR: 26.33 dB | 42.9s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000844 | PSNR: 26.41 dB | 47.2s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000703 | PSNR: 26.77 dB | 51.5s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000647 | PSNR: 26.89 dB | 55.8s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000543 | PSNR: 27.18 dB | 60.1s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000498 | PSNR: 27.35 dB | 64.4s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000476 | PSNR: 27.46 dB | 68.7s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000421 | PSNR: 27.63 dB | 73.0s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000367 | PSNR: 27.85 dB | 77.3s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000347 | PSNR: 27.95 dB | 81.6s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000335 | PSNR: 27.97 dB | 85.9s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000291 | PSNR: 28.13 dB | 90.2s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000273 | PSNR: 28.23 dB | 94.4s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000263 | PSNR: 28.31 dB | 98.7s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000255 | PSNR: 28.31 dB | 103.0s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000236 | PSNR: 28.41 dB | 107.3s
+HR and LR resolutions: (768, 512), (192, 128)
+
+[9/12] img_011_SRF_4_HR (768x512) | Bicubic: 26.54 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_011_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.008864 | PSNR: 19.53 dB | 8.2s
+  [                 skip_l2] step 0200/2500 | Loss: 0.003348 | PSNR: 22.68 dB | 16.4s
+  [                 skip_l2] step 0300/2500 | Loss: 0.001951 | PSNR: 24.20 dB | 24.7s
+  [                 skip_l2] step 0400/2500 | Loss: 0.001392 | PSNR: 25.07 dB | 32.9s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000995 | PSNR: 25.85 dB | 41.1s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000853 | PSNR: 26.19 dB | 49.3s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000635 | PSNR: 26.79 dB | 57.5s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000622 | PSNR: 26.89 dB | 65.7s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000478 | PSNR: 27.30 dB | 73.9s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000399 | PSNR: 27.51 dB | 82.1s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000380 | PSNR: 27.66 dB | 90.4s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000312 | PSNR: 27.91 dB | 98.6s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000288 | PSNR: 28.00 dB | 106.8s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000276 | PSNR: 28.09 dB | 115.0s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000235 | PSNR: 28.27 dB | 123.2s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000220 | PSNR: 28.33 dB | 131.4s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000199 | PSNR: 28.50 dB | 139.6s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000183 | PSNR: 28.53 dB | 147.8s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000170 | PSNR: 28.64 dB | 156.1s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000177 | PSNR: 28.63 dB | 164.3s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000140 | PSNR: 28.82 dB | 172.5s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000136 | PSNR: 28.84 dB | 180.7s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000126 | PSNR: 28.88 dB | 188.9s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000127 | PSNR: 28.91 dB | 197.1s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000116 | PSNR: 28.97 dB | 205.3s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_011_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.009354 | PSNR: 19.35 dB | 8.2s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.003229 | PSNR: 22.77 dB | 16.4s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.001994 | PSNR: 24.15 dB | 24.7s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.001338 | PSNR: 25.16 dB | 32.9s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001026 | PSNR: 25.86 dB | 41.1s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000832 | PSNR: 26.31 dB | 49.3s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000665 | PSNR: 26.70 dB | 57.5s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000540 | PSNR: 27.15 dB | 65.8s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000475 | PSNR: 27.35 dB | 74.0s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000432 | PSNR: 27.51 dB | 82.3s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000371 | PSNR: 27.72 dB | 90.5s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000323 | PSNR: 27.93 dB | 98.8s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000285 | PSNR: 28.10 dB | 107.0s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000265 | PSNR: 28.22 dB | 115.2s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000229 | PSNR: 28.42 dB | 123.5s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000227 | PSNR: 28.42 dB | 131.7s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000197 | PSNR: 28.50 dB | 140.0s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000189 | PSNR: 28.58 dB | 148.2s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000181 | PSNR: 28.68 dB | 156.5s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000167 | PSNR: 28.72 dB | 164.7s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000151 | PSNR: 28.81 dB | 172.9s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000144 | PSNR: 28.86 dB | 181.2s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000130 | PSNR: 28.86 dB | 189.4s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000120 | PSNR: 28.98 dB | 197.7s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000116 | PSNR: 28.97 dB | 205.9s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_011_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.016835 | PSNR: 17.16 dB | 6.2s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.012178 | PSNR: 18.33 dB | 12.4s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.007738 | PSNR: 19.85 dB | 18.6s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.004806 | PSNR: 21.36 dB | 24.8s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.003525 | PSNR: 22.27 dB | 31.0s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.002594 | PSNR: 23.20 dB | 37.1s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.002005 | PSNR: 23.89 dB | 43.3s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.001690 | PSNR: 24.32 dB | 49.5s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.001422 | PSNR: 24.76 dB | 55.7s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001144 | PSNR: 25.34 dB | 61.9s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000954 | PSNR: 25.73 dB | 68.1s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000904 | PSNR: 25.87 dB | 74.3s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000789 | PSNR: 26.19 dB | 80.5s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000722 | PSNR: 26.40 dB | 86.7s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000615 | PSNR: 26.63 dB | 92.8s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000578 | PSNR: 26.84 dB | 99.0s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000525 | PSNR: 26.97 dB | 105.2s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000456 | PSNR: 27.23 dB | 111.4s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000427 | PSNR: 27.30 dB | 117.6s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000404 | PSNR: 27.44 dB | 123.8s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000380 | PSNR: 27.55 dB | 130.0s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000372 | PSNR: 27.64 dB | 136.2s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000323 | PSNR: 27.81 dB | 142.4s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000296 | PSNR: 27.96 dB | 148.6s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000289 | PSNR: 27.91 dB | 154.7s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_011_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.016870 | PSNR: 17.15 dB | 6.3s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.013182 | PSNR: 18.06 dB | 12.6s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.008141 | PSNR: 19.72 dB | 18.9s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.005544 | PSNR: 20.98 dB | 25.3s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.003814 | PSNR: 22.16 dB | 31.6s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.002826 | PSNR: 23.07 dB | 37.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.002256 | PSNR: 23.71 dB | 44.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.001937 | PSNR: 24.15 dB | 50.5s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.001448 | PSNR: 24.86 dB | 56.8s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001295 | PSNR: 25.16 dB | 63.1s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.001120 | PSNR: 25.50 dB | 69.4s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000970 | PSNR: 25.87 dB | 75.7s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000853 | PSNR: 26.09 dB | 82.0s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000737 | PSNR: 26.43 dB | 88.4s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000659 | PSNR: 26.61 dB | 94.7s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000596 | PSNR: 26.84 dB | 101.0s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000555 | PSNR: 27.01 dB | 107.3s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000464 | PSNR: 27.22 dB | 113.6s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000434 | PSNR: 27.42 dB | 119.9s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000396 | PSNR: 27.51 dB | 126.2s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000399 | PSNR: 27.48 dB | 132.5s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000344 | PSNR: 27.74 dB | 138.8s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000344 | PSNR: 27.73 dB | 145.1s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000318 | PSNR: 27.84 dB | 151.5s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000285 | PSNR: 27.99 dB | 157.8s
+HR and LR resolutions: (512, 512), (128, 128)
+
+[10/12] img_012_SRF_4_HR (512x512) | Bicubic: 27.34 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_012_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.005956 | PSNR: 20.99 dB | 5.6s
+  [                 skip_l2] step 0200/2500 | Loss: 0.002653 | PSNR: 23.43 dB | 11.2s
+  [                 skip_l2] step 0300/2500 | Loss: 0.001611 | PSNR: 24.67 dB | 16.8s
+  [                 skip_l2] step 0400/2500 | Loss: 0.001163 | PSNR: 25.37 dB | 22.5s
+  [                 skip_l2] step 0500/2500 | Loss: 0.000896 | PSNR: 25.89 dB | 28.1s
+  [                 skip_l2] step 0600/2500 | Loss: 0.000712 | PSNR: 26.27 dB | 33.7s
+  [                 skip_l2] step 0700/2500 | Loss: 0.000571 | PSNR: 26.59 dB | 39.3s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000495 | PSNR: 26.87 dB | 44.9s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000427 | PSNR: 27.05 dB | 50.5s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000393 | PSNR: 27.18 dB | 56.2s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000323 | PSNR: 27.37 dB | 61.8s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000305 | PSNR: 27.46 dB | 67.4s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000258 | PSNR: 27.63 dB | 73.0s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000241 | PSNR: 27.67 dB | 78.6s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000219 | PSNR: 27.76 dB | 84.2s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000226 | PSNR: 27.72 dB | 89.8s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000195 | PSNR: 27.86 dB | 95.5s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000212 | PSNR: 27.80 dB | 101.1s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000161 | PSNR: 27.95 dB | 106.7s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000169 | PSNR: 27.95 dB | 112.3s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000174 | PSNR: 27.93 dB | 117.9s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000163 | PSNR: 27.96 dB | 123.5s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000126 | PSNR: 28.06 dB | 129.2s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000124 | PSNR: 28.13 dB | 134.8s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000118 | PSNR: 28.13 dB | 140.4s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_012_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.005348 | PSNR: 21.36 dB | 5.6s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.002546 | PSNR: 23.53 dB | 11.3s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.001519 | PSNR: 24.79 dB | 16.9s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.001073 | PSNR: 25.52 dB | 22.5s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.000793 | PSNR: 26.06 dB | 28.1s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.000626 | PSNR: 26.41 dB | 33.7s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.000571 | PSNR: 26.56 dB | 39.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000502 | PSNR: 26.82 dB | 44.9s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000388 | PSNR: 27.13 dB | 50.5s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000331 | PSNR: 27.34 dB | 56.1s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000301 | PSNR: 27.45 dB | 61.7s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000279 | PSNR: 27.53 dB | 67.3s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000265 | PSNR: 27.59 dB | 72.9s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000232 | PSNR: 27.76 dB | 78.5s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000228 | PSNR: 27.75 dB | 84.1s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000197 | PSNR: 27.88 dB | 89.7s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000170 | PSNR: 27.96 dB | 95.3s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000172 | PSNR: 27.96 dB | 101.0s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000159 | PSNR: 28.02 dB | 106.6s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000154 | PSNR: 28.08 dB | 112.2s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000134 | PSNR: 28.14 dB | 117.8s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000136 | PSNR: 28.11 dB | 123.4s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000122 | PSNR: 28.19 dB | 129.1s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000124 | PSNR: 28.18 dB | 134.7s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000112 | PSNR: 28.25 dB | 140.3s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_012_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.013103 | PSNR: 18.17 dB | 4.2s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.007069 | PSNR: 20.38 dB | 8.4s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.004787 | PSNR: 21.65 dB | 12.5s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.003538 | PSNR: 22.52 dB | 16.7s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.002592 | PSNR: 23.39 dB | 20.9s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.002015 | PSNR: 24.05 dB | 25.1s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.001718 | PSNR: 24.45 dB | 29.3s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.001444 | PSNR: 24.82 dB | 33.4s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.001178 | PSNR: 25.21 dB | 37.6s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001076 | PSNR: 25.36 dB | 41.8s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.000967 | PSNR: 25.53 dB | 46.0s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.000812 | PSNR: 25.85 dB | 50.2s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.000732 | PSNR: 26.02 dB | 54.3s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.000624 | PSNR: 26.23 dB | 58.5s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.000634 | PSNR: 26.21 dB | 62.7s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000543 | PSNR: 26.39 dB | 66.9s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000485 | PSNR: 26.52 dB | 71.1s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000473 | PSNR: 26.57 dB | 75.2s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000382 | PSNR: 26.81 dB | 79.4s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000384 | PSNR: 26.82 dB | 83.6s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000363 | PSNR: 26.88 dB | 87.8s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000334 | PSNR: 26.94 dB | 92.0s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000343 | PSNR: 26.93 dB | 96.1s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000305 | PSNR: 27.03 dB | 100.3s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000257 | PSNR: 27.17 dB | 104.5s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_012_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.013498 | PSNR: 18.05 dB | 4.3s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.008112 | PSNR: 19.91 dB | 8.6s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.005017 | PSNR: 21.51 dB | 12.9s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.003683 | PSNR: 22.46 dB | 17.2s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.002617 | PSNR: 23.39 dB | 21.6s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.002073 | PSNR: 23.98 dB | 25.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.001884 | PSNR: 24.21 dB | 30.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.001500 | PSNR: 24.74 dB | 34.5s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.001332 | PSNR: 24.97 dB | 38.8s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001062 | PSNR: 25.44 dB | 43.1s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.000873 | PSNR: 25.75 dB | 47.4s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.000829 | PSNR: 25.85 dB | 51.7s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.000771 | PSNR: 25.96 dB | 56.0s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.000639 | PSNR: 26.25 dB | 60.3s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.000607 | PSNR: 26.30 dB | 64.7s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.000531 | PSNR: 26.49 dB | 69.0s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000493 | PSNR: 26.59 dB | 73.3s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000459 | PSNR: 26.64 dB | 77.6s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000425 | PSNR: 26.77 dB | 81.9s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000378 | PSNR: 26.86 dB | 86.2s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000385 | PSNR: 26.86 dB | 90.5s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000336 | PSNR: 26.99 dB | 94.8s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000328 | PSNR: 27.01 dB | 99.1s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000288 | PSNR: 27.14 dB | 103.4s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000294 | PSNR: 27.09 dB | 107.7s
+HR and LR resolutions: (512, 640), (128, 160)
+
+[11/12] img_013_SRF_4_HR (512x640) | Bicubic: 20.31 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_013_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.018917 | PSNR: 15.26 dB | 6.9s
+  [                 skip_l2] step 0200/2500 | Loss: 0.006703 | PSNR: 18.20 dB | 13.8s
+  [                 skip_l2] step 0300/2500 | Loss: 0.004087 | PSNR: 19.28 dB | 20.7s
+  [                 skip_l2] step 0400/2500 | Loss: 0.002531 | PSNR: 20.16 dB | 27.6s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001923 | PSNR: 20.70 dB | 34.5s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001419 | PSNR: 21.21 dB | 41.4s
+  [                 skip_l2] step 0700/2500 | Loss: 0.001182 | PSNR: 21.37 dB | 48.3s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000955 | PSNR: 21.72 dB | 55.2s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000792 | PSNR: 21.93 dB | 62.1s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000713 | PSNR: 22.00 dB | 69.0s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000631 | PSNR: 22.07 dB | 75.9s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000525 | PSNR: 22.25 dB | 82.8s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000499 | PSNR: 22.28 dB | 89.6s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000442 | PSNR: 22.34 dB | 96.5s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000373 | PSNR: 22.50 dB | 103.4s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000338 | PSNR: 22.59 dB | 110.3s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000313 | PSNR: 22.58 dB | 117.2s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000315 | PSNR: 22.66 dB | 124.1s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000271 | PSNR: 22.71 dB | 131.0s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000244 | PSNR: 22.78 dB | 137.9s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000225 | PSNR: 22.76 dB | 144.8s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000222 | PSNR: 22.82 dB | 151.7s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000201 | PSNR: 22.82 dB | 158.6s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000191 | PSNR: 22.86 dB | 165.5s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000184 | PSNR: 22.94 dB | 172.4s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_013_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.017846 | PSNR: 15.46 dB | 6.9s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.006690 | PSNR: 18.17 dB | 13.9s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.003555 | PSNR: 19.53 dB | 20.8s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.002384 | PSNR: 20.26 dB | 27.7s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001832 | PSNR: 20.73 dB | 34.7s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001357 | PSNR: 21.14 dB | 41.6s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.001162 | PSNR: 21.45 dB | 48.6s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000960 | PSNR: 21.66 dB | 55.6s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000761 | PSNR: 21.95 dB | 63.9s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000714 | PSNR: 22.02 dB | 72.5s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000596 | PSNR: 22.19 dB | 80.6s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000525 | PSNR: 22.35 dB | 87.5s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000473 | PSNR: 22.42 dB | 94.4s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000398 | PSNR: 22.52 dB | 101.3s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000380 | PSNR: 22.51 dB | 108.2s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000323 | PSNR: 22.70 dB | 115.1s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000334 | PSNR: 22.68 dB | 122.0s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000290 | PSNR: 22.83 dB | 128.9s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000253 | PSNR: 22.87 dB | 135.8s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000239 | PSNR: 22.91 dB | 142.7s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000221 | PSNR: 22.96 dB | 149.6s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000213 | PSNR: 22.96 dB | 156.5s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000210 | PSNR: 23.00 dB | 163.4s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000177 | PSNR: 23.01 dB | 170.3s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000173 | PSNR: 23.07 dB | 177.2s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_013_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.031572 | PSNR: 13.66 dB | 5.2s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.022858 | PSNR: 14.71 dB | 10.4s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.015751 | PSNR: 15.84 dB | 15.6s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.010472 | PSNR: 17.02 dB | 20.8s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.007636 | PSNR: 17.85 dB | 26.0s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.005846 | PSNR: 18.50 dB | 31.2s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.004708 | PSNR: 18.98 dB | 36.4s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.003781 | PSNR: 19.42 dB | 41.5s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.003189 | PSNR: 19.80 dB | 46.7s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.002653 | PSNR: 20.12 dB | 51.9s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.002241 | PSNR: 20.45 dB | 57.1s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.001906 | PSNR: 20.68 dB | 62.3s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.001739 | PSNR: 20.81 dB | 67.5s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.001545 | PSNR: 21.01 dB | 72.7s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.001297 | PSNR: 21.24 dB | 77.9s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.001180 | PSNR: 21.41 dB | 83.1s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.001021 | PSNR: 21.59 dB | 88.3s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000971 | PSNR: 21.68 dB | 93.5s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000903 | PSNR: 21.76 dB | 98.6s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000786 | PSNR: 21.87 dB | 103.8s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000736 | PSNR: 21.98 dB | 109.0s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000620 | PSNR: 22.14 dB | 114.2s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000629 | PSNR: 22.17 dB | 119.4s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000571 | PSNR: 22.26 dB | 124.6s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000529 | PSNR: 22.27 dB | 129.8s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_013_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.032242 | PSNR: 13.61 dB | 5.3s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.023373 | PSNR: 14.63 dB | 10.6s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.015351 | PSNR: 15.93 dB | 15.9s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.009888 | PSNR: 17.24 dB | 21.2s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.006880 | PSNR: 18.22 dB | 26.6s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.005562 | PSNR: 18.64 dB | 31.9s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.004385 | PSNR: 19.16 dB | 37.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.003557 | PSNR: 19.63 dB | 42.5s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.002755 | PSNR: 20.01 dB | 47.8s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.002445 | PSNR: 20.22 dB | 53.1s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.002083 | PSNR: 20.56 dB | 58.4s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.001807 | PSNR: 20.79 dB | 63.7s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.001544 | PSNR: 21.02 dB | 69.0s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.001337 | PSNR: 21.22 dB | 74.3s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.001300 | PSNR: 21.24 dB | 79.6s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.001129 | PSNR: 21.43 dB | 84.9s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000989 | PSNR: 21.51 dB | 90.2s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000887 | PSNR: 21.71 dB | 95.5s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000853 | PSNR: 21.69 dB | 100.8s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000731 | PSNR: 21.95 dB | 106.1s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000712 | PSNR: 21.95 dB | 111.4s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000630 | PSNR: 22.06 dB | 116.8s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000612 | PSNR: 22.11 dB | 122.1s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000556 | PSNR: 22.20 dB | 127.4s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000521 | PSNR: 22.25 dB | 132.7s
+HR and LR resolutions: (576, 384), (144, 96)
+
+[12/12] img_014_SRF_4_HR (576x384) | Bicubic: 23.10 dB
+
+---> [                 skip_l2] Params: 2,217,831 | Image: img_014_SRF_4_HR | 2500 steps
+  [                 skip_l2] step 0100/2500 | Loss: 0.009177 | PSNR: 18.42 dB | 4.7s
+  [                 skip_l2] step 0200/2500 | Loss: 0.004150 | PSNR: 20.67 dB | 9.3s
+  [                 skip_l2] step 0300/2500 | Loss: 0.002815 | PSNR: 21.63 dB | 14.0s
+  [                 skip_l2] step 0400/2500 | Loss: 0.001919 | PSNR: 22.46 dB | 18.6s
+  [                 skip_l2] step 0500/2500 | Loss: 0.001515 | PSNR: 22.92 dB | 23.3s
+  [                 skip_l2] step 0600/2500 | Loss: 0.001216 | PSNR: 23.27 dB | 27.9s
+  [                 skip_l2] step 0700/2500 | Loss: 0.001012 | PSNR: 23.46 dB | 32.6s
+  [                 skip_l2] step 0800/2500 | Loss: 0.000857 | PSNR: 23.63 dB | 37.2s
+  [                 skip_l2] step 0900/2500 | Loss: 0.000764 | PSNR: 23.76 dB | 41.9s
+  [                 skip_l2] step 1000/2500 | Loss: 0.000650 | PSNR: 23.92 dB | 46.5s
+  [                 skip_l2] step 1100/2500 | Loss: 0.000596 | PSNR: 24.09 dB | 51.2s
+  [                 skip_l2] step 1200/2500 | Loss: 0.000506 | PSNR: 24.18 dB | 55.8s
+  [                 skip_l2] step 1300/2500 | Loss: 0.000478 | PSNR: 24.17 dB | 60.5s
+  [                 skip_l2] step 1400/2500 | Loss: 0.000436 | PSNR: 24.29 dB | 65.1s
+  [                 skip_l2] step 1500/2500 | Loss: 0.000401 | PSNR: 24.36 dB | 69.8s
+  [                 skip_l2] step 1600/2500 | Loss: 0.000362 | PSNR: 24.34 dB | 74.4s
+  [                 skip_l2] step 1700/2500 | Loss: 0.000330 | PSNR: 24.52 dB | 79.1s
+  [                 skip_l2] step 1800/2500 | Loss: 0.000307 | PSNR: 24.56 dB | 83.8s
+  [                 skip_l2] step 1900/2500 | Loss: 0.000283 | PSNR: 24.56 dB | 88.4s
+  [                 skip_l2] step 2000/2500 | Loss: 0.000260 | PSNR: 24.65 dB | 93.0s
+  [                 skip_l2] step 2100/2500 | Loss: 0.000242 | PSNR: 24.68 dB | 97.7s
+  [                 skip_l2] step 2200/2500 | Loss: 0.000239 | PSNR: 24.69 dB | 102.4s
+  [                 skip_l2] step 2300/2500 | Loss: 0.000214 | PSNR: 24.75 dB | 107.0s
+  [                 skip_l2] step 2400/2500 | Loss: 0.000206 | PSNR: 24.76 dB | 111.6s
+  [                 skip_l2] step 2500/2500 | Loss: 0.000195 | PSNR: 24.82 dB | 116.3s
+
+---> [         skip_deepred_l2] Params: 2,217,831 | Image: img_014_SRF_4_HR | 2500 steps
+  [         skip_deepred_l2] step 0100/2500 | Loss: 0.011031 | PSNR: 17.82 dB | 4.8s
+  [         skip_deepred_l2] step 0200/2500 | Loss: 0.004500 | PSNR: 20.39 dB | 9.5s
+  [         skip_deepred_l2] step 0300/2500 | Loss: 0.003083 | PSNR: 21.39 dB | 14.3s
+  [         skip_deepred_l2] step 0400/2500 | Loss: 0.002141 | PSNR: 22.23 dB | 19.0s
+  [         skip_deepred_l2] step 0500/2500 | Loss: 0.001727 | PSNR: 22.69 dB | 23.8s
+  [         skip_deepred_l2] step 0600/2500 | Loss: 0.001363 | PSNR: 22.98 dB | 28.6s
+  [         skip_deepred_l2] step 0700/2500 | Loss: 0.001159 | PSNR: 23.26 dB | 33.3s
+  [         skip_deepred_l2] step 0800/2500 | Loss: 0.000949 | PSNR: 23.57 dB | 38.1s
+  [         skip_deepred_l2] step 0900/2500 | Loss: 0.000808 | PSNR: 23.67 dB | 42.9s
+  [         skip_deepred_l2] step 1000/2500 | Loss: 0.000706 | PSNR: 23.92 dB | 47.6s
+  [         skip_deepred_l2] step 1100/2500 | Loss: 0.000640 | PSNR: 23.94 dB | 52.4s
+  [         skip_deepred_l2] step 1200/2500 | Loss: 0.000538 | PSNR: 24.08 dB | 57.1s
+  [         skip_deepred_l2] step 1300/2500 | Loss: 0.000530 | PSNR: 24.13 dB | 61.9s
+  [         skip_deepred_l2] step 1400/2500 | Loss: 0.000475 | PSNR: 24.26 dB | 66.7s
+  [         skip_deepred_l2] step 1500/2500 | Loss: 0.000403 | PSNR: 24.36 dB | 71.4s
+  [         skip_deepred_l2] step 1600/2500 | Loss: 0.000402 | PSNR: 24.39 dB | 76.2s
+  [         skip_deepred_l2] step 1700/2500 | Loss: 0.000368 | PSNR: 24.41 dB | 81.0s
+  [         skip_deepred_l2] step 1800/2500 | Loss: 0.000325 | PSNR: 24.47 dB | 85.7s
+  [         skip_deepred_l2] step 1900/2500 | Loss: 0.000307 | PSNR: 24.49 dB | 90.5s
+  [         skip_deepred_l2] step 2000/2500 | Loss: 0.000288 | PSNR: 24.51 dB | 95.2s
+  [         skip_deepred_l2] step 2100/2500 | Loss: 0.000258 | PSNR: 24.61 dB | 100.0s
+  [         skip_deepred_l2] step 2200/2500 | Loss: 0.000242 | PSNR: 24.64 dB | 104.8s
+  [         skip_deepred_l2] step 2300/2500 | Loss: 0.000249 | PSNR: 24.65 dB | 109.5s
+  [         skip_deepred_l2] step 2400/2500 | Loss: 0.000229 | PSNR: 24.63 dB | 114.3s
+  [         skip_deepred_l2] step 2500/2500 | Loss: 0.000199 | PSNR: 24.74 dB | 119.1s
+
+---> [          dpwise_skip_l2] Params: 346,171 | Image: img_014_SRF_4_HR | 2500 steps
+  [          dpwise_skip_l2] step 0100/2500 | Loss: 0.022539 | PSNR: 15.44 dB | 3.6s
+  [          dpwise_skip_l2] step 0200/2500 | Loss: 0.012260 | PSNR: 17.41 dB | 7.2s
+  [          dpwise_skip_l2] step 0300/2500 | Loss: 0.007127 | PSNR: 19.04 dB | 10.8s
+  [          dpwise_skip_l2] step 0400/2500 | Loss: 0.005515 | PSNR: 19.72 dB | 14.4s
+  [          dpwise_skip_l2] step 0500/2500 | Loss: 0.004374 | PSNR: 20.30 dB | 18.0s
+  [          dpwise_skip_l2] step 0600/2500 | Loss: 0.003565 | PSNR: 20.88 dB | 21.6s
+  [          dpwise_skip_l2] step 0700/2500 | Loss: 0.002798 | PSNR: 21.45 dB | 25.2s
+  [          dpwise_skip_l2] step 0800/2500 | Loss: 0.002487 | PSNR: 21.70 dB | 28.7s
+  [          dpwise_skip_l2] step 0900/2500 | Loss: 0.002215 | PSNR: 21.95 dB | 32.3s
+  [          dpwise_skip_l2] step 1000/2500 | Loss: 0.001844 | PSNR: 22.30 dB | 35.9s
+  [          dpwise_skip_l2] step 1100/2500 | Loss: 0.001647 | PSNR: 22.50 dB | 39.5s
+  [          dpwise_skip_l2] step 1200/2500 | Loss: 0.001417 | PSNR: 22.75 dB | 43.1s
+  [          dpwise_skip_l2] step 1300/2500 | Loss: 0.001355 | PSNR: 22.87 dB | 46.7s
+  [          dpwise_skip_l2] step 1400/2500 | Loss: 0.001225 | PSNR: 22.99 dB | 50.3s
+  [          dpwise_skip_l2] step 1500/2500 | Loss: 0.001042 | PSNR: 23.18 dB | 53.9s
+  [          dpwise_skip_l2] step 1600/2500 | Loss: 0.000948 | PSNR: 23.35 dB | 57.5s
+  [          dpwise_skip_l2] step 1700/2500 | Loss: 0.000916 | PSNR: 23.38 dB | 61.1s
+  [          dpwise_skip_l2] step 1800/2500 | Loss: 0.000804 | PSNR: 23.62 dB | 64.6s
+  [          dpwise_skip_l2] step 1900/2500 | Loss: 0.000802 | PSNR: 23.55 dB | 68.2s
+  [          dpwise_skip_l2] step 2000/2500 | Loss: 0.000688 | PSNR: 23.74 dB | 71.8s
+  [          dpwise_skip_l2] step 2100/2500 | Loss: 0.000634 | PSNR: 23.81 dB | 75.4s
+  [          dpwise_skip_l2] step 2200/2500 | Loss: 0.000599 | PSNR: 23.88 dB | 79.0s
+  [          dpwise_skip_l2] step 2300/2500 | Loss: 0.000530 | PSNR: 23.96 dB | 82.6s
+  [          dpwise_skip_l2] step 2400/2500 | Loss: 0.000511 | PSNR: 24.04 dB | 86.2s
+  [          dpwise_skip_l2] step 2500/2500 | Loss: 0.000463 | PSNR: 24.12 dB | 89.8s
+
+---> [  dpwise_skip_deepred_l2] Params: 346,171 | Image: img_014_SRF_4_HR | 2500 steps
+  [  dpwise_skip_deepred_l2] step 0100/2500 | Loss: 0.023371 | PSNR: 15.31 dB | 4.0s
+  [  dpwise_skip_deepred_l2] step 0200/2500 | Loss: 0.013230 | PSNR: 17.11 dB | 8.1s
+  [  dpwise_skip_deepred_l2] step 0300/2500 | Loss: 0.008052 | PSNR: 18.68 dB | 12.1s
+  [  dpwise_skip_deepred_l2] step 0400/2500 | Loss: 0.005486 | PSNR: 19.78 dB | 16.1s
+  [  dpwise_skip_deepred_l2] step 0500/2500 | Loss: 0.004475 | PSNR: 20.26 dB | 20.2s
+  [  dpwise_skip_deepred_l2] step 0600/2500 | Loss: 0.003713 | PSNR: 20.74 dB | 24.2s
+  [  dpwise_skip_deepred_l2] step 0700/2500 | Loss: 0.002857 | PSNR: 21.38 dB | 28.2s
+  [  dpwise_skip_deepred_l2] step 0800/2500 | Loss: 0.002571 | PSNR: 21.55 dB | 32.2s
+  [  dpwise_skip_deepred_l2] step 0900/2500 | Loss: 0.002147 | PSNR: 21.93 dB | 36.2s
+  [  dpwise_skip_deepred_l2] step 1000/2500 | Loss: 0.001938 | PSNR: 22.11 dB | 40.3s
+  [  dpwise_skip_deepred_l2] step 1100/2500 | Loss: 0.001738 | PSNR: 22.39 dB | 44.3s
+  [  dpwise_skip_deepred_l2] step 1200/2500 | Loss: 0.001460 | PSNR: 22.64 dB | 48.3s
+  [  dpwise_skip_deepred_l2] step 1300/2500 | Loss: 0.001304 | PSNR: 22.83 dB | 52.3s
+  [  dpwise_skip_deepred_l2] step 1400/2500 | Loss: 0.001186 | PSNR: 22.95 dB | 56.4s
+  [  dpwise_skip_deepred_l2] step 1500/2500 | Loss: 0.001029 | PSNR: 23.17 dB | 60.4s
+  [  dpwise_skip_deepred_l2] step 1600/2500 | Loss: 0.001019 | PSNR: 23.18 dB | 64.4s
+  [  dpwise_skip_deepred_l2] step 1700/2500 | Loss: 0.000881 | PSNR: 23.34 dB | 68.4s
+  [  dpwise_skip_deepred_l2] step 1800/2500 | Loss: 0.000805 | PSNR: 23.44 dB | 72.4s
+  [  dpwise_skip_deepred_l2] step 1900/2500 | Loss: 0.000713 | PSNR: 23.61 dB | 76.5s
+  [  dpwise_skip_deepred_l2] step 2000/2500 | Loss: 0.000672 | PSNR: 23.70 dB | 80.5s
+  [  dpwise_skip_deepred_l2] step 2100/2500 | Loss: 0.000601 | PSNR: 23.79 dB | 84.5s
+  [  dpwise_skip_deepred_l2] step 2200/2500 | Loss: 0.000561 | PSNR: 23.85 dB | 88.5s
+  [  dpwise_skip_deepred_l2] step 2300/2500 | Loss: 0.000532 | PSNR: 23.85 dB | 92.5s
+  [  dpwise_skip_deepred_l2] step 2400/2500 | Loss: 0.000510 | PSNR: 23.91 dB | 96.5s
+  [  dpwise_skip_deepred_l2] step 2500/2500 | Loss: 0.000475 | PSNR: 24.03 dB | 100.5s
+
+==========================================================================================
+Image                | Bicubic  | skip_l2        | skip_deepred   | dpwise_l2      | dpwise_deepred
+------------------------------------------------------------------------------------------
+img_001_SRF_4_HR     | 20.31    | 20.30 (-0.01) | 20.30 (-0.00) | 19.97 (-0.33) | 20.00 (-0.31)
+img_002_SRF_4_HR     | 23.58    | 23.80 (+0.22) | 23.88 (+0.30) | 23.24 (-0.34) | 23.16 (-0.41)
+img_004_SRF_4_HR     | 24.05    | 24.59 (+0.54) | 24.52 (+0.47) | 24.31 (+0.26) | 24.31 (+0.26)
+img_005_SRF_4_HR     | 20.27    | 21.03 (+0.76) | 21.05 (+0.79) | 20.82 (+0.56) | 20.73 (+0.47)
+img_006_SRF_4_HR     | 28.83    | 28.83 (+0.00) | 28.87 (+0.04) | 28.61 (-0.22) | 28.65 (-0.18)
+img_007_SRF_4_HR     | 23.78    | 24.83 (+1.05) | 24.77 (+0.99) | 24.31 (+0.53) | 24.10 (+0.32)
+img_008_SRF_4_HR     | 26.12    | 28.17 (+2.05) | 28.02 (+1.90) | 26.91 (+0.79) | 26.43 (+0.31)
+img_009_SRF_4_HR     | 28.56    | 29.26 (+0.70) | 29.27 (+0.71) | 28.53 (-0.03) | 28.41 (-0.15)
+img_011_SRF_4_HR     | 26.54    | 28.97 (+2.43) | 28.97 (+2.43) | 27.91 (+1.38) | 27.99 (+1.46)
+img_012_SRF_4_HR     | 27.34    | 28.13 (+0.79) | 28.25 (+0.91) | 27.17 (-0.17) | 27.09 (-0.26)
+img_013_SRF_4_HR     | 20.31    | 22.94 (+2.63) | 23.07 (+2.76) | 22.27 (+1.97) | 22.25 (+1.94)
+img_014_SRF_4_HR     | 23.10    | 24.82 (+1.71) | 24.74 (+1.63) | 24.12 (+1.01) | 24.03 (+0.92)
+------------------------------------------------------------------------------------------
+AVERAGE              | 24.40    | 25.47 | 25.48 | 24.85 | 24.76
+==========================================================================================
+wandb: updating run metadata
+wandb: uploading history steps 1196-1199, summary, console lines 1328-1350
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading wandb-summary.json
+wandb: uploading output.log
+wandb: uploading data
+wandb: 
+wandb: Run history:
+wandb: loss/img_001_SRF_4_HR_dpwise_skip_deepred_l2 █▅▄▄▃▃▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/img_001_SRF_4_HR_dpwise_skip_l2 █▆▅▄▄▃▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:        loss/img_001_SRF_4_HR_skip_deepred_l2 █▆▄▄▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                loss/img_001_SRF_4_HR_skip_l2 █▆▄▄▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/img_002_SRF_4_HR_dpwise_skip_deepred_l2 █▅▄▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/img_002_SRF_4_HR_dpwise_skip_l2 █▆▄▃▃▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        loss/img_002_SRF_4_HR_skip_deepred_l2 █▅▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                loss/img_002_SRF_4_HR_skip_l2 █▅▃▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/img_004_SRF_4_HR_dpwise_skip_deepred_l2 █▄▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/img_004_SRF_4_HR_dpwise_skip_l2 █▄▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                                          +87 ...
+wandb: 
+wandb: Run summary:
+wandb: loss/img_001_SRF_4_HR_dpwise_skip_deepred_l2 0.00067
+wandb:         loss/img_001_SRF_4_HR_dpwise_skip_l2 0.00065
+wandb:        loss/img_001_SRF_4_HR_skip_deepred_l2 0.00028
+wandb:                loss/img_001_SRF_4_HR_skip_l2 0.00026
+wandb: loss/img_002_SRF_4_HR_dpwise_skip_deepred_l2 0.00042
+wandb:         loss/img_002_SRF_4_HR_dpwise_skip_l2 0.00045
+wandb:        loss/img_002_SRF_4_HR_skip_deepred_l2 0.00014
+wandb:                loss/img_002_SRF_4_HR_skip_l2 0.00016
+wandb: loss/img_004_SRF_4_HR_dpwise_skip_deepred_l2 0.00016
+wandb:         loss/img_004_SRF_4_HR_dpwise_skip_l2 0.00017
+wandb:                                          +87 ...
+wandb: 
+wandb: 🚀 View run set14_skip_vs_dpwise at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr/runs/kwfml24t
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-multi-image-sr
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261014_000407-kwfml24t/logs
