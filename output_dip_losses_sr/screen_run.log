@@ -1,0 +1,421 @@
+HR and LR resolutions: (576, 384), (144, 96)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run dp77kj01
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261013_001401-dp77kj01
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run skip_losses_zebra
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr/runs/dp77kj01
+================================================================================
+ DIP Loss & Regularizer Comparison | Device: cuda | Resolution: 576x384 (221,184 px)
+ Baselines: Bicubic=23.10 dB | Bilinear=22.17 dB
+================================================================================
+
+[L2] Starting 6000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        l2] step 0001/6000 | Loss: 0.060046 | PSNR_HR: 11.75 dB (Best: 11.75) | 0.5s
+  [        l2] step 0500/6000 | Loss: 0.001713 | PSNR_HR: 22.69 dB (Best: 22.82) | 24.7s
+  [        l2] step 1000/6000 | Loss: 0.000712 | PSNR_HR: 23.89 dB (Best: 23.95) | 48.9s
+  [        l2] step 1500/6000 | Loss: 0.000419 | PSNR_HR: 24.40 dB (Best: 24.44) | 73.2s
+  [        l2] step 2000/6000 | Loss: 0.000290 | PSNR_HR: 24.67 dB (Best: 24.68) | 97.8s
+  [        l2] step 2500/6000 | Loss: 0.000204 | PSNR_HR: 24.78 dB (Best: 24.82) | 123.1s
+  [        l2] step 3000/6000 | Loss: 0.000165 | PSNR_HR: 24.83 dB (Best: 24.92) | 148.3s
+  [        l2] step 3500/6000 | Loss: 0.000129 | PSNR_HR: 24.92 dB (Best: 24.99) | 173.4s
+  [        l2] step 4000/6000 | Loss: 0.000111 | PSNR_HR: 24.98 dB (Best: 25.05) | 198.6s
+  [        l2] step 4500/6000 | Loss: 0.000092 | PSNR_HR: 25.04 dB (Best: 25.08) | 223.7s
+  [        l2] step 5000/6000 | Loss: 0.000072 | PSNR_HR: 25.06 dB (Best: 25.10) | 248.8s
+  [        l2] step 5500/6000 | Loss: 0.000076 | PSNR_HR: 25.08 dB (Best: 25.11) | 274.0s
+  [        l2] step 6000/6000 | Loss: 0.000056 | PSNR_HR: 25.07 dB (Best: 25.12) | 299.1s
+
+[L1] Starting 6000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        l1] step 0001/6000 | Loss: 0.184519 | PSNR_HR: 12.12 dB (Best: 12.12) | 0.1s
+  [        l1] step 0500/6000 | Loss: 0.024580 | PSNR_HR: 23.30 dB (Best: 23.42) | 25.2s
+  [        l1] step 1000/6000 | Loss: 0.014560 | PSNR_HR: 24.41 dB (Best: 24.43) | 50.3s
+  [        l1] step 1500/6000 | Loss: 0.011008 | PSNR_HR: 24.71 dB (Best: 24.80) | 75.4s
+  [        l1] step 2000/6000 | Loss: 0.008355 | PSNR_HR: 24.91 dB (Best: 24.94) | 100.5s
+  [        l1] step 2500/6000 | Loss: 0.007204 | PSNR_HR: 24.99 dB (Best: 25.02) | 125.6s
+  [        l1] step 3000/6000 | Loss: 0.006171 | PSNR_HR: 25.01 dB (Best: 25.06) | 150.7s
+  [        l1] step 3500/6000 | Loss: 0.005524 | PSNR_HR: 25.07 dB (Best: 25.09) | 175.8s
+  [        l1] step 4000/6000 | Loss: 0.005295 | PSNR_HR: 25.07 dB (Best: 25.11) | 201.0s
+  [        l1] step 4500/6000 | Loss: 0.004750 | PSNR_HR: 25.08 dB (Best: 25.12) | 226.1s
+  [        l1] step 5000/6000 | Loss: 0.004262 | PSNR_HR: 25.09 dB (Best: 25.13) | 251.4s
+  [        l1] step 5500/6000 | Loss: 0.004225 | PSNR_HR: 25.07 dB (Best: 25.13) | 278.5s
+  [        l1] step 6000/6000 | Loss: 0.003719 | PSNR_HR: 25.08 dB (Best: 25.13) | 303.8s
+
+[TV] Starting 6000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        tv] step 0001/6000 | Loss: 0.058724 | PSNR_HR: 11.84 dB (Best: 11.84) | 0.1s
+  [        tv] step 0500/6000 | Loss: 0.001545 | PSNR_HR: 22.90 dB (Best: 22.99) | 25.5s
+  [        tv] step 1000/6000 | Loss: 0.000649 | PSNR_HR: 24.13 dB (Best: 24.13) | 50.9s
+  [        tv] step 1500/6000 | Loss: 0.000374 | PSNR_HR: 24.53 dB (Best: 24.57) | 76.3s
+  [        tv] step 2000/6000 | Loss: 0.000262 | PSNR_HR: 24.70 dB (Best: 24.77) | 101.6s
+  [        tv] step 2500/6000 | Loss: 0.000192 | PSNR_HR: 24.90 dB (Best: 24.90) | 126.9s
+  [        tv] step 3000/6000 | Loss: 0.000157 | PSNR_HR: 24.88 dB (Best: 25.00) | 152.3s
+  [        tv] step 3500/6000 | Loss: 0.000127 | PSNR_HR: 25.02 dB (Best: 25.05) | 178.2s
+  [        tv] step 4000/6000 | Loss: 0.000105 | PSNR_HR: 25.02 dB (Best: 25.09) | 204.1s
+  [        tv] step 4500/6000 | Loss: 0.000099 | PSNR_HR: 25.03 dB (Best: 25.14) | 229.6s
+  [        tv] step 5000/6000 | Loss: 0.000074 | PSNR_HR: 25.11 dB (Best: 25.14) | 255.0s
+  [        tv] step 5500/6000 | Loss: 0.000066 | PSNR_HR: 25.11 dB (Best: 25.16) | 280.4s
+  [        tv] step 6000/6000 | Loss: 0.000056 | PSNR_HR: 25.13 dB (Best: 25.16) | 305.7s
+
+[DEEPRED_L2] Starting 6000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [deepred_l2] step 0001/6000 | Loss: 0.053984 | PSNR_HR: 12.17 dB (Best: 12.17) | 0.1s
+  [deepred_l2] step 0500/6000 | Loss: 0.001580 | PSNR_HR: 22.85 dB (Best: 22.85) | 25.9s
+  [deepred_l2] step 1000/6000 | Loss: 0.000697 | PSNR_HR: 23.86 dB (Best: 23.93) | 51.7s
+  [deepred_l2] step 1500/6000 | Loss: 0.000428 | PSNR_HR: 24.34 dB (Best: 24.42) | 77.5s
+  [deepred_l2] step 2000/6000 | Loss: 0.000302 | PSNR_HR: 24.59 dB (Best: 24.67) | 103.4s
+  [deepred_l2] step 2500/6000 | Loss: 0.000219 | PSNR_HR: 24.76 dB (Best: 24.83) | 129.2s
+  [deepred_l2] step 3000/6000 | Loss: 0.000178 | PSNR_HR: 24.84 dB (Best: 24.92) | 155.0s
+  [deepred_l2] step 3500/6000 | Loss: 0.000138 | PSNR_HR: 24.92 dB (Best: 24.98) | 180.9s
+  [deepred_l2] step 4000/6000 | Loss: 0.000113 | PSNR_HR: 24.98 dB (Best: 25.06) | 206.7s
+  [deepred_l2] step 4500/6000 | Loss: 0.000095 | PSNR_HR: 25.06 dB (Best: 25.08) | 232.6s
+  [deepred_l2] step 5000/6000 | Loss: 0.000084 | PSNR_HR: 25.06 dB (Best: 25.12) | 258.5s
+  [deepred_l2] step 5500/6000 | Loss: 0.000065 | PSNR_HR: 25.09 dB (Best: 25.14) | 284.5s
+  [deepred_l2] step 6000/6000 | Loss: 0.000058 | PSNR_HR: 25.13 dB (Best: 25.18) | 310.6s
+
+[DEEPRED_L1] Starting 6000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [deepred_l1] step 0001/6000 | Loss: 0.224246 | PSNR_HR: 10.96 dB (Best: 10.96) | 0.1s
+  [deepred_l1] step 0500/6000 | Loss: 0.025358 | PSNR_HR: 23.16 dB (Best: 23.16) | 25.8s
+  [deepred_l1] step 1000/6000 | Loss: 0.014201 | PSNR_HR: 24.42 dB (Best: 24.50) | 51.5s
+  [deepred_l1] step 1500/6000 | Loss: 0.010420 | PSNR_HR: 24.75 dB (Best: 24.82) | 77.3s
+  [deepred_l1] step 2000/6000 | Loss: 0.008272 | PSNR_HR: 24.93 dB (Best: 25.00) | 103.0s
+  [deepred_l1] step 2500/6000 | Loss: 0.007194 | PSNR_HR: 25.02 dB (Best: 25.06) | 128.8s
+  [deepred_l1] step 3000/6000 | Loss: 0.006378 | PSNR_HR: 25.08 dB (Best: 25.12) | 154.5s
+  [deepred_l1] step 3500/6000 | Loss: 0.005563 | PSNR_HR: 25.06 dB (Best: 25.15) | 180.3s
+  [deepred_l1] step 4000/6000 | Loss: 0.005214 | PSNR_HR: 25.11 dB (Best: 25.16) | 206.1s
+  [deepred_l1] step 4500/6000 | Loss: 0.004673 | PSNR_HR: 25.12 dB (Best: 25.17) | 231.8s
+  [deepred_l1] step 5000/6000 | Loss: 0.004096 | PSNR_HR: 25.15 dB (Best: 25.17) | 257.6s
+  [deepred_l1] step 5500/6000 | Loss: 0.003863 | PSNR_HR: 25.15 dB (Best: 25.19) | 283.4s
+  [deepred_l1] step 6000/6000 | Loss: 0.003943 | PSNR_HR: 25.17 dB (Best: 25.19) | 309.1s
+
+================================================================================
+Approach       | Params       | Input Pixels   | Loss         | Final PSNR   | Gain vs Bicubic
+--------------------------------------------------------------------------------
+Bicubic        | N/A          | 221,184        | N/A          | 23.10        | Baseline
+Bilinear       | N/A          | 221,184        | N/A          | 22.17        | -0.94 dB
+l2             | 2,217,831    | 221,184        | 0.000056     | 25.10        | +1.99 dB
+l1             | 2,217,831    | 221,184        | 0.003719     | 25.08        | +1.98 dB
+tv             | 2,217,831    | 221,184        | 0.000056     | 25.14        | +2.04 dB
+deepred_l2     | 2,217,831    | 221,184        | 0.000058     | 25.14        | +2.03 dB
+deepred_l1     | 2,217,831    | 221,184        | 0.003943     | 25.15        | +2.05 dB
+================================================================================
+wandb: updating run metadata
+wandb: updating run metadata; uploading history steps 29718-29999, summary, console lines 78-90
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading config.yaml
+wandb: uploading data
+wandb: 
+wandb: Run history:
+wandb: loss/deepred_l1 █▅▄▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/deepred_l2 █▄▃▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/l1 █▆▆▅▄▄▄▃▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/l2 █▆▅▃▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/tv █▆▆▅▄▃▃▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: psnr/deepred_l1 ▁▅▆▇▇▇▇▇▇▇█▇████████████████████████████
+wandb: psnr/deepred_l2 ▁▂▃▃▅▆▆▆▇▇▇▇▇▇▇█████████████████████████
+wandb:         psnr/l1 ▁▃▅▆▆▇▇▇▇▇██████████████████████████████
+wandb:         psnr/l2 ▁▄▆▆▆▇▇▇▇▇▇▇▇▇██████████████████████████
+wandb:         psnr/tv ▁▂▄▅▆▇▇▇▇███████████████████████████████
+wandb:              +1 ...
+wandb: 
+wandb: Run summary:
+wandb: loss/deepred_l1 0.00394
+wandb: loss/deepred_l2 6e-05
+wandb:         loss/l1 0.00372
+wandb:         loss/l2 6e-05
+wandb:         loss/tv 6e-05
+wandb: psnr/deepred_l1 25.16952
+wandb: psnr/deepred_l2 25.12968
+wandb:         psnr/l1 25.08436
+wandb:         psnr/l2 25.06591
+wandb:         psnr/tv 25.12954
+wandb:              +1 ...
+wandb: 
+wandb: 🚀 View run skip_losses_zebra at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr/runs/dp77kj01
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261013_001401-dp77kj01/logs
+
+Completed! Outputs and log saved in: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_losses_sr
+HR and LR resolutions: (576, 384), (144, 96)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+wandb: setting up run gbzpf54y
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261014_190638-gbzpf54y
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run skip_losses_zebra
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr/runs/gbzpf54y
+==========================================================================================
+ DIP Loss & Regularizer Comparison | Device: cuda | Resolution: 576x384 (221,184 px) | Seed: 0
+ Baselines: Bicubic RGB=23.10 dB, Y-shaved=23.01 dB | Bilinear RGB=22.17 dB
+==========================================================================================
+
+[L2] Starting 4000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        l2] step 0001/4000 | Loss: 0.058219 | RGB: 11.88 dB | Y: 12.45 dB | 0.8s
+  [        l2] step 0100/4000 | Loss: 0.008206 | RGB: 18.73 dB | Y: 18.76 dB | 21.9s
+  [        l2] step 0200/4000 | Loss: 0.003992 | RGB: 20.74 dB | Y: 20.87 dB | 43.3s
+  [        l2] step 0300/4000 | Loss: 0.002695 | RGB: 21.75 dB | Y: 21.95 dB | 64.7s
+  [        l2] step 0400/4000 | Loss: 0.001969 | RGB: 22.41 dB | Y: 22.59 dB | 86.0s
+  [        l2] step 0500/4000 | Loss: 0.001499 | RGB: 22.91 dB | Y: 23.10 dB | 107.4s
+  [        l2] step 0600/4000 | Loss: 0.001283 | RGB: 23.17 dB | Y: 23.34 dB | 128.8s
+  [        l2] step 0700/4000 | Loss: 0.001044 | RGB: 23.42 dB | Y: 23.60 dB | 150.1s
+  [        l2] step 0800/4000 | Loss: 0.000925 | RGB: 23.56 dB | Y: 23.73 dB | 171.5s
+  [        l2] step 0900/4000 | Loss: 0.000821 | RGB: 23.79 dB | Y: 23.96 dB | 192.8s
+  [        l2] step 1000/4000 | Loss: 0.000679 | RGB: 23.91 dB | Y: 24.06 dB | 214.2s
+  [        l2] step 1100/4000 | Loss: 0.000583 | RGB: 24.05 dB | Y: 24.20 dB | 235.6s
+  [        l2] step 1200/4000 | Loss: 0.000536 | RGB: 24.18 dB | Y: 24.33 dB | 256.9s
+  [        l2] step 1300/4000 | Loss: 0.000526 | RGB: 24.18 dB | Y: 24.31 dB | 278.3s
+  [        l2] step 1400/4000 | Loss: 0.000437 | RGB: 24.30 dB | Y: 24.43 dB | 299.6s
+  [        l2] step 1500/4000 | Loss: 0.000405 | RGB: 24.33 dB | Y: 24.44 dB | 321.0s
+  [        l2] step 1600/4000 | Loss: 0.000369 | RGB: 24.39 dB | Y: 24.51 dB | 342.4s
+  [        l2] step 1700/4000 | Loss: 0.000375 | RGB: 24.46 dB | Y: 24.58 dB | 363.7s
+  [        l2] step 1800/4000 | Loss: 0.000337 | RGB: 24.52 dB | Y: 24.63 dB | 385.1s
+  [        l2] step 1900/4000 | Loss: 0.000290 | RGB: 24.50 dB | Y: 24.61 dB | 406.4s
+  [        l2] step 2000/4000 | Loss: 0.000299 | RGB: 24.61 dB | Y: 24.71 dB | 427.8s
+  [        l2] step 2100/4000 | Loss: 0.000258 | RGB: 24.69 dB | Y: 24.80 dB | 449.1s
+  [        l2] step 2200/4000 | Loss: 0.000265 | RGB: 24.64 dB | Y: 24.74 dB | 470.5s
+  [        l2] step 2300/4000 | Loss: 0.000228 | RGB: 24.63 dB | Y: 24.72 dB | 491.9s
+  [        l2] step 2400/4000 | Loss: 0.000212 | RGB: 24.73 dB | Y: 24.83 dB | 513.2s
+  [        l2] step 2500/4000 | Loss: 0.000193 | RGB: 24.75 dB | Y: 24.84 dB | 534.6s
+  [        l2] step 2600/4000 | Loss: 0.000201 | RGB: 24.74 dB | Y: 24.82 dB | 555.9s
+  [        l2] step 2700/4000 | Loss: 0.000169 | RGB: 24.78 dB | Y: 24.87 dB | 577.3s
+  [        l2] step 2800/4000 | Loss: 0.000177 | RGB: 24.82 dB | Y: 24.90 dB | 598.6s
+  [        l2] step 2900/4000 | Loss: 0.000156 | RGB: 24.84 dB | Y: 24.92 dB | 620.0s
+  [        l2] step 3000/4000 | Loss: 0.000162 | RGB: 24.84 dB | Y: 24.91 dB | 641.4s
+  [        l2] step 3100/4000 | Loss: 0.000182 | RGB: 24.83 dB | Y: 24.90 dB | 662.7s
+  [        l2] step 3200/4000 | Loss: 0.000134 | RGB: 24.91 dB | Y: 24.98 dB | 683.6s
+  [        l2] step 3300/4000 | Loss: 0.000129 | RGB: 24.93 dB | Y: 25.01 dB | 705.0s
+  [        l2] step 3400/4000 | Loss: 0.000124 | RGB: 24.91 dB | Y: 24.98 dB | 726.4s
+  [        l2] step 3500/4000 | Loss: 0.000122 | RGB: 24.94 dB | Y: 25.01 dB | 747.3s
+  [        l2] step 3600/4000 | Loss: 0.000135 | RGB: 24.88 dB | Y: 24.95 dB | 768.6s
+  [        l2] step 3700/4000 | Loss: 0.000118 | RGB: 24.94 dB | Y: 25.00 dB | 790.0s
+  [        l2] step 3800/4000 | Loss: 0.000112 | RGB: 24.92 dB | Y: 24.98 dB | 811.4s
+  [        l2] step 3900/4000 | Loss: 0.000104 | RGB: 24.99 dB | Y: 25.05 dB | 832.7s
+  [        l2] step 4000/4000 | Loss: 0.000099 | RGB: 24.98 dB | Y: 25.04 dB | 854.1s
+
+[L1] Starting 4000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        l1] step 0001/4000 | Loss: 0.204108 | RGB: 11.53 dB | Y: 12.53 dB | 0.3s
+  [        l1] step 0100/4000 | Loss: 0.071073 | RGB: 17.44 dB | Y: 17.38 dB | 21.5s
+  [        l1] step 0200/4000 | Loss: 0.044200 | RGB: 20.63 dB | Y: 20.72 dB | 42.9s
+  [        l1] step 0300/4000 | Loss: 0.034593 | RGB: 21.96 dB | Y: 22.12 dB | 64.3s
+  [        l1] step 0400/4000 | Loss: 0.028773 | RGB: 22.78 dB | Y: 22.94 dB | 85.7s
+  [        l1] step 0500/4000 | Loss: 0.024539 | RGB: 23.34 dB | Y: 23.50 dB | 107.0s
+  [        l1] step 0600/4000 | Loss: 0.022086 | RGB: 23.58 dB | Y: 23.73 dB | 128.4s
+  [        l1] step 0700/4000 | Loss: 0.019184 | RGB: 23.95 dB | Y: 24.10 dB | 150.4s
+  [        l1] step 0800/4000 | Loss: 0.017797 | RGB: 24.10 dB | Y: 24.24 dB | 172.5s
+  [        l1] step 0900/4000 | Loss: 0.016014 | RGB: 24.32 dB | Y: 24.45 dB | 193.8s
+  [        l1] step 1000/4000 | Loss: 0.015121 | RGB: 24.34 dB | Y: 24.46 dB | 215.2s
+  [        l1] step 1100/4000 | Loss: 0.013639 | RGB: 24.55 dB | Y: 24.66 dB | 236.6s
+  [        l1] step 1200/4000 | Loss: 0.012975 | RGB: 24.52 dB | Y: 24.62 dB | 257.4s
+  [        l1] step 1300/4000 | Loss: 0.012084 | RGB: 24.61 dB | Y: 24.70 dB | 278.8s
+  [        l1] step 1400/4000 | Loss: 0.011126 | RGB: 24.68 dB | Y: 24.77 dB | 300.2s
+  [        l1] step 1500/4000 | Loss: 0.010725 | RGB: 24.72 dB | Y: 24.81 dB | 321.6s
+  [        l1] step 1600/4000 | Loss: 0.010324 | RGB: 24.72 dB | Y: 24.80 dB | 343.0s
+  [        l1] step 1700/4000 | Loss: 0.010159 | RGB: 24.74 dB | Y: 24.82 dB | 364.4s
+  [        l1] step 1800/4000 | Loss: 0.009995 | RGB: 24.73 dB | Y: 24.79 dB | 385.8s
+  [        l1] step 1900/4000 | Loss: 0.009148 | RGB: 24.79 dB | Y: 24.85 dB | 407.1s
+  [        l1] step 2000/4000 | Loss: 0.008520 | RGB: 24.85 dB | Y: 24.91 dB | 428.5s
+  [        l1] step 2100/4000 | Loss: 0.008997 | RGB: 24.83 dB | Y: 24.89 dB | 449.9s
+  [        l1] step 2200/4000 | Loss: 0.008011 | RGB: 24.92 dB | Y: 24.98 dB | 471.3s
+  [        l1] step 2300/4000 | Loss: 0.007881 | RGB: 24.90 dB | Y: 24.95 dB | 492.8s
+  [        l1] step 2400/4000 | Loss: 0.007592 | RGB: 24.92 dB | Y: 24.98 dB | 514.2s
+  [        l1] step 2500/4000 | Loss: 0.007272 | RGB: 24.91 dB | Y: 24.96 dB | 535.5s
+  [        l1] step 2600/4000 | Loss: 0.007218 | RGB: 24.91 dB | Y: 24.96 dB | 556.9s
+  [        l1] step 2700/4000 | Loss: 0.007084 | RGB: 24.94 dB | Y: 24.99 dB | 578.3s
+  [        l1] step 2800/4000 | Loss: 0.006567 | RGB: 25.00 dB | Y: 25.05 dB | 599.7s
+  [        l1] step 2900/4000 | Loss: 0.006727 | RGB: 24.98 dB | Y: 25.04 dB | 621.1s
+  [        l1] step 3000/4000 | Loss: 0.006687 | RGB: 24.96 dB | Y: 25.00 dB | 642.5s
+  [        l1] step 3100/4000 | Loss: 0.006769 | RGB: 24.98 dB | Y: 25.04 dB | 663.9s
+  [        l1] step 3200/4000 | Loss: 0.006237 | RGB: 24.96 dB | Y: 25.00 dB | 685.3s
+  [        l1] step 3300/4000 | Loss: 0.006029 | RGB: 25.01 dB | Y: 25.06 dB | 706.7s
+  [        l1] step 3400/4000 | Loss: 0.005671 | RGB: 25.03 dB | Y: 25.08 dB | 727.5s
+  [        l1] step 3500/4000 | Loss: 0.005816 | RGB: 25.02 dB | Y: 25.06 dB | 748.9s
+  [        l1] step 3600/4000 | Loss: 0.005624 | RGB: 25.00 dB | Y: 25.05 dB | 770.3s
+  [        l1] step 3700/4000 | Loss: 0.005507 | RGB: 25.03 dB | Y: 25.07 dB | 791.7s
+  [        l1] step 3800/4000 | Loss: 0.005622 | RGB: 24.98 dB | Y: 25.02 dB | 813.1s
+  [        l1] step 3900/4000 | Loss: 0.005409 | RGB: 25.00 dB | Y: 25.04 dB | 834.5s
+  [        l1] step 4000/4000 | Loss: 0.005261 | RGB: 25.05 dB | Y: 25.09 dB | 855.9s
+
+[TV] Starting 4000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [        tv] step 0001/4000 | Loss: 0.065662 | RGB: 11.40 dB | Y: 12.43 dB | 0.2s
+  [        tv] step 0100/4000 | Loss: 0.008869 | RGB: 18.49 dB | Y: 18.49 dB | 21.5s
+  [        tv] step 0200/4000 | Loss: 0.004404 | RGB: 20.50 dB | Y: 20.64 dB | 42.9s
+  [        tv] step 0300/4000 | Loss: 0.002981 | RGB: 21.51 dB | Y: 21.67 dB | 64.4s
+  [        tv] step 0400/4000 | Loss: 0.002003 | RGB: 22.35 dB | Y: 22.53 dB | 85.8s
+  [        tv] step 0500/4000 | Loss: 0.001547 | RGB: 22.76 dB | Y: 22.93 dB | 107.3s
+  [        tv] step 0600/4000 | Loss: 0.001269 | RGB: 23.20 dB | Y: 23.37 dB | 128.7s
+  [        tv] step 0700/4000 | Loss: 0.001003 | RGB: 23.44 dB | Y: 23.59 dB | 150.2s
+  [        tv] step 0800/4000 | Loss: 0.000870 | RGB: 23.60 dB | Y: 23.75 dB | 171.6s
+  [        tv] step 0900/4000 | Loss: 0.000771 | RGB: 23.74 dB | Y: 23.88 dB | 193.1s
+  [        tv] step 1000/4000 | Loss: 0.000662 | RGB: 23.95 dB | Y: 24.09 dB | 214.5s
+  [        tv] step 1100/4000 | Loss: 0.000586 | RGB: 24.03 dB | Y: 24.17 dB | 235.8s
+  [        tv] step 1200/4000 | Loss: 0.000518 | RGB: 24.16 dB | Y: 24.29 dB | 257.0s
+  [        tv] step 1300/4000 | Loss: 0.000486 | RGB: 24.21 dB | Y: 24.33 dB | 278.4s
+  [        tv] step 1400/4000 | Loss: 0.000448 | RGB: 24.24 dB | Y: 24.36 dB | 299.8s
+  [        tv] step 1500/4000 | Loss: 0.000395 | RGB: 24.40 dB | Y: 24.51 dB | 321.3s
+  [        tv] step 1600/4000 | Loss: 0.000370 | RGB: 24.41 dB | Y: 24.52 dB | 342.7s
+  [        tv] step 1700/4000 | Loss: 0.000332 | RGB: 24.48 dB | Y: 24.59 dB | 364.1s
+  [        tv] step 1800/4000 | Loss: 0.000320 | RGB: 24.51 dB | Y: 24.62 dB | 385.6s
+  [        tv] step 1900/4000 | Loss: 0.000278 | RGB: 24.58 dB | Y: 24.67 dB | 407.0s
+  [        tv] step 2000/4000 | Loss: 0.000258 | RGB: 24.60 dB | Y: 24.70 dB | 428.4s
+  [        tv] step 2100/4000 | Loss: 0.000252 | RGB: 24.60 dB | Y: 24.69 dB | 449.9s
+  [        tv] step 2200/4000 | Loss: 0.000230 | RGB: 24.67 dB | Y: 24.76 dB | 471.3s
+  [        tv] step 2300/4000 | Loss: 0.000239 | RGB: 24.68 dB | Y: 24.76 dB | 492.7s
+  [        tv] step 2400/4000 | Loss: 0.000216 | RGB: 24.75 dB | Y: 24.84 dB | 514.2s
+  [        tv] step 2500/4000 | Loss: 0.000193 | RGB: 24.74 dB | Y: 24.83 dB | 535.1s
+  [        tv] step 2600/4000 | Loss: 0.000188 | RGB: 24.72 dB | Y: 24.80 dB | 556.5s
+  [        tv] step 2700/4000 | Loss: 0.000187 | RGB: 24.71 dB | Y: 24.78 dB | 577.9s
+  [        tv] step 2800/4000 | Loss: 0.000176 | RGB: 24.74 dB | Y: 24.81 dB | 599.4s
+  [        tv] step 2900/4000 | Loss: 0.000164 | RGB: 24.79 dB | Y: 24.86 dB | 620.8s
+  [        tv] step 3000/4000 | Loss: 0.000145 | RGB: 24.83 dB | Y: 24.90 dB | 641.7s
+  [        tv] step 3100/4000 | Loss: 0.000167 | RGB: 24.79 dB | Y: 24.85 dB | 663.2s
+  [        tv] step 3200/4000 | Loss: 0.000141 | RGB: 24.83 dB | Y: 24.89 dB | 684.6s
+  [        tv] step 3300/4000 | Loss: 0.000131 | RGB: 24.87 dB | Y: 24.94 dB | 706.0s
+  [        tv] step 3400/4000 | Loss: 0.000134 | RGB: 24.87 dB | Y: 24.94 dB | 727.5s
+  [        tv] step 3500/4000 | Loss: 0.000121 | RGB: 24.87 dB | Y: 24.93 dB | 748.9s
+  [        tv] step 3600/4000 | Loss: 0.000120 | RGB: 24.91 dB | Y: 24.98 dB | 770.3s
+  [        tv] step 3700/4000 | Loss: 0.000128 | RGB: 24.90 dB | Y: 24.95 dB | 791.8s
+  [        tv] step 3800/4000 | Loss: 0.000112 | RGB: 24.95 dB | Y: 25.01 dB | 813.2s
+  [        tv] step 3900/4000 | Loss: 0.000121 | RGB: 24.91 dB | Y: 24.97 dB | 834.6s
+  [        tv] step 4000/4000 | Loss: 0.000106 | RGB: 24.94 dB | Y: 24.99 dB | 856.1s
+
+[DEEPRED_L2] Starting 4000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [deepred_l2] step 0001/4000 | Loss: 0.063490 | RGB: 11.54 dB | Y: 12.37 dB | 0.3s
+  [deepred_l2] step 0100/4000 | Loss: 0.009893 | RGB: 18.20 dB | Y: 18.20 dB | 21.6s
+  [deepred_l2] step 0200/4000 | Loss: 0.004153 | RGB: 20.65 dB | Y: 20.79 dB | 43.2s
+  [deepred_l2] step 0300/4000 | Loss: 0.002763 | RGB: 21.71 dB | Y: 21.89 dB | 64.7s
+  [deepred_l2] step 0400/4000 | Loss: 0.001979 | RGB: 22.44 dB | Y: 22.65 dB | 86.2s
+  [deepred_l2] step 0500/4000 | Loss: 0.001536 | RGB: 22.85 dB | Y: 23.07 dB | 107.8s
+  [deepred_l2] step 0600/4000 | Loss: 0.001282 | RGB: 23.20 dB | Y: 23.39 dB | 129.3s
+  [deepred_l2] step 0700/4000 | Loss: 0.001012 | RGB: 23.50 dB | Y: 23.69 dB | 150.8s
+  [deepred_l2] step 0800/4000 | Loss: 0.000935 | RGB: 23.56 dB | Y: 23.72 dB | 172.3s
+  [deepred_l2] step 0900/4000 | Loss: 0.000798 | RGB: 23.73 dB | Y: 23.89 dB | 193.9s
+  [deepred_l2] step 1000/4000 | Loss: 0.000679 | RGB: 23.96 dB | Y: 24.12 dB | 215.4s
+  [deepred_l2] step 1100/4000 | Loss: 0.000593 | RGB: 24.03 dB | Y: 24.19 dB | 236.9s
+  [deepred_l2] step 1200/4000 | Loss: 0.000601 | RGB: 24.09 dB | Y: 24.25 dB | 258.5s
+  [deepred_l2] step 1300/4000 | Loss: 0.000486 | RGB: 24.25 dB | Y: 24.40 dB | 279.6s
+  [deepred_l2] step 1400/4000 | Loss: 0.000470 | RGB: 24.25 dB | Y: 24.39 dB | 301.1s
+  [deepred_l2] step 1500/4000 | Loss: 0.000411 | RGB: 24.36 dB | Y: 24.51 dB | 322.7s
+  [deepred_l2] step 1600/4000 | Loss: 0.000379 | RGB: 24.39 dB | Y: 24.53 dB | 344.2s
+  [deepred_l2] step 1700/4000 | Loss: 0.000343 | RGB: 24.50 dB | Y: 24.63 dB | 365.2s
+  [deepred_l2] step 1800/4000 | Loss: 0.000325 | RGB: 24.50 dB | Y: 24.62 dB | 386.7s
+  [deepred_l2] step 1900/4000 | Loss: 0.000298 | RGB: 24.58 dB | Y: 24.70 dB | 408.3s
+  [deepred_l2] step 2000/4000 | Loss: 0.000282 | RGB: 24.59 dB | Y: 24.71 dB | 429.8s
+  [deepred_l2] step 2100/4000 | Loss: 0.000274 | RGB: 24.66 dB | Y: 24.79 dB | 451.4s
+  [deepred_l2] step 2200/4000 | Loss: 0.000259 | RGB: 24.64 dB | Y: 24.75 dB | 472.9s
+  [deepred_l2] step 2300/4000 | Loss: 0.000229 | RGB: 24.69 dB | Y: 24.79 dB | 494.5s
+  [deepred_l2] step 2400/4000 | Loss: 0.000222 | RGB: 24.73 dB | Y: 24.83 dB | 516.1s
+  [deepred_l2] step 2500/4000 | Loss: 0.000192 | RGB: 24.76 dB | Y: 24.86 dB | 537.6s
+  [deepred_l2] step 2600/4000 | Loss: 0.000175 | RGB: 24.77 dB | Y: 24.86 dB | 559.2s
+  [deepred_l2] step 2700/4000 | Loss: 0.000179 | RGB: 24.78 dB | Y: 24.87 dB | 580.7s
+  [deepred_l2] step 2800/4000 | Loss: 0.000164 | RGB: 24.81 dB | Y: 24.90 dB | 602.3s
+  [deepred_l2] step 2900/4000 | Loss: 0.000159 | RGB: 24.81 dB | Y: 24.90 dB | 623.8s
+  [deepred_l2] step 3000/4000 | Loss: 0.000156 | RGB: 24.82 dB | Y: 24.91 dB | 645.4s
+  [deepred_l2] step 3100/4000 | Loss: 0.000165 | RGB: 24.84 dB | Y: 24.93 dB | 666.9s
+  [deepred_l2] step 3200/4000 | Loss: 0.000142 | RGB: 24.87 dB | Y: 24.95 dB | 688.5s
+  [deepred_l2] step 3300/4000 | Loss: 0.000128 | RGB: 24.91 dB | Y: 24.99 dB | 710.0s
+  [deepred_l2] step 3400/4000 | Loss: 0.000146 | RGB: 24.85 dB | Y: 24.93 dB | 731.6s
+  [deepred_l2] step 3500/4000 | Loss: 0.000129 | RGB: 24.90 dB | Y: 24.97 dB | 753.1s
+  [deepred_l2] step 3600/4000 | Loss: 0.000116 | RGB: 24.92 dB | Y: 25.00 dB | 774.7s
+  [deepred_l2] step 3700/4000 | Loss: 0.000100 | RGB: 24.95 dB | Y: 25.03 dB | 796.3s
+  [deepred_l2] step 3800/4000 | Loss: 0.000101 | RGB: 25.00 dB | Y: 25.07 dB | 817.8s
+  [deepred_l2] step 3900/4000 | Loss: 0.000099 | RGB: 24.96 dB | Y: 25.03 dB | 839.3s
+  [deepred_l2] step 4000/4000 | Loss: 0.000106 | RGB: 24.94 dB | Y: 25.01 dB | 860.9s
+
+[DEEPRED_L1] Starting 4000 steps | Params: 2,217,831 | Input Pixels: 221,184
+  [deepred_l1] step 0001/4000 | Loss: 0.208228 | RGB: 11.56 dB | Y: 12.55 dB | 0.2s
+  [deepred_l1] step 0100/4000 | Loss: 0.069306 | RGB: 17.75 dB | Y: 17.72 dB | 21.6s
+  [deepred_l1] step 0200/4000 | Loss: 0.045358 | RGB: 20.52 dB | Y: 20.62 dB | 43.1s
+  [deepred_l1] step 0300/4000 | Loss: 0.035576 | RGB: 21.85 dB | Y: 22.01 dB | 64.7s
+  [deepred_l1] step 0400/4000 | Loss: 0.029947 | RGB: 22.66 dB | Y: 22.81 dB | 86.2s
+  [deepred_l1] step 0500/4000 | Loss: 0.025024 | RGB: 23.22 dB | Y: 23.37 dB | 107.8s
+  [deepred_l1] step 0600/4000 | Loss: 0.022386 | RGB: 23.59 dB | Y: 23.72 dB | 129.3s
+  [deepred_l1] step 0700/4000 | Loss: 0.020143 | RGB: 23.81 dB | Y: 23.94 dB | 150.9s
+  [deepred_l1] step 0800/4000 | Loss: 0.018195 | RGB: 24.04 dB | Y: 24.16 dB | 171.9s
+  [deepred_l1] step 0900/4000 | Loss: 0.016571 | RGB: 24.24 dB | Y: 24.37 dB | 193.4s
+  [deepred_l1] step 1000/4000 | Loss: 0.015248 | RGB: 24.32 dB | Y: 24.44 dB | 215.0s
+  [deepred_l1] step 1100/4000 | Loss: 0.014596 | RGB: 24.39 dB | Y: 24.49 dB | 236.5s
+  [deepred_l1] step 1200/4000 | Loss: 0.013007 | RGB: 24.55 dB | Y: 24.65 dB | 258.1s
+  [deepred_l1] step 1300/4000 | Loss: 0.012259 | RGB: 24.60 dB | Y: 24.69 dB | 279.6s
+  [deepred_l1] step 1400/4000 | Loss: 0.011704 | RGB: 24.71 dB | Y: 24.80 dB | 301.0s
+  [deepred_l1] step 1500/4000 | Loss: 0.011202 | RGB: 24.74 dB | Y: 24.82 dB | 322.1s
+  [deepred_l1] step 1600/4000 | Loss: 0.010768 | RGB: 24.77 dB | Y: 24.86 dB | 343.7s
+  [deepred_l1] step 1700/4000 | Loss: 0.010181 | RGB: 24.79 dB | Y: 24.87 dB | 365.3s
+  [deepred_l1] step 1800/4000 | Loss: 0.009690 | RGB: 24.82 dB | Y: 24.89 dB | 386.9s
+  [deepred_l1] step 1900/4000 | Loss: 0.008987 | RGB: 24.86 dB | Y: 24.93 dB | 408.5s
+  [deepred_l1] step 2000/4000 | Loss: 0.008861 | RGB: 24.87 dB | Y: 24.93 dB | 430.0s
+  [deepred_l1] step 2100/4000 | Loss: 0.008717 | RGB: 24.85 dB | Y: 24.90 dB | 451.6s
+  [deepred_l1] step 2200/4000 | Loss: 0.008315 | RGB: 24.93 dB | Y: 24.99 dB | 473.2s
+  [deepred_l1] step 2300/4000 | Loss: 0.008166 | RGB: 24.93 dB | Y: 24.98 dB | 494.8s
+  [deepred_l1] step 2400/4000 | Loss: 0.007566 | RGB: 24.92 dB | Y: 24.97 dB | 516.4s
+  [deepred_l1] step 2500/4000 | Loss: 0.007581 | RGB: 24.89 dB | Y: 24.95 dB | 538.0s
+  [deepred_l1] step 2600/4000 | Loss: 0.007188 | RGB: 24.95 dB | Y: 25.01 dB | 559.6s
+  [deepred_l1] step 2700/4000 | Loss: 0.007125 | RGB: 24.97 dB | Y: 25.02 dB | 581.2s
+  [deepred_l1] step 2800/4000 | Loss: 0.006821 | RGB: 24.96 dB | Y: 25.00 dB | 602.8s
+  [deepred_l1] step 2900/4000 | Loss: 0.006446 | RGB: 25.02 dB | Y: 25.06 dB | 624.3s
+  [deepred_l1] step 3000/4000 | Loss: 0.006443 | RGB: 25.01 dB | Y: 25.06 dB | 645.9s
+  [deepred_l1] step 3100/4000 | Loss: 0.006680 | RGB: 24.99 dB | Y: 25.03 dB | 667.5s
+  [deepred_l1] step 3200/4000 | Loss: 0.005954 | RGB: 25.02 dB | Y: 25.06 dB | 689.0s
+  [deepred_l1] step 3300/4000 | Loss: 0.006495 | RGB: 25.00 dB | Y: 25.04 dB | 710.6s
+  [deepred_l1] step 3400/4000 | Loss: 0.006155 | RGB: 25.03 dB | Y: 25.06 dB | 732.2s
+  [deepred_l1] step 3500/4000 | Loss: 0.005674 | RGB: 25.03 dB | Y: 25.07 dB | 753.8s
+  [deepred_l1] step 3600/4000 | Loss: 0.005738 | RGB: 25.05 dB | Y: 25.09 dB | 775.4s
+  [deepred_l1] step 3700/4000 | Loss: 0.005416 | RGB: 25.06 dB | Y: 25.10 dB | 796.9s
+  [deepred_l1] step 3800/4000 | Loss: 0.005486 | RGB: 25.05 dB | Y: 25.09 dB | 818.5s
+  [deepred_l1] step 3900/4000 | Loss: 0.005071 | RGB: 25.07 dB | Y: 25.12 dB | 840.1s
+  [deepred_l1] step 4000/4000 | Loss: 0.005478 | RGB: 25.04 dB | Y: 25.08 dB | 861.7s
+
+===============================================================================================
+ FINAL SUMMARY TABLE: LOSS COMPARISON (4000 STEPS)
+===============================================================================================
+Approach       | Params       | RGB PSNR     | RGB Gain   | Y-shaved PSNR  | Y Gain    
+-----------------------------------------------------------------------------------------------
+Bicubic        | N/A          | 23.10        | Baseline   | 23.01          | Baseline  
+l2             | 2,217,831    | 24.98        | +1.87 dB  | 25.04          | +2.02 dB
+l1             | 2,217,831    | 25.05        | +1.95 dB  | 25.09          | +2.07 dB
+tv             | 2,217,831    | 24.94        | +1.83 dB  | 24.99          | +1.97 dB
+deepred_l2     | 2,217,831    | 24.94        | +1.84 dB  | 25.01          | +2.00 dB
+deepred_l1     | 2,217,831    | 25.04        | +1.94 dB  | 25.08          | +2.06 dB
+===============================================================================================
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading wandb-summary.json
+wandb: uploading history steps 204-204, summary, console lines 218-231
+wandb: 
+wandb: Run history:
+wandb: loss/deepred_l1 █▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/deepred_l2 █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/l1 █▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/l2 █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         loss/tv █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: psnr/deepred_l1 ▁▄▆▆▇▇▇▇▇███████████████████████████████
+wandb: psnr/deepred_l2 ▁▄▆▆▇▇▇▇▇▇▇▇████████████████████████████
+wandb:         psnr/l1 ▁▄▆▆▇▇▇▇████████████████████████████████
+wandb:         psnr/l2 ▁▅▆▆▇▇▇▇▇▇▇█████████████████████████████
+wandb:         psnr/tv ▁▅▆▆▇▇▇▇▇▇▇█████████████████████████████
+wandb:              +6 ...
+wandb: 
+wandb: Run summary:
+wandb: loss/deepred_l1 0.00548
+wandb: loss/deepred_l2 0.00011
+wandb:         loss/l1 0.00526
+wandb:         loss/l2 0.0001
+wandb:         loss/tv 0.00011
+wandb: psnr/deepred_l1 25.04229
+wandb: psnr/deepred_l2 24.94071
+wandb:         psnr/l1 25.05349
+wandb:         psnr/l2 24.97541
+wandb:         psnr/tv 24.93675
+wandb:              +6 ...
+wandb: 
+wandb: 🚀 View run skip_losses_zebra at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr/runs/gbzpf54y
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-losses-sr
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261014_190638-gbzpf54y/logs
+
+Completed! Outputs and log saved in: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_losses_sr
