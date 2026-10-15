@@ -28,8 +28,24 @@ from utils.common_utils import np_to_pil, np_to_torch, pil_to_np, torch_to_np
 from utils.sr_utils import get_baselines, load_LR_HR_imgs_sr
 
 
+def rgb_to_y(img):
+    """Convert RGB tensor in [0, 1] to ITU-R BT.601 Y (luminance) channel."""
+    return 0.299 * img[:, 0:1, :, :] + 0.587 * img[:, 1:2, :, :] + 0.114 * img[:, 2:3, :, :]
+
+
 def calc_psnr(x, y):
     mse = torch.mean((x.detach() - y.detach()) ** 2)
+    return (10.0 * torch.log10(1.0 / mse)).item() if mse > 0 else 100.0
+
+
+def calc_psnr_y(x, y, shave=4):
+    """Calculate standard benchmark PSNR on Y channel with boundary shaved."""
+    if shave > 0:
+        x = x[:, :, shave:-shave, shave:-shave]
+        y = y[:, :, shave:-shave, shave:-shave]
+    xy = rgb_to_y(x)
+    yy = rgb_to_y(y)
+    mse = torch.mean((xy.detach() - yy.detach()) ** 2)
     return (10.0 * torch.log10(1.0 / mse)).item() if mse > 0 else 100.0
 
 
@@ -37,15 +53,35 @@ def tv_penalty(x):
     return torch.mean(torch.abs(x[:, :, 1:, :] - x[:, :, :-1, :])) + torch.mean(torch.abs(x[:, :, :, 1:] - x[:, :, :, :-1]))
 
 
+def edge_preserving_denoiser(img, radius=3, eps=1e-3):
+    kernel_size = 2 * radius + 1
+    pad = radius
+    img_pad = F.pad(img, (pad, pad, pad, pad), mode="reflect")
+    channels = img.shape[1]
+    weight = torch.ones((channels, 1, kernel_size, kernel_size), device=img.device) / (kernel_size * kernel_size)
+    mean_I = F.conv2d(img_pad, weight, groups=channels)
+    mean_II = F.conv2d(img_pad ** 2, weight, groups=channels)
+    var_I = torch.clamp(mean_II - mean_I ** 2, min=0.0)
+    a = var_I / (var_I + eps)
+    b = mean_I - a * mean_I
+    mean_a = F.conv2d(F.pad(a, (pad, pad, pad, pad), mode="reflect"), weight, groups=channels)
+    mean_b = F.conv2d(F.pad(b, (pad, pad, pad, pad), mode="reflect"), weight, groups=channels)
+    return (mean_a * img + mean_b).clamp(0.0, 1.0)
+
+
 def red_penalty(x):
-    kernel = torch.tensor([[1, 2, 1], [2, 4, 2], [1, 2, 1]], dtype=torch.float32, device=x.device) / 16.0
-    kernel = kernel.repeat(x.shape[1], 1, 1, 1)
     with torch.no_grad():
-        denoised = F.conv2d(x, kernel, padding=1, groups=x.shape[1])
-    return 0.5 * torch.mean(x * (x - denoised))
+        denoised = edge_preserving_denoiser(x)
+    return 0.5 * torch.mean((x - denoised) ** 2)
 
 
 def main():
+    SEED = 0
+    torch.manual_seed(SEED)
+    np.random.seed(SEED)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(SEED)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     out_dir = Path(__file__).resolve().parent / "output_dip_attention_sr"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -66,6 +102,7 @@ def main():
 
     hr_t = np_to_torch(imgs["HR_np"]).to(device)
     lr_t = np_to_torch(imgs["LR_np"]).to(device)
+    bic_t = np_to_torch(imgs["bicubic_np"]).to(device)
     w, h = imgs["HR_pil"].size
 
     # Save baseline images
@@ -74,8 +111,9 @@ def main():
     np_to_pil(imgs["bicubic_np"]).save(out_dir / f"{name}_bicubic_HR.png")
     imgs["bilinear_pil"].save(out_dir / f"{name}_bilinear_HR.png")
 
-    psnr_bic = calc_psnr(np_to_torch(imgs["bicubic_np"]).to(device), hr_t)
-    psnr_bil = calc_psnr(np_to_torch(imgs["bilinear_np"]).to(device), hr_t)
+    psnr_bic_rgb = calc_psnr(bic_t, hr_t)
+    psnr_bic_y = calc_psnr_y(bic_t, hr_t, shave=4)
+    psnr_bil_rgb = calc_psnr(np_to_torch(imgs["bilinear_np"]).to(device), hr_t)
 
     run = None
     if HAS_WANDB:
@@ -85,6 +123,9 @@ def main():
             run = None
 
     downsampler = Downsampler(n_planes=3, factor=4, kernel_type="lanczos2", phase=0.5, preserve_size=True).to(device)
+    for p in downsampler.parameters():
+        p.requires_grad = False
+
     net_input_saved = torch.rand((1, 32, h, w), device=device) * 0.1
 
     # Loss configurations: DIP L2, Total Variation for DIP L2, Deep RED L1, Deep RED L2
@@ -95,10 +136,10 @@ def main():
         "deepred_l2": lambda d, hr: F.mse_loss(d, lr_t) + 1e-3 * red_penalty(hr),
     }
 
-    log("=" * 80)
-    log(f" DIP Skip-Attention Super-Resolution | Device: {device} | {w}x{h} ({w*h:,} px)")
-    log(f" Baselines: Bicubic={psnr_bic:.2f} dB | Bilinear={psnr_bil:.2f} dB")
-    log("=" * 80)
+    log("=" * 90)
+    log(f" DIP Skip-Attention Super-Resolution | Device: {device} | {w}x{h} ({w*h:,} px) | Seed: {SEED}")
+    log(f" Baselines: Bicubic RGB={psnr_bic_rgb:.2f} dB, Y-shaved={psnr_bic_y:.2f} dB | Bilinear RGB={psnr_bil_rgb:.2f} dB")
+    log("=" * 90)
 
     results = {}
     for loss_name, loss_fn in loss_dict.items():
@@ -106,12 +147,13 @@ def main():
         opt = torch.optim.Adam(net.parameters(), lr=0.0005)
         params = sum(p.numel() for p in net.parameters() if p.requires_grad)
 
-        log(f"\n[SKIP-ATTENTION | {loss_name.upper()}] 6000 steps | Params: {params:,} | Input Pixels: {w*h:,}")
+        log(f"\n[SKIP-ATTENTION | {loss_name.upper()}] 4000 steps | Params: {params:,} | Input Pixels: {w*h:,}")
         best_psnr, t0 = -1.0, time.time()
+        noise = torch.zeros_like(net_input_saved)
 
-        for step in range(1, 6001):
+        for step in range(1, 4001):
             opt.zero_grad(set_to_none=True)
-            inp = net_input_saved + (torch.randn_like(net_input_saved) * 0.03)
+            inp = net_input_saved + (noise.normal_() * 0.03)
             out_hr = net(inp)
             out_lr = downsampler(out_hr)
 
@@ -119,35 +161,39 @@ def main():
             loss.backward()
             opt.step()
 
-            with torch.no_grad():
-                psnr_hr = calc_psnr(out_hr, hr_t)
-            best_psnr = max(best_psnr, psnr_hr)
-
-            if step == 1 or step % 500 == 0 or step == 6000:
+            if step == 1 or step % 100 == 0 or step == 4000:
+                with torch.no_grad():
+                    psnr_hr = calc_psnr(out_hr, hr_t)
+                    psnr_y = calc_psnr_y(out_hr, hr_t, shave=4)
+                best_psnr = max(best_psnr, psnr_hr)
                 elapsed = time.time() - t0
-                log(f"  [{loss_name:>10}] step {step:04d}/6000 | Loss: {loss.item():.6f} | PSNR_HR: {psnr_hr:.2f} dB (Best: {best_psnr:.2f}) | {elapsed:.1f}s")
+                log(f"  [{loss_name:>10}] step {step:04d}/4000 | Loss: {loss.item():.6f} | RGB: {psnr_hr:.2f} dB | Y: {psnr_y:.2f} dB | {elapsed:.1f}s")
 
-            if run is not None:
-                run.log({f"loss/{loss_name}": loss.item(), f"psnr/{loss_name}": psnr_hr, "step": step})
+                if run is not None:
+                    run.log({f"loss/{loss_name}": loss.item(), f"psnr/{loss_name}": psnr_hr, f"psnr_y/{loss_name}": psnr_y, "step": step})
 
         with torch.no_grad():
-            final_hr = net(net_input_saved)
+            final_hr = out_hr
             final_psnr = calc_psnr(final_hr, hr_t)
+            final_psnr_y = calc_psnr_y(final_hr, hr_t, shave=4)
             np_to_pil(np.clip(torch_to_np(final_hr), 0, 1)).save(out_dir / f"{name}_HR_{loss_name}.png")
 
-        results[loss_name] = {"final_psnr": final_psnr, "best_psnr": best_psnr, "loss": loss.item(), "params": params}
+        results[loss_name] = {"final_psnr": final_psnr, "final_psnr_y": final_psnr_y, "best_psnr": best_psnr, "loss": loss.item(), "params": params}
         del net
         torch.cuda.empty_cache()
 
     # Final summary table
-    log("\n" + "=" * 80)
-    log(f"{'Approach':<14} | {'Params':<12} | {'Input Pixels':<14} | {'Loss':<12} | {'Final PSNR':<12} | {'Gain vs Bicubic':<15}")
-    log("-" * 80)
-    log(f"{'Bicubic':<14} | {'N/A':<12} | {f'{w*h:,}':<14} | {'N/A':<12} | {psnr_bic:<12.2f} | Baseline")
-    log(f"{'Bilinear':<14} | {'N/A':<12} | {f'{w*h:,}':<14} | {'N/A':<12} | {psnr_bil:<12.2f} | {psnr_bil-psnr_bic:+.2f} dB")
+    log("\n" + "=" * 95)
+    log(" FINAL SUMMARY TABLE: SKIP-ATTENTION COMPARISON (4000 STEPS)")
+    log("=" * 95)
+    log(f"{'Approach':<14} | {'Params':<12} | {'RGB PSNR':<12} | {'RGB Gain':<10} | {'Y-shaved PSNR':<14} | {'Y Gain':<10}")
+    log("-" * 95)
+    log(f"{'Bicubic':<14} | {'N/A':<12} | {psnr_bic_rgb:<12.2f} | {'Baseline':<10} | {psnr_bic_y:<14.2f} | {'Baseline':<10}")
     for k, v in results.items():
-        log(f"{k:<14} | {v['params']:<12,} | {f'{w*h:,}':<14} | {v['loss']:<12.6f} | {v['final_psnr']:<12.2f} | {v['final_psnr']-psnr_bic:+.2f} dB")
-    log("=" * 80)
+        gain_rgb = v['final_psnr'] - psnr_bic_rgb
+        gain_y = v['final_psnr_y'] - psnr_bic_y
+        log(f"{k:<14} | {v['params']:<12,} | {v['final_psnr']:<12.2f} | {gain_rgb:+.2f} dB  | {v['final_psnr_y']:<14.2f} | {gain_y:+.2f} dB")
+    log("=" * 95)
 
     log_file.close()
     if run is not None:

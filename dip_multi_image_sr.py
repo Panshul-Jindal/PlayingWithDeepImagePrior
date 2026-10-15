@@ -27,17 +27,47 @@ from utils.common_utils import np_to_pil, np_to_torch, pil_to_np, torch_to_np
 from utils.sr_utils import get_baselines, load_LR_HR_imgs_sr
 
 
+def rgb_to_y(img):
+    """Convert RGB tensor in [0, 1] to ITU-R BT.601 Y (luminance) channel."""
+    return 0.299 * img[:, 0:1, :, :] + 0.587 * img[:, 1:2, :, :] + 0.114 * img[:, 2:3, :, :]
+
+
 def calc_psnr(x, y):
     mse = torch.mean((x.detach() - y.detach()) ** 2)
     return (10.0 * torch.log10(1.0 / mse)).item() if mse > 0 else 100.0
 
 
+def calc_psnr_y(x, y, shave=4):
+    """Calculate standard benchmark PSNR on Y channel with boundary shaved."""
+    if shave > 0:
+        x = x[:, :, shave:-shave, shave:-shave]
+        y = y[:, :, shave:-shave, shave:-shave]
+    xy = rgb_to_y(x)
+    yy = rgb_to_y(y)
+    mse = torch.mean((xy.detach() - yy.detach()) ** 2)
+    return (10.0 * torch.log10(1.0 / mse)).item() if mse > 0 else 100.0
+
+
+def edge_preserving_denoiser(img, radius=3, eps=1e-3):
+    kernel_size = 2 * radius + 1
+    pad = radius
+    img_pad = F.pad(img, (pad, pad, pad, pad), mode="reflect")
+    channels = img.shape[1]
+    weight = torch.ones((channels, 1, kernel_size, kernel_size), device=img.device) / (kernel_size * kernel_size)
+    mean_I = F.conv2d(img_pad, weight, groups=channels)
+    mean_II = F.conv2d(img_pad ** 2, weight, groups=channels)
+    var_I = torch.clamp(mean_II - mean_I ** 2, min=0.0)
+    a = var_I / (var_I + eps)
+    b = mean_I - a * mean_I
+    mean_a = F.conv2d(F.pad(a, (pad, pad, pad, pad), mode="reflect"), weight, groups=channels)
+    mean_b = F.conv2d(F.pad(b, (pad, pad, pad, pad), mode="reflect"), weight, groups=channels)
+    return (mean_a * img + mean_b).clamp(0.0, 1.0)
+
+
 def red_penalty(x):
-    k = torch.tensor([[1, 2, 1], [2, 4, 2], [1, 2, 1]], dtype=torch.float32, device=x.device) / 16.0
-    k = k.repeat(x.shape[1], 1, 1, 1)
     with torch.no_grad():
-        denoised = F.conv2d(x, k, padding=1, groups=x.shape[1])
-    return 0.5 * torch.mean(x * (x - denoised))
+        denoised = edge_preserving_denoiser(x)
+    return 0.5 * torch.mean((x - denoised) ** 2)
 
 
 def build_skip(model_type="skip"):
@@ -61,6 +91,12 @@ def build_skip(model_type="skip"):
 
 
 def main():
+    SEED = 0
+    torch.manual_seed(SEED)
+    np.random.seed(SEED)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(SEED)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     base_out = Path(__file__).resolve().parent / "output_multi_image_sr"
     base_out.mkdir(parents=True, exist_ok=True)
@@ -72,10 +108,17 @@ def main():
 
     set14_dir = PROJECT_DIR / "data/sr/Set14"
     image_paths = sorted(set14_dir.glob("*.png"))
-    log(f"Found {len(image_paths)} images in {set14_dir}: {[p.name for p in image_paths]}")
+    log("=" * 95)
+    log(" MULTI-IMAGE DIP SUPER-RESOLUTION: Classic Skip vs Depthwise-Separable Skip on Set14")
+    log(f" Found {len(image_paths)} images in {set14_dir}")
+    log(f" Device: {device} | Factor: 4x | Steps: 4000 | LR: 0.0005 | Noise: 0.03 | Seed: {SEED}")
+    log("=" * 95)
 
     run = wandb.init(project=os.environ.get("WANDB_PROJECT", "dip-multi-image-sr"), name="set14_skip_vs_dpwise", reinit=True) if HAS_WANDB else None
     downsampler = Downsampler(n_planes=3, factor=4, kernel_type="lanczos2", phase=0.5, preserve_size=True).to(device)
+    for p in downsampler.parameters():
+        p.requires_grad = False
+
     eval_configs = [("skip", "l2"), ("skip", "deepred_l2"), ("dpwise_skip", "l2"), ("dpwise_skip", "deepred_l2")]
     results = {}
 
@@ -94,6 +137,7 @@ def main():
         imgs["bicubic_np"], _, _ = get_baselines(imgs["LR_pil"], imgs["HR_pil"])
         hr_t = np_to_torch(imgs["HR_np"]).to(device)
         lr_t = np_to_torch(imgs["LR_np"]).to(device)
+        bic_t = np_to_torch(imgs["bicubic_np"]).to(device)
         w, h = imgs["HR_pil"].size
 
         # Save reference images using the exact file stem
@@ -101,9 +145,10 @@ def main():
         imgs["LR_pil"].save(img_dir / f"{name}_observed_LR.png")
         np_to_pil(imgs["bicubic_np"]).save(img_dir / f"{name}_bicubic_HR.png")
 
-        psnr_bic = calc_psnr(np_to_torch(imgs["bicubic_np"]).to(device), hr_t)
-        log(f"\n[{idx}/{len(image_paths)}] {name} ({w}x{h}) | Bicubic: {psnr_bic:.2f} dB")
-        results[name] = {"bicubic": psnr_bic}
+        psnr_bic_rgb = calc_psnr(bic_t, hr_t)
+        psnr_bic_y = calc_psnr_y(bic_t, hr_t, shave=4)
+        log(f"\n[{idx}/{len(image_paths)}] {name} ({w}x{h}) | Bicubic: RGB={psnr_bic_rgb:.2f} dB, Y-shaved={psnr_bic_y:.2f} dB")
+        results[name] = {"bicubic": psnr_bic_rgb, "bicubic_y": psnr_bic_y}
 
         net_input_saved = torch.rand((1, 32, h, w), device=device) * 0.1
 
@@ -112,12 +157,14 @@ def main():
             net = build_skip(model_type).to(device)
             opt = torch.optim.Adam(net.parameters(), lr=0.0005)
             params = sum(p.numel() for p in net.parameters() if p.requires_grad)
-            log(f"\n---> [{tag:>24}] Params: {params:,} | Image: {name} | 2500 steps")
+            log(f"\n---> [{tag:>24}] Params: {params:,} | Image: {name} | 4000 steps")
 
             t0 = time.time()
-            for step in range(1, 2501):
+            noise = torch.zeros_like(net_input_saved)
+
+            for step in range(1, 4001):
                 opt.zero_grad(set_to_none=True)
-                inp = net_input_saved + (torch.randn_like(net_input_saved) * 0.03)
+                inp = net_input_saved + (noise.normal_() * 0.03)
                 out_hr = net(inp)
                 out_lr = downsampler(out_hr)
 
@@ -128,34 +175,54 @@ def main():
                 loss.backward()
                 opt.step()
 
-                if step % 100 == 0 or step == 2500:
+                if step % 100 == 0 or step == 4000:
                     with torch.no_grad():
                         psnr_val = calc_psnr(out_hr, hr_t)
-                    if step % 100 == 0 or step == 2500:
-                        log(f"  [{tag:>24}] step {step:04d}/2500 | Loss: {loss.item():.6f} | PSNR: {psnr_val:.2f} dB | {time.time()-t0:.1f}s")
+                        psnr_y_val = calc_psnr_y(out_hr, hr_t, shave=4)
+                    log(f"  [{tag:>24}] step {step:04d}/4000 | Loss: {loss.item():.6f} | RGB: {psnr_val:.2f} dB | Y: {psnr_y_val:.2f} dB | {time.time()-t0:.1f}s")
                     if run:
-                        run.log({f"loss/{name}_{tag}": loss.item(), f"psnr/{name}_{tag}": psnr_val, "step": step})
+                        run.log({f"loss/{name}_{tag}": loss.item(), f"psnr/{name}_{tag}": psnr_val, f"psnr_y/{name}_{tag}": psnr_y_val, "step": step})
 
             # Save final trained step output directly
             with torch.no_grad():
                 np_to_pil(np.clip(torch_to_np(out_hr), 0, 1)).save(img_dir / f"{name}_HR_{tag}.png")
                 results[name][tag] = psnr_val
+                results[name][f"{tag}_y"] = psnr_y_val
             del net
             torch.cuda.empty_cache()
 
-    # Final summary table
+    # Final summary table - RGB
     log("\n" + "=" * 90)
+    log(" SUMMARY TABLE (FULL RGB PSNR, 4000 STEPS)")
+    log("=" * 90)
     log(f"{'Image':<20} | {'Bicubic':<8} | {'skip_l2':<14} | {'skip_deepred':<14} | {'dpwise_l2':<14} | {'dpwise_deepred':<14}")
     log("-" * 90)
     tags = ["skip_l2", "skip_deepred_l2", "dpwise_skip_l2", "dpwise_skip_deepred_l2"]
     for img, res in results.items():
-        row = f"{img:<20} | {res['bicubic']:<8.2f} | " + " | ".join(f"{res[t]:.2f} ({res[t]-res['bicubic']:+.2f})" for t in tags)
+        row = f"{img:<20} | {res['bicubic']:<8.2f} | " + " | ".join(f"{res.get(t, 0.0):.2f} ({res.get(t, 0.0)-res['bicubic']:+.2f})" for t in tags)
         log(row)
     log("-" * 90)
     avg_row = f"{'AVERAGE':<20} | {np.mean([r['bicubic'] for r in results.values()]):<8.2f} | " + " | ".join(
-        f"{np.mean([r[t] for r in results.values()]):.2f}" for t in tags
+        f"{np.mean([r.get(t, 0.0) for r in results.values()]):.2f}" for t in tags
     )
     log(avg_row)
+    log("=" * 90)
+
+    # Final summary table - Standard SR Benchmark (Y-channel, shaved border)
+    log("\n" + "=" * 90)
+    log(" SUMMARY TABLE (STANDARD SR BENCHMARK: Y-CHANNEL, SHAVED 4px, 4000 STEPS)")
+    log("=" * 90)
+    log(f"{'Image':<20} | {'Bicubic_Y':<9} | {'skip_l2_y':<14} | {'skip_deepred_y':<14} | {'dpwise_l2_y':<14} | {'dpwise_deepred_y':<14}")
+    log("-" * 90)
+    tags_y = [f"{t}_y" for t in tags]
+    for img, res in results.items():
+        row = f"{img:<20} | {res['bicubic_y']:<9.2f} | " + " | ".join(f"{res.get(ty, 0.0):.2f} ({res.get(ty, 0.0)-res['bicubic_y']:+.2f})" for ty in tags_y)
+        log(row)
+    log("-" * 90)
+    avg_y_row = f"{'AVERAGE':<20} | {np.mean([r['bicubic_y'] for r in results.values()]):<9.2f} | " + " | ".join(
+        f"{np.mean([r.get(ty, 0.0) for r in results.values()]):.2f}" for ty in tags_y
+    )
+    log(avg_y_row)
     log("=" * 90)
 
     log_f.close()

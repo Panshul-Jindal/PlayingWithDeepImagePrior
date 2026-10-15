@@ -15,7 +15,7 @@ if [[ "${1:-}" == "--run-tasks" || -n "${STY:-}" ]]; then
 
     echo "=========================================================="
     echo " Starting DIP Super-Resolution Loss & Regularizer Comparison"
-    echo " Architecture: Skip | 6000 steps"
+    echo " Architecture: Skip | 4000 steps"
     echo " Losses:       l2, l1, tv, deepred_l2, deepred_l1"
     echo " Output dir:   $OUTPUT_DIR"
     echo " Log file:     $LOG_FILE"

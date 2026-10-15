@@ -1,0 +1,44 @@
+=====================================================================================
+ ZEBRA DEPTHWISE SCALING TEST (346K vs 1M vs Classic Skip 2.2M)
+ Resolution: HR=576x384 | LR=144x96 | Steps: 2500
+ Baselines:  Bicubic = 23.10 dB
+=====================================================================================
+
+---> [            dpwise_346k_l2] Params: 346,171 (width=128) | Steps: 2500
+  [            dpwise_346k_l2] step 0500/2500 | Loss: 0.004405 | PSNR: 20.39 dB | 18.3s
+  [            dpwise_346k_l2] step 1000/2500 | Loss: 0.001986 | PSNR: 22.11 dB | 36.3s
+  [            dpwise_346k_l2] step 1500/2500 | Loss: 0.001257 | PSNR: 22.88 dB | 54.3s
+  [            dpwise_346k_l2] step 2000/2500 | Loss: 0.000724 | PSNR: 23.63 dB | 72.2s
+  [            dpwise_346k_l2] step 2500/2500 | Loss: 0.000524 | PSNR: 23.88 dB | 90.2s
+
+---> [    dpwise_346k_deepred_l2] Params: 346,171 (width=128) | Steps: 2500
+  [    dpwise_346k_deepred_l2] step 0500/2500 | Loss: 0.004175 | PSNR: 20.46 dB | 19.1s
+  [    dpwise_346k_deepred_l2] step 1000/2500 | Loss: 0.001893 | PSNR: 22.21 dB | 38.3s
+  [    dpwise_346k_deepred_l2] step 1500/2500 | Loss: 0.001095 | PSNR: 23.11 dB | 57.5s
+  [    dpwise_346k_deepred_l2] step 2000/2500 | Loss: 0.000711 | PSNR: 23.67 dB | 76.7s
+  [    dpwise_346k_deepred_l2] step 2500/2500 | Loss: 0.000499 | PSNR: 24.04 dB | 95.8s
+
+---> [              dpwise_1M_l2] Params: 1,013,851 (width=224) | Steps: 2500
+  [              dpwise_1M_l2] step 0500/2500 | Loss: 0.002285 | PSNR: 21.95 dB | 32.1s
+  [              dpwise_1M_l2] step 1000/2500 | Loss: 0.000849 | PSNR: 23.57 dB | 64.2s
+  [              dpwise_1M_l2] step 1500/2500 | Loss: 0.000490 | PSNR: 24.12 dB | 96.3s
+  [              dpwise_1M_l2] step 2000/2500 | Loss: 0.000276 | PSNR: 24.50 dB | 128.3s
+  [              dpwise_1M_l2] step 2500/2500 | Loss: 0.000200 | PSNR: 24.59 dB | 160.4s
+
+---> [      dpwise_1M_deepred_l2] Params: 1,013,851 (width=224) | Steps: 2500
+  [      dpwise_1M_deepred_l2] step 0500/2500 | Loss: 0.002349 | PSNR: 21.89 dB | 32.6s
+  [      dpwise_1M_deepred_l2] step 1000/2500 | Loss: 0.000894 | PSNR: 23.46 dB | 65.2s
+  [      dpwise_1M_deepred_l2] step 1500/2500 | Loss: 0.000507 | PSNR: 24.12 dB | 97.8s
+  [      dpwise_1M_deepred_l2] step 2000/2500 | Loss: 0.000318 | PSNR: 24.36 dB | 130.4s
+  [      dpwise_1M_deepred_l2] step 2500/2500 | Loss: 0.000215 | PSNR: 24.56 dB | 163.0s
+
+===========================================================================
+ FINAL SUMMARY TABLE: ZEBRA SCALING (Bicubic: 23.10 dB)
+===========================================================================
+Configuration                | Params       | PSNR (2500 steps)  | Gain      
+---------------------------------------------------------------------------
+dpwise_346k_l2               | 346,171      | 23.88              | +0.78 dB
+dpwise_346k_deepred_l2       | 346,171      | 24.04              | +0.94 dB
+dpwise_1M_l2                 | 1,013,851    | 24.59              | +1.49 dB
+dpwise_1M_deepred_l2         | 1,013,851    | 24.56              | +1.46 dB
+===========================================================================
