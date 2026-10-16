@@ -1,0 +1,378 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 8oiyxhyx
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20260928_012053-8oiyxhyx
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run swin-F16-seed-0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior/runs/8oiyxhyx
+Device: cuda
+Image: /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/denoising/F16_GT.png
+Tensor shape: (1, 3, 512, 512)
+Shared input shape: (1, 32, 512, 512)
+Image: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.058748, psnr=12.31 dB
+  iteration 00100/8000: loss=0.029598, psnr=15.29 dB
+  iteration 00200/8000: loss=0.027923, psnr=15.54 dB
+  iteration 00300/8000: loss=0.013065, psnr=18.84 dB
+  iteration 00400/8000: loss=0.008942, psnr=20.49 dB
+  iteration 00500/8000: loss=0.006658, psnr=21.77 dB
+  iteration 00600/8000: loss=0.005588, psnr=22.53 dB
+  iteration 00700/8000: loss=0.004891, psnr=23.11 dB
+  iteration 00800/8000: loss=0.005051, psnr=22.97 dB
+  iteration 00900/8000: loss=0.004724, psnr=23.26 dB
+  iteration 01000/8000: loss=0.004165, psnr=23.80 dB
+  iteration 01100/8000: loss=0.003828, psnr=24.17 dB
+  iteration 01200/8000: loss=0.003577, psnr=24.47 dB
+  iteration 01300/8000: loss=0.003415, psnr=24.67 dB
+  iteration 01400/8000: loss=0.003175, psnr=24.98 dB
+  iteration 01500/8000: loss=0.003017, psnr=25.20 dB
+  iteration 01600/8000: loss=0.002859, psnr=25.44 dB
+  iteration 01700/8000: loss=0.002730, psnr=25.64 dB
+  iteration 01800/8000: loss=0.002595, psnr=25.86 dB
+  iteration 01900/8000: loss=0.002544, psnr=25.94 dB
+  iteration 02000/8000: loss=0.002412, psnr=26.18 dB
+  iteration 02100/8000: loss=0.002409, psnr=26.18 dB
+  iteration 02200/8000: loss=0.002204, psnr=26.57 dB
+  iteration 02300/8000: loss=0.002242, psnr=26.49 dB
+  iteration 02400/8000: loss=0.002083, psnr=26.81 dB
+  iteration 02500/8000: loss=0.002031, psnr=26.92 dB
+  iteration 02600/8000: loss=0.001980, psnr=27.03 dB
+  iteration 02700/8000: loss=0.001947, psnr=27.11 dB
+  iteration 02800/8000: loss=0.001853, psnr=27.32 dB
+  iteration 02900/8000: loss=0.001832, psnr=27.37 dB
+  iteration 03000/8000: loss=0.001772, psnr=27.51 dB
+  iteration 03100/8000: loss=0.002074, psnr=26.83 dB
+  iteration 03200/8000: loss=0.001681, psnr=27.74 dB
+  iteration 03300/8000: loss=0.001642, psnr=27.85 dB
+  iteration 03400/8000: loss=0.001619, psnr=27.91 dB
+  iteration 03500/8000: loss=0.001605, psnr=27.94 dB
+  iteration 03600/8000: loss=0.001674, psnr=27.76 dB
+  iteration 03700/8000: loss=0.001474, psnr=28.32 dB
+  iteration 03800/8000: loss=0.001452, psnr=28.38 dB
+  iteration 03900/8000: loss=0.001433, psnr=28.44 dB
+  iteration 04000/8000: loss=0.001399, psnr=28.54 dB
+  iteration 04100/8000: loss=0.001393, psnr=28.56 dB
+  iteration 04200/8000: loss=0.001330, psnr=28.76 dB
+  iteration 04300/8000: loss=0.001291, psnr=28.89 dB
+  iteration 04400/8000: loss=0.002145, psnr=26.69 dB
+  iteration 04500/8000: loss=0.001279, psnr=28.93 dB
+  iteration 04600/8000: loss=0.001235, psnr=29.08 dB
+  iteration 04700/8000: loss=0.001209, psnr=29.18 dB
+  iteration 04800/8000: loss=0.001195, psnr=29.23 dB
+  iteration 04900/8000: loss=0.001188, psnr=29.25 dB
+  iteration 05000/8000: loss=0.001237, psnr=29.08 dB
+  iteration 05100/8000: loss=0.001136, psnr=29.44 dB
+  iteration 05200/8000: loss=0.001196, psnr=29.22 dB
+  iteration 05300/8000: loss=0.001092, psnr=29.62 dB
+  iteration 05400/8000: loss=0.001119, psnr=29.51 dB
+  iteration 05500/8000: loss=0.001075, psnr=29.69 dB
+  iteration 05600/8000: loss=0.001077, psnr=29.68 dB
+  iteration 05700/8000: loss=0.001051, psnr=29.78 dB
+  iteration 05800/8000: loss=0.001062, psnr=29.74 dB
+  iteration 05900/8000: loss=0.001011, psnr=29.95 dB
+  iteration 06000/8000: loss=0.001105, psnr=29.57 dB
+  iteration 06100/8000: loss=0.000986, psnr=30.06 dB
+  iteration 06200/8000: loss=0.000995, psnr=30.02 dB
+  iteration 06300/8000: loss=0.000996, psnr=30.02 dB
+  iteration 06400/8000: loss=0.000956, psnr=30.19 dB
+  iteration 06500/8000: loss=0.000946, psnr=30.24 dB
+  iteration 06600/8000: loss=0.000950, psnr=30.23 dB
+  iteration 06700/8000: loss=0.000943, psnr=30.25 dB
+  iteration 06800/8000: loss=0.000915, psnr=30.39 dB
+  iteration 06900/8000: loss=0.000914, psnr=30.39 dB
+  iteration 07000/8000: loss=0.000920, psnr=30.36 dB
+  iteration 07100/8000: loss=0.000913, psnr=30.39 dB
+  iteration 07200/8000: loss=0.000908, psnr=30.42 dB
+  iteration 07300/8000: loss=0.000877, psnr=30.57 dB
+  iteration 07400/8000: loss=0.000900, psnr=30.46 dB
+  iteration 07500/8000: loss=0.000974, psnr=30.12 dB
+  iteration 07600/8000: loss=0.000867, psnr=30.62 dB
+  iteration 07700/8000: loss=0.000843, psnr=30.74 dB
+  iteration 07800/8000: loss=0.000856, psnr=30.68 dB
+  iteration 07900/8000: loss=0.000864, psnr=30.64 dB
+  iteration 08000/8000: loss=0.000835, psnr=30.78 dB
+Image + noise: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.121466, psnr=9.46 dB
+  iteration 00100/8000: loss=0.037215, psnr=15.47 dB
+  iteration 00200/8000: loss=0.021137, psnr=19.17 dB
+  iteration 00300/8000: loss=0.017332, psnr=20.83 dB
+  iteration 00400/8000: loss=0.015728, psnr=21.77 dB
+  iteration 00500/8000: loss=0.014480, psnr=22.69 dB
+  iteration 00600/8000: loss=0.013752, psnr=23.33 dB
+  iteration 00700/8000: loss=0.013392, psnr=23.67 dB
+  iteration 00800/8000: loss=0.012866, psnr=24.24 dB
+  iteration 00900/8000: loss=0.012730, psnr=24.40 dB
+  iteration 01000/8000: loss=0.012472, psnr=24.72 dB
+  iteration 01100/8000: loss=0.012199, psnr=25.08 dB
+  iteration 01200/8000: loss=0.012026, psnr=25.32 dB
+  iteration 01300/8000: loss=0.011862, psnr=25.56 dB
+  iteration 01400/8000: loss=0.011949, psnr=25.42 dB
+  iteration 01500/8000: loss=0.011608, psnr=25.97 dB
+  iteration 01600/8000: loss=0.011526, psnr=26.10 dB
+  iteration 01700/8000: loss=0.011372, psnr=26.37 dB
+  iteration 01800/8000: loss=0.011719, psnr=25.80 dB
+  iteration 01900/8000: loss=0.011236, psnr=26.63 dB
+  iteration 02000/8000: loss=0.011152, psnr=26.79 dB
+  iteration 02100/8000: loss=0.011074, psnr=26.94 dB
+  iteration 02200/8000: loss=0.011009, psnr=27.06 dB
+  iteration 02300/8000: loss=0.010947, psnr=27.18 dB
+  iteration 02400/8000: loss=0.010904, psnr=27.27 dB
+  iteration 02500/8000: loss=0.010925, psnr=27.22 dB
+  iteration 02600/8000: loss=0.010824, psnr=27.44 dB
+  iteration 02700/8000: loss=0.010758, psnr=27.58 dB
+  iteration 02800/8000: loss=0.010819, psnr=27.43 dB
+  iteration 02900/8000: loss=0.010704, psnr=27.68 dB
+  iteration 03000/8000: loss=0.010663, psnr=27.77 dB
+  iteration 03100/8000: loss=0.010707, psnr=27.64 dB
+  iteration 03200/8000: loss=0.010564, psnr=28.03 dB
+  iteration 03300/8000: loss=0.010504, psnr=28.15 dB
+  iteration 03400/8000: loss=0.010447, psnr=28.30 dB
+  iteration 03500/8000: loss=0.010441, psnr=28.33 dB
+  iteration 03600/8000: loss=0.010375, psnr=28.48 dB
+  iteration 03700/8000: loss=0.010330, psnr=28.57 dB
+  iteration 03800/8000: loss=0.010294, psnr=28.67 dB
+  iteration 03900/8000: loss=0.010254, psnr=28.78 dB
+  iteration 04000/8000: loss=0.010234, psnr=28.84 dB
+  iteration 04100/8000: loss=0.010204, psnr=28.91 dB
+  iteration 04200/8000: loss=0.010343, psnr=28.48 dB
+  iteration 04300/8000: loss=0.010207, psnr=28.90 dB
+  iteration 04400/8000: loss=0.010148, psnr=29.03 dB
+  iteration 04500/8000: loss=0.010105, psnr=29.17 dB
+  iteration 04600/8000: loss=0.010078, psnr=29.23 dB
+  iteration 04700/8000: loss=0.010050, psnr=29.33 dB
+  iteration 04800/8000: loss=0.010061, psnr=29.24 dB
+  iteration 04900/8000: loss=0.010030, psnr=29.36 dB
+  iteration 05000/8000: loss=0.009998, psnr=29.44 dB
+  iteration 05100/8000: loss=0.010006, psnr=29.40 dB
+  iteration 05200/8000: loss=0.009990, psnr=29.43 dB
+  iteration 05300/8000: loss=0.010084, psnr=29.08 dB
+  iteration 05400/8000: loss=0.009962, psnr=29.55 dB
+  iteration 05500/8000: loss=0.009928, psnr=29.61 dB
+  iteration 05600/8000: loss=0.009976, psnr=29.38 dB
+  iteration 05700/8000: loss=0.009908, psnr=29.63 dB
+  iteration 05800/8000: loss=0.009887, psnr=29.69 dB
+  iteration 05900/8000: loss=0.009881, psnr=29.69 dB
+  iteration 06000/8000: loss=0.009873, psnr=29.68 dB
+  iteration 06100/8000: loss=0.009848, psnr=29.77 dB
+  iteration 06200/8000: loss=0.009855, psnr=29.73 dB
+  iteration 06300/8000: loss=0.009856, psnr=29.69 dB
+  iteration 06400/8000: loss=0.009893, psnr=29.51 dB
+  iteration 06500/8000: loss=0.009817, psnr=29.82 dB
+  iteration 06600/8000: loss=0.009809, psnr=29.83 dB
+  iteration 06700/8000: loss=0.009877, psnr=29.50 dB
+  iteration 06800/8000: loss=0.009782, psnr=29.87 dB
+  iteration 06900/8000: loss=0.009790, psnr=29.84 dB
+  iteration 07000/8000: loss=0.009777, psnr=29.87 dB
+  iteration 07100/8000: loss=0.009763, psnr=29.89 dB
+  iteration 07200/8000: loss=0.009761, psnr=29.84 dB
+  iteration 07300/8000: loss=0.009773, psnr=29.80 dB
+  iteration 07400/8000: loss=0.009752, psnr=29.88 dB
+  iteration 07500/8000: loss=0.009746, psnr=29.86 dB
+  iteration 07600/8000: loss=0.009707, psnr=29.98 dB
+  iteration 07700/8000: loss=0.009696, psnr=29.99 dB
+  iteration 07800/8000: loss=0.009757, psnr=29.70 dB
+  iteration 07900/8000: loss=0.009702, psnr=29.93 dB
+  iteration 08000/8000: loss=0.009868, psnr=29.31 dB
+Image shuffled: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.054104, psnr=12.86 dB
+  iteration 00100/8000: loss=0.029893, psnr=15.25 dB
+  iteration 00200/8000: loss=0.029866, psnr=15.25 dB
+  iteration 00300/8000: loss=0.029846, psnr=15.25 dB
+  iteration 00400/8000: loss=0.029831, psnr=15.25 dB
+  iteration 00500/8000: loss=0.029820, psnr=15.25 dB
+  iteration 00600/8000: loss=0.029811, psnr=15.25 dB
+  iteration 00700/8000: loss=0.029803, psnr=15.25 dB
+  iteration 00800/8000: loss=0.029798, psnr=15.25 dB
+  iteration 00900/8000: loss=0.029793, psnr=15.25 dB
+  iteration 01000/8000: loss=0.029876, psnr=15.24 dB
+  iteration 01100/8000: loss=0.029786, psnr=15.25 dB
+  iteration 01200/8000: loss=0.029783, psnr=15.25 dB
+  iteration 01300/8000: loss=0.029780, psnr=15.25 dB
+  iteration 01400/8000: loss=0.029778, psnr=15.25 dB
+  iteration 01500/8000: loss=0.029775, psnr=15.25 dB
+  iteration 01600/8000: loss=0.029773, psnr=15.25 dB
+  iteration 01700/8000: loss=0.029770, psnr=15.25 dB
+  iteration 01800/8000: loss=0.029772, psnr=15.26 dB
+  iteration 01900/8000: loss=0.029764, psnr=15.25 dB
+  iteration 02000/8000: loss=0.029766, psnr=15.25 dB
+  iteration 02100/8000: loss=0.029758, psnr=15.26 dB
+  iteration 02200/8000: loss=0.029753, psnr=15.26 dB
+  iteration 02300/8000: loss=0.029749, psnr=15.26 dB
+  iteration 02400/8000: loss=0.029746, psnr=15.25 dB
+  iteration 02500/8000: loss=0.029741, psnr=15.26 dB
+  iteration 02600/8000: loss=0.029733, psnr=15.26 dB
+  iteration 02700/8000: loss=0.029723, psnr=15.25 dB
+  iteration 02800/8000: loss=0.029709, psnr=15.25 dB
+  iteration 02900/8000: loss=0.029709, psnr=15.23 dB
+  iteration 03000/8000: loss=0.029706, psnr=15.23 dB
+  iteration 03100/8000: loss=0.029665, psnr=15.25 dB
+  iteration 03200/8000: loss=0.029643, psnr=15.24 dB
+  iteration 03300/8000: loss=0.029642, psnr=15.23 dB
+  iteration 03400/8000: loss=0.029596, psnr=15.24 dB
+  iteration 03500/8000: loss=0.029751, psnr=15.26 dB
+  iteration 03600/8000: loss=0.029720, psnr=15.25 dB
+  iteration 03700/8000: loss=0.029698, psnr=15.23 dB
+  iteration 03800/8000: loss=0.029596, psnr=15.24 dB
+  iteration 03900/8000: loss=0.029556, psnr=15.24 dB
+  iteration 04000/8000: loss=0.029521, psnr=15.23 dB
+  iteration 04100/8000: loss=0.029459, psnr=15.23 dB
+  iteration 04200/8000: loss=0.029428, psnr=15.22 dB
+  iteration 04300/8000: loss=0.029358, psnr=15.21 dB
+  iteration 04400/8000: loss=0.029298, psnr=15.21 dB
+  iteration 04500/8000: loss=0.029244, psnr=15.18 dB
+  iteration 04600/8000: loss=0.029174, psnr=15.19 dB
+  iteration 04700/8000: loss=0.029131, psnr=15.17 dB
+  iteration 04800/8000: loss=0.029064, psnr=15.18 dB
+  iteration 04900/8000: loss=0.028977, psnr=15.16 dB
+  iteration 05000/8000: loss=0.028919, psnr=15.15 dB
+  iteration 05100/8000: loss=0.028899, psnr=15.15 dB
+  iteration 05200/8000: loss=0.028793, psnr=15.14 dB
+  iteration 05300/8000: loss=0.028806, psnr=15.13 dB
+  iteration 05400/8000: loss=0.028665, psnr=15.12 dB
+  iteration 05500/8000: loss=0.028596, psnr=15.11 dB
+  iteration 05600/8000: loss=0.028524, psnr=15.10 dB
+  iteration 05700/8000: loss=0.028516, psnr=15.10 dB
+  iteration 05800/8000: loss=0.028427, psnr=15.07 dB
+  iteration 05900/8000: loss=0.028361, psnr=15.07 dB
+  iteration 06000/8000: loss=0.028349, psnr=15.07 dB
+  iteration 06100/8000: loss=0.028246, psnr=15.06 dB
+  iteration 06200/8000: loss=0.028178, psnr=15.04 dB
+  iteration 06300/8000: loss=0.028150, psnr=15.05 dB
+  iteration 06400/8000: loss=0.028113, psnr=15.02 dB
+  iteration 06500/8000: loss=0.028046, psnr=15.02 dB
+  iteration 06600/8000: loss=0.027955, psnr=15.02 dB
+  iteration 06700/8000: loss=0.027913, psnr=15.02 dB
+  iteration 06800/8000: loss=0.027862, psnr=15.01 dB
+  iteration 06900/8000: loss=0.027813, psnr=15.01 dB
+  iteration 07000/8000: loss=0.027786, psnr=14.98 dB
+  iteration 07100/8000: loss=0.027744, psnr=14.97 dB
+  iteration 07200/8000: loss=0.027684, psnr=14.98 dB
+  iteration 07300/8000: loss=0.027646, psnr=14.98 dB
+  iteration 07400/8000: loss=0.027581, psnr=14.97 dB
+  iteration 07500/8000: loss=0.027569, psnr=14.96 dB
+  iteration 07600/8000: loss=0.027540, psnr=14.94 dB
+  iteration 07700/8000: loss=0.027507, psnr=14.94 dB
+  iteration 07800/8000: loss=0.027459, psnr=14.94 dB
+  iteration 07900/8000: loss=0.027452, psnr=14.93 dB
+  iteration 08000/8000: loss=0.027396, psnr=14.93 dB
+U(0, 1) noise: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.085360, psnr=10.26 dB
+  iteration 00100/8000: loss=0.083351, psnr=11.24 dB
+  iteration 00200/8000: loss=0.083308, psnr=11.24 dB
+  iteration 00300/8000: loss=0.083285, psnr=11.24 dB
+  iteration 00400/8000: loss=0.083272, psnr=11.24 dB
+  iteration 00500/8000: loss=0.083262, psnr=11.24 dB
+  iteration 00600/8000: loss=0.083254, psnr=11.24 dB
+  iteration 00700/8000: loss=0.083247, psnr=11.24 dB
+  iteration 00800/8000: loss=0.083239, psnr=11.24 dB
+  iteration 00900/8000: loss=0.083246, psnr=11.20 dB
+  iteration 01000/8000: loss=0.083226, psnr=11.24 dB
+  iteration 01100/8000: loss=0.083262, psnr=11.16 dB
+  iteration 01200/8000: loss=0.083207, psnr=11.24 dB
+  iteration 01300/8000: loss=0.083179, psnr=11.24 dB
+  iteration 01400/8000: loss=0.083147, psnr=11.26 dB
+  iteration 01500/8000: loss=0.083098, psnr=11.22 dB
+  iteration 01600/8000: loss=0.083195, psnr=11.20 dB
+  iteration 01700/8000: loss=0.083162, psnr=11.00 dB
+  iteration 01800/8000: loss=0.082948, psnr=11.24 dB
+  iteration 01900/8000: loss=0.082884, psnr=11.26 dB
+  iteration 02000/8000: loss=0.082705, psnr=11.21 dB
+  iteration 02100/8000: loss=0.082389, psnr=11.23 dB
+  iteration 02200/8000: loss=0.082137, psnr=11.20 dB
+  iteration 02300/8000: loss=0.081906, psnr=11.21 dB
+  iteration 02400/8000: loss=0.081614, psnr=11.14 dB
+  iteration 02500/8000: loss=0.081335, psnr=11.15 dB
+  iteration 02600/8000: loss=0.081195, psnr=11.18 dB
+  iteration 02700/8000: loss=0.080791, psnr=11.14 dB
+  iteration 02800/8000: loss=0.080688, psnr=10.99 dB
+  iteration 02900/8000: loss=0.080208, psnr=11.08 dB
+  iteration 03000/8000: loss=0.079891, psnr=11.07 dB
+  iteration 03100/8000: loss=0.079698, psnr=11.11 dB
+  iteration 03200/8000: loss=0.079355, psnr=11.05 dB
+  iteration 03300/8000: loss=0.079342, psnr=11.10 dB
+  iteration 03400/8000: loss=0.078945, psnr=10.96 dB
+  iteration 03500/8000: loss=0.078597, psnr=11.02 dB
+  iteration 03600/8000: loss=0.078427, psnr=11.06 dB
+  iteration 03700/8000: loss=0.078291, psnr=11.01 dB
+  iteration 03800/8000: loss=0.078106, psnr=10.97 dB
+  iteration 03900/8000: loss=0.077959, psnr=10.97 dB
+  iteration 04000/8000: loss=0.077725, psnr=10.99 dB
+  iteration 04100/8000: loss=0.077568, psnr=10.98 dB
+  iteration 04200/8000: loss=0.077451, psnr=10.93 dB
+  iteration 04300/8000: loss=0.077271, psnr=10.91 dB
+  iteration 04400/8000: loss=0.077272, psnr=10.92 dB
+  iteration 04500/8000: loss=0.077039, psnr=10.93 dB
+  iteration 04600/8000: loss=0.077147, psnr=10.89 dB
+  iteration 04700/8000: loss=0.076891, psnr=10.91 dB
+  iteration 04800/8000: loss=0.076684, psnr=10.90 dB
+  iteration 04900/8000: loss=0.076549, psnr=10.89 dB
+  iteration 05000/8000: loss=0.076565, psnr=10.89 dB
+  iteration 05100/8000: loss=0.076329, psnr=10.92 dB
+  iteration 05200/8000: loss=0.076348, psnr=10.89 dB
+  iteration 05300/8000: loss=0.076180, psnr=10.89 dB
+  iteration 05400/8000: loss=0.076189, psnr=10.84 dB
+  iteration 05500/8000: loss=0.076049, psnr=10.87 dB
+  iteration 05600/8000: loss=0.076006, psnr=10.86 dB
+  iteration 05700/8000: loss=0.075936, psnr=10.89 dB
+  iteration 05800/8000: loss=0.075792, psnr=10.85 dB
+  iteration 05900/8000: loss=0.075790, psnr=10.87 dB
+  iteration 06000/8000: loss=0.075665, psnr=10.85 dB
+  iteration 06100/8000: loss=0.075766, psnr=10.84 dB
+  iteration 06200/8000: loss=0.075609, psnr=10.86 dB
+  iteration 06300/8000: loss=0.075490, psnr=10.85 dB
+  iteration 06400/8000: loss=0.075462, psnr=10.85 dB
+  iteration 06500/8000: loss=0.075419, psnr=10.84 dB
+  iteration 06600/8000: loss=0.075290, psnr=10.83 dB
+  iteration 06700/8000: loss=0.075326, psnr=10.83 dB
+  iteration 06800/8000: loss=0.075309, psnr=10.83 dB
+  iteration 06900/8000: loss=0.075179, psnr=10.82 dB
+  iteration 07000/8000: loss=0.075165, psnr=10.81 dB
+  iteration 07100/8000: loss=0.075144, psnr=10.79 dB
+  iteration 07200/8000: loss=0.075097, psnr=10.79 dB
+  iteration 07300/8000: loss=0.075154, psnr=10.83 dB
+  iteration 07400/8000: loss=0.075081, psnr=10.80 dB
+  iteration 07500/8000: loss=0.074942, psnr=10.81 dB
+  iteration 07600/8000: loss=0.074953, psnr=10.78 dB
+  iteration 07700/8000: loss=0.075008, psnr=10.77 dB
+  iteration 07800/8000: loss=0.074839, psnr=10.79 dB
+  iteration 07900/8000: loss=0.074809, psnr=10.80 dB
+  iteration 08000/8000: loss=0.074809, psnr=10.79 dB
+Saved loss plot to /home/ee23btech11057/PlayingWithDeepImagePrior/output_swin_test/swin_loss_comparison.png
+Saved PSNR plot to /home/ee23btech11057/PlayingWithDeepImagePrior/output_swin_test/swin_psnr_comparison.png
+Saved combined comparison plot to /home/ee23btech11057/PlayingWithDeepImagePrior/output_swin_test/swin_comparison.png
+wandb: updating run metadata
+wandb: uploading media/images/loss_comparison_32000_3ff003e79b3fcf85a17a.png; uploading media/images/psnr_comparison_32000_0c4506247252b4141a88.png; uploading media/images/comparison_32000_7a4bb3e93a03cc5d94f3.png; uploading output.log; uploading wandb-summary.json (+ 1 more)
+wandb: uploading media/images/loss_comparison_32000_3ff003e79b3fcf85a17a.png; uploading media/images/psnr_comparison_32000_0c4506247252b4141a88.png; uploading media/images/comparison_32000_7a4bb3e93a03cc5d94f3.png; uploading output.log; uploading config.yaml
+wandb: uploading media/images/loss_comparison_32000_3ff003e79b3fcf85a17a.png; uploading media/images/psnr_comparison_32000_0c4506247252b4141a88.png; uploading media/images/comparison_32000_7a4bb3e93a03cc5d94f3.png; uploading output.log; uploading config.yaml (+ 1 more)
+wandb: uploading media/images/loss_comparison_32000_3ff003e79b3fcf85a17a.png; uploading media/images/psnr_comparison_32000_0c4506247252b4141a88.png; uploading media/images/comparison_32000_7a4bb3e93a03cc5d94f3.png
+wandb: uploading media/images/comparison_32000_7a4bb3e93a03cc5d94f3.png
+wandb: uploading data
+wandb: 
+wandb: Run history:
+wandb:           iteration ▃▃▃▄▄▆▆▆▇▁▂▃▃▄▆▇▇███▁▂▃▄▅▆▆██▂▃▃▃▄▄▅▅▅▇▇
+wandb:          loss/Image ▇█▄▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  loss/Image + noise ██▆▆▄▃▃▄▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/Image shuffled ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇█▆▆▆▆▅▅▄▄▄▄▃▃▃▃▂▂▁▁▁▁▁
+wandb:  loss/U(0, 1) noise █████▇▇▆▆▆▅▄▄▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁
+wandb:          psnr/Image ▁▁▄▄▄▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇██████▇███████
+wandb:  psnr/Image + noise ▁▂▄▄▄▅▅▅▆▆▆▆▆▅▆▇▇▇▇▇▇▇██▇███▇███████████
+wandb: psnr/Image shuffled ████████████████▇██▇▇▇▇▆▆▅▅▅▅▄▃▃▃▂▂▁▂▁▁▁
+wandb:  psnr/U(0, 1) noise ▆███████▇███▆▇█▆▄▃▄▃▃▂▃▃▃▂▂▃▂▂▃▂▂▂▁▂▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:           iteration 8000
+wandb:          loss/Image 0.00083
+wandb:  loss/Image + noise 0.00987
+wandb: loss/Image shuffled 0.0274
+wandb:  loss/U(0, 1) noise 0.07481
+wandb:          psnr/Image 30.78487
+wandb:  psnr/Image + noise 29.31314
+wandb: psnr/Image shuffled 14.9254
+wandb:  psnr/U(0, 1) noise 10.78502
+wandb: 
+wandb: 🚀 View run swin-F16-seed-0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior/runs/8oiyxhyx
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior
+wandb: Synced 5 W&B file(s), 3 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260928_012053-8oiyxhyx/logs

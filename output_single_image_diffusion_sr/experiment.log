@@ -1,0 +1,91 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run mm6js55p
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_182045-mm6js55p
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run single_image_diffusion_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/mm6js55p
+HR and LR resolutions: (576, 384), (144, 96)
+Loaded vanilla DIP reference (PSNR: 24.74 dB)
+Generating internal training dataset strictly from input image y...
+==========================================================
+ Experiment 3: Single-Image Conditional Diffusion Model
+ Device: cuda
+ Timesteps: 300, Sampling Steps: 50
+ Input y Resolution:  (144, 96) (W x H)
+ Target X Resolution: (576, 384) (W x H) [NOT used during training]
+ Baseline Bicubic PSNR: 23.10 dB
+ Vanilla DIP Baseline:  24.74 dB
+==========================================================
+
+Starting Diffusion score-matching training...
+  Epoch 0001/600: Score-Matching Loss=0.923966
+  Epoch 0020/600: Score-Matching Loss=0.113613
+  Epoch 0040/600: Score-Matching Loss=0.100827
+  Epoch 0060/600: Score-Matching Loss=0.077655
+  Epoch 0080/600: Score-Matching Loss=0.070317
+  Epoch 0100/600: Score-Matching Loss=0.071969
+  Epoch 0120/600: Score-Matching Loss=0.058876
+  Epoch 0140/600: Score-Matching Loss=0.056118
+  Epoch 0160/600: Score-Matching Loss=0.049479
+  Epoch 0180/600: Score-Matching Loss=0.058221
+  Epoch 0200/600: Score-Matching Loss=0.041658
+  Epoch 0220/600: Score-Matching Loss=0.052227
+  Epoch 0240/600: Score-Matching Loss=0.063201
+  Epoch 0260/600: Score-Matching Loss=0.056487
+  Epoch 0280/600: Score-Matching Loss=0.040594
+  Epoch 0300/600: Score-Matching Loss=0.045889
+  Epoch 0320/600: Score-Matching Loss=0.044992
+  Epoch 0340/600: Score-Matching Loss=0.042349
+  Epoch 0360/600: Score-Matching Loss=0.046762
+  Epoch 0380/600: Score-Matching Loss=0.039600
+  Epoch 0400/600: Score-Matching Loss=0.042405
+  Epoch 0420/600: Score-Matching Loss=0.044042
+  Epoch 0440/600: Score-Matching Loss=0.039662
+  Epoch 0460/600: Score-Matching Loss=0.045884
+  Epoch 0480/600: Score-Matching Loss=0.041710
+  Epoch 0500/600: Score-Matching Loss=0.034059
+  Epoch 0520/600: Score-Matching Loss=0.055789
+  Epoch 0540/600: Score-Matching Loss=0.052485
+  Epoch 0560/600: Score-Matching Loss=0.033189
+  Epoch 0580/600: Score-Matching Loss=0.039611
+  Epoch 0600/600: Score-Matching Loss=0.034669
+
+Running Reverse Diffusion Sampling conditioned on input image y...
+
+==========================================================
+ Single-Image Diffusion SR Complete!
+ Final Diffusion SR PSNR:  nan dB
+ Vanilla DIP Baseline:     24.74 dB
+ Diff vs DIP:              +nan dB
+ Baseline Bicubic PSNR:    23.10 dB
+ Gain over Bicubic:        +nan dB
+==========================================================
+/home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/utils/common_utils.py:174: RuntimeWarning: invalid value encountered in cast
+  ar = np.clip(img_np*255,0,255).astype(np.uint8)
+Saved new approach HR to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_diffusion_sr/zebra_hr_with_new_approach.png
+Saved comparison figure to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_diffusion_sr/zebra_sr_comparison.png
+Saved training curve to:   /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_diffusion_sr/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading media/images/real_HR_image_600_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_dip_600_4deae5dc86a5ce9a9f79.png; uploading output.log; uploading config.yaml; uploading media/images/downsampled_LR_image_600_346c8e0110f2d86a7e42.png (+ 4 more)
+wandb: uploading media/images/real_HR_image_600_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_dip_600_4deae5dc86a5ce9a9f79.png; uploading media/images/visual_comparison_600_ab8c4e21d58be021b295.png
+wandb: uploading media/images/hr_with_dip_600_4deae5dc86a5ce9a9f79.png; uploading media/images/visual_comparison_600_ab8c4e21d58be021b295.png
+wandb: uploading media/images/visual_comparison_600_ab8c4e21d58be021b295.png
+wandb: uploading history steps 593-600, summary, console lines 44-60
+wandb: 
+wandb: Run history:
+wandb:              epoch ▁▁▁▁▂▂▂▂▂▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇█████
+wandb: loss/diffusion_mse █▂▂▂▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:              epoch 600
+wandb: loss/diffusion_mse 0.03467
+wandb:       psnr_bicubic 23.10479
+wandb:           psnr_dip 24.73767
+wandb: 
+wandb: 🚀 View run single_image_diffusion_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/mm6js55p
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_182045-mm6js55p/logs

@@ -2,10 +2,11 @@ from .skip import skip
 from .texture_nets import get_texture_nets
 from .resnet import ResNet
 from .unet import UNet
+from .swin import swin, SwinImagePrior
 
 import torch.nn as nn
 
-def get_net(input_depth, NET_TYPE, pad, upsample_mode, n_channels=3, act_fun='LeakyReLU', skip_n33d=128, skip_n33u=128, skip_n11=4, num_scales=5, downsample_mode='stride'):
+def get_net(input_depth, NET_TYPE, pad, upsample_mode, n_channels=3, act_fun='LeakyReLU', skip_n33d=128, skip_n33u=128, skip_n11=4, num_scales=5, downsample_mode='stride', swin_patch_size=4, swin_embed_dim=64, swin_depth=4, swin_num_heads=4, swin_window_size=8):
     if NET_TYPE == 'ResNet':
         # TODO
         net = ResNet(input_depth, 3, 10, 16, 1, nn.BatchNorm2d, False)
@@ -23,6 +24,16 @@ def get_net(input_depth, NET_TYPE, pad, upsample_mode, n_channels=3, act_fun='Le
         net = UNet(num_input_channels=input_depth, num_output_channels=3, 
                    feature_scale=4, more_layers=0, concat_x=False,
                    upsample_mode=upsample_mode, pad=pad, norm_layer=nn.BatchNorm2d, need_sigmoid=True, need_bias=True)
+    elif NET_TYPE == 'swin':
+        net = swin(input_depth, n_channels,
+                   patch_size=swin_patch_size,
+                   embed_dim=swin_embed_dim,
+                   depth=swin_depth,
+                   num_heads=swin_num_heads,
+                   window_size=swin_window_size,
+                   need_sigmoid=True,
+                   need_bias=True,
+                   pad=pad)
     elif NET_TYPE == 'identity':
         assert input_depth == 3
         net = nn.Sequential()

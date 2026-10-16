@@ -1,0 +1,127 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run rsf9xobx
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_193339-rsf9xobx
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dip_wavelet_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/rsf9xobx
+HR and LR resolutions: (576, 384), (144, 96)
+Loaded vanilla DIP reference (PSNR: 24.74 dB)
+==========================================================
+ Experiment 7: Wavelet Sparsity & Directional DIP (Wavelet-DIP)
+ Device: cuda
+ Resolution: LR=(144, 96) -> HR=(576, 384)
+ Lambda Sparse: 0.005, Lambda Cross: 0.01
+ Baselines: Bicubic=23.10 dB, Nearest=20.82 dB
+ Vanilla DIP Baseline: 24.74 dB
+==========================================================
+
+Starting Wavelet-DIP optimization...
+  Iteration 00001/6000: loss_data=0.058219, loss_sparse=0.064654, loss_cross=0.000336, PSNR_LR=12.35 dB, PSNR_HR=11.88 dB (best=11.88 dB)
+  Iteration 00100/6000: loss_data=0.011018, loss_sparse=0.025770, loss_cross=0.000439, PSNR_LR=19.58 dB, PSNR_HR=17.87 dB (best=17.89 dB)
+  Iteration 00200/6000: loss_data=0.005492, loss_sparse=0.036362, loss_cross=0.000896, PSNR_LR=22.60 dB, PSNR_HR=19.96 dB (best=19.96 dB)
+  Iteration 00300/6000: loss_data=0.003649, loss_sparse=0.041631, loss_cross=0.001096, PSNR_LR=24.38 dB, PSNR_HR=21.08 dB (best=21.15 dB)
+  Iteration 00400/6000: loss_data=0.002907, loss_sparse=0.044759, loss_cross=0.001143, PSNR_LR=25.37 dB, PSNR_HR=21.63 dB (best=21.77 dB)
+  Iteration 00500/6000: loss_data=0.002179, loss_sparse=0.047883, loss_cross=0.001235, PSNR_LR=26.62 dB, PSNR_HR=22.24 dB (best=22.34 dB)
+  Iteration 00600/6000: loss_data=0.001759, loss_sparse=0.049266, loss_cross=0.001272, PSNR_LR=27.55 dB, PSNR_HR=22.70 dB (best=22.70 dB)
+  Iteration 00700/6000: loss_data=0.001531, loss_sparse=0.050459, loss_cross=0.001311, PSNR_LR=28.15 dB, PSNR_HR=22.92 dB (best=23.01 dB)
+  Iteration 00800/6000: loss_data=0.001299, loss_sparse=0.051740, loss_cross=0.001334, PSNR_LR=28.86 dB, PSNR_HR=23.21 dB (best=23.21 dB)
+  Iteration 00900/6000: loss_data=0.001136, loss_sparse=0.052172, loss_cross=0.001383, PSNR_LR=29.44 dB, PSNR_HR=23.34 dB (best=23.38 dB)
+  Iteration 01000/6000: loss_data=0.001100, loss_sparse=0.052147, loss_cross=0.001358, PSNR_LR=29.59 dB, PSNR_HR=23.36 dB (best=23.50 dB)
+  Iteration 01100/6000: loss_data=0.000957, loss_sparse=0.050951, loss_cross=0.001297, PSNR_LR=30.19 dB, PSNR_HR=23.52 dB (best=23.57 dB)
+  Iteration 01200/6000: loss_data=0.000878, loss_sparse=0.049858, loss_cross=0.001251, PSNR_LR=30.56 dB, PSNR_HR=23.60 dB (best=23.63 dB)
+  Iteration 01300/6000: loss_data=0.000928, loss_sparse=0.048689, loss_cross=0.001187, PSNR_LR=30.32 dB, PSNR_HR=23.43 dB (best=23.64 dB)
+  Iteration 01400/6000: loss_data=0.000818, loss_sparse=0.047398, loss_cross=0.001146, PSNR_LR=30.87 dB, PSNR_HR=23.46 dB (best=23.64 dB)
+  Iteration 01500/6000: loss_data=0.000765, loss_sparse=0.043159, loss_cross=0.000990, PSNR_LR=31.16 dB, PSNR_HR=23.38 dB (best=23.64 dB)
+  Iteration 01600/6000: loss_data=0.000699, loss_sparse=0.041059, loss_cross=0.000891, PSNR_LR=31.55 dB, PSNR_HR=23.30 dB (best=23.64 dB)
+  Iteration 01700/6000: loss_data=0.000625, loss_sparse=0.036560, loss_cross=0.000751, PSNR_LR=32.04 dB, PSNR_HR=23.36 dB (best=23.64 dB)
+  Iteration 01800/6000: loss_data=0.000588, loss_sparse=0.033037, loss_cross=0.000582, PSNR_LR=32.30 dB, PSNR_HR=23.15 dB (best=23.64 dB)
+  Iteration 01900/6000: loss_data=0.000569, loss_sparse=0.031535, loss_cross=0.000552, PSNR_LR=32.45 dB, PSNR_HR=23.14 dB (best=23.64 dB)
+  Iteration 02000/6000: loss_data=0.000520, loss_sparse=0.030224, loss_cross=0.000500, PSNR_LR=32.84 dB, PSNR_HR=23.06 dB (best=23.64 dB)
+  Iteration 02100/6000: loss_data=0.000519, loss_sparse=0.028728, loss_cross=0.000426, PSNR_LR=32.85 dB, PSNR_HR=23.05 dB (best=23.64 dB)
+  Iteration 02200/6000: loss_data=0.000477, loss_sparse=0.029443, loss_cross=0.000447, PSNR_LR=33.21 dB, PSNR_HR=23.11 dB (best=23.64 dB)
+  Iteration 02300/6000: loss_data=0.000437, loss_sparse=0.028167, loss_cross=0.000408, PSNR_LR=33.60 dB, PSNR_HR=23.06 dB (best=23.64 dB)
+  Iteration 02400/6000: loss_data=0.000439, loss_sparse=0.028057, loss_cross=0.000376, PSNR_LR=33.57 dB, PSNR_HR=23.10 dB (best=23.64 dB)
+  Iteration 02500/6000: loss_data=0.000398, loss_sparse=0.026018, loss_cross=0.000328, PSNR_LR=34.00 dB, PSNR_HR=23.05 dB (best=23.64 dB)
+  Iteration 02600/6000: loss_data=0.000390, loss_sparse=0.027608, loss_cross=0.000367, PSNR_LR=34.09 dB, PSNR_HR=23.09 dB (best=23.64 dB)
+  Iteration 02700/6000: loss_data=0.000351, loss_sparse=0.026083, loss_cross=0.000323, PSNR_LR=34.54 dB, PSNR_HR=23.10 dB (best=23.64 dB)
+  Iteration 02800/6000: loss_data=0.000356, loss_sparse=0.024924, loss_cross=0.000282, PSNR_LR=34.49 dB, PSNR_HR=23.01 dB (best=23.64 dB)
+  Iteration 02900/6000: loss_data=0.000343, loss_sparse=0.025823, loss_cross=0.000324, PSNR_LR=34.65 dB, PSNR_HR=23.10 dB (best=23.64 dB)
+  Iteration 03000/6000: loss_data=0.000335, loss_sparse=0.026025, loss_cross=0.000327, PSNR_LR=34.74 dB, PSNR_HR=23.15 dB (best=23.64 dB)
+  Iteration 03100/6000: loss_data=0.000314, loss_sparse=0.024402, loss_cross=0.000266, PSNR_LR=35.03 dB, PSNR_HR=23.08 dB (best=23.64 dB)
+  Iteration 03200/6000: loss_data=0.000276, loss_sparse=0.024612, loss_cross=0.000256, PSNR_LR=35.59 dB, PSNR_HR=23.07 dB (best=23.64 dB)
+  Iteration 03300/6000: loss_data=0.000324, loss_sparse=0.025795, loss_cross=0.000304, PSNR_LR=34.90 dB, PSNR_HR=23.09 dB (best=23.64 dB)
+  Iteration 03400/6000: loss_data=0.000285, loss_sparse=0.025434, loss_cross=0.000286, PSNR_LR=35.44 dB, PSNR_HR=23.09 dB (best=23.64 dB)
+  Iteration 03500/6000: loss_data=0.000249, loss_sparse=0.024105, loss_cross=0.000236, PSNR_LR=36.04 dB, PSNR_HR=23.05 dB (best=23.64 dB)
+  Iteration 03600/6000: loss_data=0.000245, loss_sparse=0.024827, loss_cross=0.000255, PSNR_LR=36.11 dB, PSNR_HR=23.06 dB (best=23.64 dB)
+  Iteration 03700/6000: loss_data=0.000218, loss_sparse=0.024085, loss_cross=0.000227, PSNR_LR=36.61 dB, PSNR_HR=22.95 dB (best=23.64 dB)
+  Iteration 03800/6000: loss_data=0.000224, loss_sparse=0.023845, loss_cross=0.000221, PSNR_LR=36.49 dB, PSNR_HR=23.04 dB (best=23.64 dB)
+  Iteration 03900/6000: loss_data=0.000204, loss_sparse=0.024228, loss_cross=0.000235, PSNR_LR=36.89 dB, PSNR_HR=23.06 dB (best=23.64 dB)
+  Iteration 04000/6000: loss_data=0.000199, loss_sparse=0.023577, loss_cross=0.000217, PSNR_LR=37.01 dB, PSNR_HR=23.08 dB (best=23.64 dB)
+  Iteration 04100/6000: loss_data=0.000201, loss_sparse=0.023487, loss_cross=0.000218, PSNR_LR=36.97 dB, PSNR_HR=23.10 dB (best=23.64 dB)
+  Iteration 04200/6000: loss_data=0.000192, loss_sparse=0.023305, loss_cross=0.000194, PSNR_LR=37.16 dB, PSNR_HR=23.02 dB (best=23.64 dB)
+  Iteration 04300/6000: loss_data=0.000200, loss_sparse=0.023428, loss_cross=0.000217, PSNR_LR=36.99 dB, PSNR_HR=22.94 dB (best=23.64 dB)
+  Iteration 04400/6000: loss_data=0.000177, loss_sparse=0.023308, loss_cross=0.000202, PSNR_LR=37.53 dB, PSNR_HR=23.04 dB (best=23.64 dB)
+  Iteration 04500/6000: loss_data=0.000190, loss_sparse=0.022406, loss_cross=0.000182, PSNR_LR=37.22 dB, PSNR_HR=23.04 dB (best=23.64 dB)
+  Iteration 04600/6000: loss_data=0.000191, loss_sparse=0.023949, loss_cross=0.000234, PSNR_LR=37.19 dB, PSNR_HR=23.06 dB (best=23.64 dB)
+  Iteration 04700/6000: loss_data=0.010795, loss_sparse=0.028937, loss_cross=0.000582, PSNR_LR=19.67 dB, PSNR_HR=17.97 dB (best=23.64 dB)
+  Iteration 04800/6000: loss_data=0.004293, loss_sparse=0.039813, loss_cross=0.000952, PSNR_LR=23.67 dB, PSNR_HR=20.61 dB (best=23.64 dB)
+  Iteration 04900/6000: loss_data=0.002976, loss_sparse=0.044996, loss_cross=0.001115, PSNR_LR=25.26 dB, PSNR_HR=21.58 dB (best=23.64 dB)
+  Iteration 05000/6000: loss_data=0.002223, loss_sparse=0.048588, loss_cross=0.001233, PSNR_LR=26.53 dB, PSNR_HR=22.15 dB (best=23.64 dB)
+  Iteration 05100/6000: loss_data=0.001771, loss_sparse=0.050625, loss_cross=0.001300, PSNR_LR=27.52 dB, PSNR_HR=22.65 dB (best=23.64 dB)
+  Iteration 05200/6000: loss_data=0.001487, loss_sparse=0.052531, loss_cross=0.001356, PSNR_LR=28.28 dB, PSNR_HR=22.90 dB (best=23.64 dB)
+  Iteration 05300/6000: loss_data=0.001284, loss_sparse=0.052039, loss_cross=0.001343, PSNR_LR=28.91 dB, PSNR_HR=23.13 dB (best=23.64 dB)
+  Iteration 05400/6000: loss_data=0.001208, loss_sparse=0.051837, loss_cross=0.001293, PSNR_LR=29.18 dB, PSNR_HR=23.17 dB (best=23.64 dB)
+  Iteration 05500/6000: loss_data=0.001015, loss_sparse=0.050385, loss_cross=0.001253, PSNR_LR=29.94 dB, PSNR_HR=23.39 dB (best=23.64 dB)
+  Iteration 05600/6000: loss_data=0.001057, loss_sparse=0.047355, loss_cross=0.001131, PSNR_LR=29.76 dB, PSNR_HR=23.34 dB (best=23.64 dB)
+  Iteration 05700/6000: loss_data=0.000905, loss_sparse=0.045274, loss_cross=0.001027, PSNR_LR=30.43 dB, PSNR_HR=23.36 dB (best=23.64 dB)
+  Iteration 05800/6000: loss_data=0.000830, loss_sparse=0.043615, loss_cross=0.000976, PSNR_LR=30.81 dB, PSNR_HR=23.26 dB (best=23.64 dB)
+  Iteration 05900/6000: loss_data=0.000776, loss_sparse=0.040477, loss_cross=0.000830, PSNR_LR=31.10 dB, PSNR_HR=23.18 dB (best=23.64 dB)
+  Iteration 06000/6000: loss_data=0.000760, loss_sparse=0.037850, loss_cross=0.000725, PSNR_LR=31.19 dB, PSNR_HR=23.14 dB (best=23.64 dB)
+
+==========================================================
+ Wavelet-DIP Optimization Complete!
+ Final Wavelet-DIP PSNR: 23.64 dB
+ Vanilla DIP Baseline:   24.74 dB
+ Gain over DIP:          -1.10 dB
+ Baseline Bicubic PSNR:  23.10 dB
+ Gain over Bicubic:      +0.53 dB
+==========================================================
+Saved new approach HR to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_wavelet/zebra_hr_with_new_approach.png
+Saved comparison figure to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_wavelet/zebra_sr_comparison.png
+Saved training curves to:   /home/ee23btech11057/PlayingWithDeepImagePrior/output_dip_wavelet/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading media/images/downsampled_LR_image_61_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_61_d3767cfef97eb25893ad.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png; uploading output.log; uploading wandb-summary.json (+ 4 more)
+wandb: uploading media/images/downsampled_LR_image_61_346c8e0110f2d86a7e42.png; uploading media/images/hr_with_new_approach_61_d3767cfef97eb25893ad.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png; uploading media/images/real_HR_image_61_a92b4b1a54158559bcc8.png; uploading media/images/visual_comparison_61_107077876210897b657e.png (+ 1 more)
+wandb: uploading media/images/hr_with_new_approach_61_d3767cfef97eb25893ad.png; uploading media/images/hr_with_dip_61_4deae5dc86a5ce9a9f79.png; uploading media/images/real_HR_image_61_a92b4b1a54158559bcc8.png; uploading media/images/visual_comparison_61_107077876210897b657e.png
+wandb: uploading media/images/visual_comparison_61_107077876210897b657e.png
+wandb: uploading history steps 60-61, summary, console lines 72-84
+wandb: 
+wandb: Run history:
+wandb:           iteration ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇███
+wandb:       loss/data_mse █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁
+wandb:          loss/total █▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁
+wandb:  loss/wavelet_cross ▂▅▆▇▇███▇▇▆▄▃▃▃▂▂▂▂▂▂▂▁▂▁▁▁▁▁▁▁▃▅▆▇█▇▇▆▅
+wandb: loss/wavelet_sparse █▃▄▅▆▆▆▅▅▄▃▂▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▄▅▅▆▆▆▅▅▄
+wandb:             psnr/HR ▁▆▇▇██████████████████████████▅▆▇▇██████
+wandb:             psnr/LR ▁▃▃▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇▇████████▁▃▄▄▅▅▅▅▆
+wandb: 
+wandb: Run summary:
+wandb:        best_psnr_hr 23.63771
+wandb:       final_psnr_hr 23.63771
+wandb:   gain_over_bicubic 0.53292
+wandb:       gain_over_dip -1.09996
+wandb:           iteration 6000
+wandb:       loss/data_mse 0.00076
+wandb:          loss/total 0.00096
+wandb:  loss/wavelet_cross 0.00073
+wandb: loss/wavelet_sparse 0.03785
+wandb:             psnr/HR 23.14123
+wandb:                  +3 ...
+wandb: 
+wandb: 🚀 View run dip_wavelet_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/rsf9xobx
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_193339-rsf9xobx/logs

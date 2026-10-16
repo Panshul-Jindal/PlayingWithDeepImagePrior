@@ -1,0 +1,365 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run m439zl57
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20260921_165751-m439zl57
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run F16-seed-0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior/runs/m439zl57
+Device: cuda
+Image: /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/denoising/F16_GT.png
+Tensor shape: (1, 3, 512, 512)
+Shared input shape: (1, 32, 512, 512)
+Image: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.058748
+  iteration 00100/8000: loss=0.029598
+  iteration 00200/8000: loss=0.027918
+  iteration 00300/8000: loss=0.013109
+  iteration 00400/8000: loss=0.009478
+  iteration 00500/8000: loss=0.006995
+  iteration 00600/8000: loss=0.005565
+  iteration 00700/8000: loss=0.005169
+  iteration 00800/8000: loss=0.004499
+  iteration 00900/8000: loss=0.004349
+  iteration 01000/8000: loss=0.003794
+  iteration 01100/8000: loss=0.004114
+  iteration 01200/8000: loss=0.003497
+  iteration 01300/8000: loss=0.003331
+  iteration 01400/8000: loss=0.003080
+  iteration 01500/8000: loss=0.002923
+  iteration 01600/8000: loss=0.002761
+  iteration 01700/8000: loss=0.002835
+  iteration 01800/8000: loss=0.002577
+  iteration 01900/8000: loss=0.002436
+  iteration 02000/8000: loss=0.002358
+  iteration 02100/8000: loss=0.002687
+  iteration 02200/8000: loss=0.002175
+  iteration 02300/8000: loss=0.002209
+  iteration 02400/8000: loss=0.002079
+  iteration 02500/8000: loss=0.001981
+  iteration 02600/8000: loss=0.001926
+  iteration 02700/8000: loss=0.001879
+  iteration 02800/8000: loss=0.001808
+  iteration 02900/8000: loss=0.001759
+  iteration 03000/8000: loss=0.001714
+  iteration 03100/8000: loss=0.001693
+  iteration 03200/8000: loss=0.001618
+  iteration 03300/8000: loss=0.001581
+  iteration 03400/8000: loss=0.001561
+  iteration 03500/8000: loss=0.001576
+  iteration 03600/8000: loss=0.001451
+  iteration 03700/8000: loss=0.001426
+  iteration 03800/8000: loss=0.001403
+  iteration 03900/8000: loss=0.001365
+  iteration 04000/8000: loss=0.001341
+  iteration 04100/8000: loss=0.002727
+  iteration 04200/8000: loss=0.001346
+  iteration 04300/8000: loss=0.001294
+  iteration 04400/8000: loss=0.001246
+  iteration 04500/8000: loss=0.001226
+  iteration 04600/8000: loss=0.001203
+  iteration 04700/8000: loss=0.001481
+  iteration 04800/8000: loss=0.001165
+  iteration 04900/8000: loss=0.001154
+  iteration 05000/8000: loss=0.001134
+  iteration 05100/8000: loss=0.001108
+  iteration 05200/8000: loss=0.001117
+  iteration 05300/8000: loss=0.001092
+  iteration 05400/8000: loss=0.001106
+  iteration 05500/8000: loss=0.001071
+  iteration 05600/8000: loss=0.001065
+  iteration 05700/8000: loss=0.001017
+  iteration 05800/8000: loss=0.001002
+  iteration 05900/8000: loss=0.001039
+  iteration 06000/8000: loss=0.000991
+  iteration 06100/8000: loss=0.001008
+  iteration 06200/8000: loss=0.000980
+  iteration 06300/8000: loss=0.000966
+  iteration 06400/8000: loss=0.001010
+  iteration 06500/8000: loss=0.000949
+  iteration 06600/8000: loss=0.000974
+  iteration 06700/8000: loss=0.000918
+  iteration 06800/8000: loss=0.000901
+  iteration 06900/8000: loss=0.000890
+  iteration 07000/8000: loss=0.001458
+  iteration 07100/8000: loss=0.000936
+  iteration 07200/8000: loss=0.000873
+  iteration 07300/8000: loss=0.000880
+  iteration 07400/8000: loss=0.000846
+  iteration 07500/8000: loss=0.000847
+  iteration 07600/8000: loss=0.000839
+  iteration 07700/8000: loss=0.000848
+  iteration 07800/8000: loss=0.000836
+  iteration 07900/8000: loss=0.000845
+  iteration 08000/8000: loss=0.000833
+Image + noise: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.121466
+  iteration 00100/8000: loss=0.037214
+  iteration 00200/8000: loss=0.020995
+  iteration 00300/8000: loss=0.017032
+  iteration 00400/8000: loss=0.015442
+  iteration 00500/8000: loss=0.014499
+  iteration 00600/8000: loss=0.013772
+  iteration 00700/8000: loss=0.013512
+  iteration 00800/8000: loss=0.012981
+  iteration 00900/8000: loss=0.012619
+  iteration 01000/8000: loss=0.012365
+  iteration 01100/8000: loss=0.012134
+  iteration 01200/8000: loss=0.012103
+  iteration 01300/8000: loss=0.012068
+  iteration 01400/8000: loss=0.011649
+  iteration 01500/8000: loss=0.011555
+  iteration 01600/8000: loss=0.011419
+  iteration 01700/8000: loss=0.011341
+  iteration 01800/8000: loss=0.011242
+  iteration 01900/8000: loss=0.011195
+  iteration 02000/8000: loss=0.011163
+  iteration 02100/8000: loss=0.011026
+  iteration 02200/8000: loss=0.010983
+  iteration 02300/8000: loss=0.010923
+  iteration 02400/8000: loss=0.010847
+  iteration 02500/8000: loss=0.010933
+  iteration 02600/8000: loss=0.010833
+  iteration 02700/8000: loss=0.011052
+  iteration 02800/8000: loss=0.010728
+  iteration 02900/8000: loss=0.010701
+  iteration 03000/8000: loss=0.010615
+  iteration 03100/8000: loss=0.010567
+  iteration 03200/8000: loss=0.010584
+  iteration 03300/8000: loss=0.010469
+  iteration 03400/8000: loss=0.010508
+  iteration 03500/8000: loss=0.010434
+  iteration 03600/8000: loss=0.010374
+  iteration 03700/8000: loss=0.010350
+  iteration 03800/8000: loss=0.010283
+  iteration 03900/8000: loss=0.010397
+  iteration 04000/8000: loss=0.010231
+  iteration 04100/8000: loss=0.010207
+  iteration 04200/8000: loss=0.010182
+  iteration 04300/8000: loss=0.010158
+  iteration 04400/8000: loss=0.010218
+  iteration 04500/8000: loss=0.010140
+  iteration 04600/8000: loss=0.010176
+  iteration 04700/8000: loss=0.010199
+  iteration 04800/8000: loss=0.010065
+  iteration 04900/8000: loss=0.010063
+  iteration 05000/8000: loss=0.010076
+  iteration 05100/8000: loss=0.010024
+  iteration 05200/8000: loss=0.010011
+  iteration 05300/8000: loss=0.009989
+  iteration 05400/8000: loss=0.009970
+  iteration 05500/8000: loss=0.009951
+  iteration 05600/8000: loss=0.009927
+  iteration 05700/8000: loss=0.009909
+  iteration 05800/8000: loss=0.009897
+  iteration 05900/8000: loss=0.009914
+  iteration 06000/8000: loss=0.009883
+  iteration 06100/8000: loss=0.009874
+  iteration 06200/8000: loss=0.009859
+  iteration 06300/8000: loss=0.009855
+  iteration 06400/8000: loss=0.009863
+  iteration 06500/8000: loss=0.009819
+  iteration 06600/8000: loss=0.009864
+  iteration 06700/8000: loss=0.009810
+  iteration 06800/8000: loss=0.009825
+  iteration 06900/8000: loss=0.009789
+  iteration 07000/8000: loss=0.009786
+  iteration 07100/8000: loss=0.009806
+  iteration 07200/8000: loss=0.009763
+  iteration 07300/8000: loss=0.009766
+  iteration 07400/8000: loss=0.009770
+  iteration 07500/8000: loss=0.009757
+  iteration 07600/8000: loss=0.009725
+  iteration 07700/8000: loss=0.009783
+  iteration 07800/8000: loss=0.009704
+  iteration 07900/8000: loss=0.009696
+  iteration 08000/8000: loss=0.009703
+Image shuffled: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.054104
+  iteration 00100/8000: loss=0.029893
+  iteration 00200/8000: loss=0.029866
+  iteration 00300/8000: loss=0.029846
+  iteration 00400/8000: loss=0.029831
+  iteration 00500/8000: loss=0.029820
+  iteration 00600/8000: loss=0.029811
+  iteration 00700/8000: loss=0.029803
+  iteration 00800/8000: loss=0.029798
+  iteration 00900/8000: loss=0.029793
+  iteration 01000/8000: loss=0.029789
+  iteration 01100/8000: loss=0.029786
+  iteration 01200/8000: loss=0.029783
+  iteration 01300/8000: loss=0.029782
+  iteration 01400/8000: loss=0.029778
+  iteration 01500/8000: loss=0.029908
+  iteration 01600/8000: loss=0.029773
+  iteration 01700/8000: loss=0.029769
+  iteration 01800/8000: loss=0.029768
+  iteration 01900/8000: loss=0.029791
+  iteration 02000/8000: loss=0.029761
+  iteration 02100/8000: loss=0.029756
+  iteration 02200/8000: loss=0.029753
+  iteration 02300/8000: loss=0.029749
+  iteration 02400/8000: loss=0.029743
+  iteration 02500/8000: loss=0.029743
+  iteration 02600/8000: loss=0.029729
+  iteration 02700/8000: loss=0.029720
+  iteration 02800/8000: loss=0.029777
+  iteration 02900/8000: loss=0.029696
+  iteration 03000/8000: loss=0.029680
+  iteration 03100/8000: loss=0.029659
+  iteration 03200/8000: loss=0.029682
+  iteration 03300/8000: loss=0.029640
+  iteration 03400/8000: loss=0.029618
+  iteration 03500/8000: loss=0.029613
+  iteration 03600/8000: loss=0.029568
+  iteration 03700/8000: loss=0.029569
+  iteration 03800/8000: loss=0.029494
+  iteration 03900/8000: loss=0.029768
+  iteration 04000/8000: loss=0.029762
+  iteration 04100/8000: loss=0.029758
+  iteration 04200/8000: loss=0.029754
+  iteration 04300/8000: loss=0.029749
+  iteration 04400/8000: loss=0.029762
+  iteration 04500/8000: loss=0.029727
+  iteration 04600/8000: loss=0.029740
+  iteration 04700/8000: loss=0.029669
+  iteration 04800/8000: loss=0.029697
+  iteration 04900/8000: loss=0.029702
+  iteration 05000/8000: loss=0.029541
+  iteration 05100/8000: loss=0.029509
+  iteration 05200/8000: loss=0.029449
+  iteration 05300/8000: loss=0.029391
+  iteration 05400/8000: loss=0.029350
+  iteration 05500/8000: loss=0.029322
+  iteration 05600/8000: loss=0.029254
+  iteration 05700/8000: loss=0.029211
+  iteration 05800/8000: loss=0.029139
+  iteration 05900/8000: loss=0.029075
+  iteration 06000/8000: loss=0.029017
+  iteration 06100/8000: loss=0.028961
+  iteration 06200/8000: loss=0.029138
+  iteration 06300/8000: loss=0.028892
+  iteration 06400/8000: loss=0.028877
+  iteration 06500/8000: loss=0.028722
+  iteration 06600/8000: loss=0.028672
+  iteration 06700/8000: loss=0.028600
+  iteration 06800/8000: loss=0.028555
+  iteration 06900/8000: loss=0.028480
+  iteration 07000/8000: loss=0.028399
+  iteration 07100/8000: loss=0.028363
+  iteration 07200/8000: loss=0.028305
+  iteration 07300/8000: loss=0.028215
+  iteration 07400/8000: loss=0.028190
+  iteration 07500/8000: loss=0.028127
+  iteration 07600/8000: loss=0.028082
+  iteration 07700/8000: loss=0.027979
+  iteration 07800/8000: loss=0.027967
+  iteration 07900/8000: loss=0.027901
+  iteration 08000/8000: loss=0.027854
+U(0, 1) noise: 2,887,303 trainable parameters
+  iteration 00001/8000: loss=0.085360
+  iteration 00100/8000: loss=0.083351
+  iteration 00200/8000: loss=0.083308
+  iteration 00300/8000: loss=0.083285
+  iteration 00400/8000: loss=0.083272
+  iteration 00500/8000: loss=0.083262
+  iteration 00600/8000: loss=0.083254
+  iteration 00700/8000: loss=0.083251
+  iteration 00800/8000: loss=0.083239
+  iteration 00900/8000: loss=0.083249
+  iteration 01000/8000: loss=0.083225
+  iteration 01100/8000: loss=0.083235
+  iteration 01200/8000: loss=0.083205
+  iteration 01300/8000: loss=0.083176
+  iteration 01400/8000: loss=0.083154
+  iteration 01500/8000: loss=0.083129
+  iteration 01600/8000: loss=0.083017
+  iteration 01700/8000: loss=0.082929
+  iteration 01800/8000: loss=0.082779
+  iteration 01900/8000: loss=0.083007
+  iteration 02000/8000: loss=0.082690
+  iteration 02100/8000: loss=0.082476
+  iteration 02200/8000: loss=0.082268
+  iteration 02300/8000: loss=0.082041
+  iteration 02400/8000: loss=0.081746
+  iteration 02500/8000: loss=0.081489
+  iteration 02600/8000: loss=0.081331
+  iteration 02700/8000: loss=0.080926
+  iteration 02800/8000: loss=0.080586
+  iteration 02900/8000: loss=0.080362
+  iteration 03000/8000: loss=0.080077
+  iteration 03100/8000: loss=0.079738
+  iteration 03200/8000: loss=0.079504
+  iteration 03300/8000: loss=0.079422
+  iteration 03400/8000: loss=0.079006
+  iteration 03500/8000: loss=0.078757
+  iteration 03600/8000: loss=0.078634
+  iteration 03700/8000: loss=0.078364
+  iteration 03800/8000: loss=0.078142
+  iteration 03900/8000: loss=0.077962
+  iteration 04000/8000: loss=0.077790
+  iteration 04100/8000: loss=0.077683
+  iteration 04200/8000: loss=0.077479
+  iteration 04300/8000: loss=0.077340
+  iteration 04400/8000: loss=0.077200
+  iteration 04500/8000: loss=0.077069
+  iteration 04600/8000: loss=0.076971
+  iteration 04700/8000: loss=0.076767
+  iteration 04800/8000: loss=0.076801
+  iteration 04900/8000: loss=0.076550
+  iteration 05000/8000: loss=0.076538
+  iteration 05100/8000: loss=0.076400
+  iteration 05200/8000: loss=0.076315
+  iteration 05300/8000: loss=0.076179
+  iteration 05400/8000: loss=0.076142
+  iteration 05500/8000: loss=0.076218
+  iteration 05600/8000: loss=0.075963
+  iteration 05700/8000: loss=0.075954
+  iteration 05800/8000: loss=0.075837
+  iteration 05900/8000: loss=0.075858
+  iteration 06000/8000: loss=0.075859
+  iteration 06100/8000: loss=0.075736
+  iteration 06200/8000: loss=0.075590
+  iteration 06300/8000: loss=0.075569
+  iteration 06400/8000: loss=0.075443
+  iteration 06500/8000: loss=0.075410
+  iteration 06600/8000: loss=0.075520
+  iteration 06700/8000: loss=0.075410
+  iteration 06800/8000: loss=0.075411
+  iteration 06900/8000: loss=0.075217
+  iteration 07000/8000: loss=0.075262
+  iteration 07100/8000: loss=0.075130
+  iteration 07200/8000: loss=0.075150
+  iteration 07300/8000: loss=0.075089
+  iteration 07400/8000: loss=0.075010
+  iteration 07500/8000: loss=0.075158
+  iteration 07600/8000: loss=0.074977
+  iteration 07700/8000: loss=0.074930
+  iteration 07800/8000: loss=0.074930
+  iteration 07900/8000: loss=0.074973
+  iteration 08000/8000: loss=0.074943
+Saved loss plot to /home/ee23btech11057/PlayingWithDeepImagePrior/swin_loss_comparison.png
+wandb: updating run metadata
+wandb: uploading media/images/loss_comparison_32000_61f264b14c01d9833d6e.png; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading media/images/loss_comparison_32000_61f264b14c01d9833d6e.png; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading history steps 31906-32000, summary, console lines 331-332
+wandb: 
+wandb: Run history:
+wandb:           iteration ▁▁▁▃▃▃▄▅▅▆██▁▂▂▃▃▃▄▅▆▇▇█▁▂▂▂▃▆▇▇█▄▄▅▆▆▇█
+wandb:          loss/Image ▇█▇▃▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  loss/Image + noise █▆▆▅▄▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: loss/Image shuffled ███████████████▇▇▇▇▇███████▇▆▅▅▅▄▅▄▂▂▁▁▁
+wandb:  loss/U(0, 1) noise ███████████████▇▇▇▇▇▇▆▆▆▅▅▅▅▄▄▄▃▃▂▂▂▂▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:           iteration 8000
+wandb:          loss/Image 0.00083
+wandb:  loss/Image + noise 0.0097
+wandb: loss/Image shuffled 0.02785
+wandb:  loss/U(0, 1) noise 0.07494
+wandb: 
+wandb: 🚀 View run F16-seed-0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior/runs/m439zl57
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/swin-image-prior
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260921_165751-m439zl57/logs

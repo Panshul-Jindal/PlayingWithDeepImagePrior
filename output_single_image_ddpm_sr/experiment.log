@@ -1,0 +1,94 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ee23btech11057/.netrc.
+wandb: Currently logged in as: shakunavetisaisriramvarun (shakunavetisaisriramvarun-indian-institute-of-technology) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run md70hihw
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /home/ee23btech11057/PlayingWithDeepImagePrior/wandb/run-20261002_183800-md70hihw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run single_image_ddpm_sr_zebra_x4_seed_0
+wandb: ⭐️ View project at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: 🚀 View run at https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/md70hihw
+HR and LR resolutions: (576, 384), (144, 96)
+Loaded vanilla DIP reference (PSNR: 24.74 dB)
+Generating internal DDPM dataset of 20 pairs strictly from y...
+Dataset generated: 20 internal training pairs of size (64x64).
+==========================================================
+ Experiment 4: Single-Image Conditional DDPM SR
+ Device: cuda
+ DDPM Timesteps: 200
+ Input y Resolution:  (144, 96) (W x H)
+ Target X Resolution: (576, 384) (W x H) [NOT used during training]
+ Training pairs:      20 cropped & downsampled from y
+ Baseline Bicubic PSNR: 23.10 dB
+ Vanilla DIP Baseline:  24.74 dB
+==========================================================
+
+Starting Conditional DDPM training...
+  Epoch 0001/1500: DDPM Score Loss = 0.996461
+  Epoch 0050/1500: DDPM Score Loss = 0.199235
+  Epoch 0100/1500: DDPM Score Loss = 0.143442
+  Epoch 0150/1500: DDPM Score Loss = 0.168612
+  Epoch 0200/1500: DDPM Score Loss = 0.122615
+  Epoch 0250/1500: DDPM Score Loss = 0.144896
+  Epoch 0300/1500: DDPM Score Loss = 0.143342
+  Epoch 0350/1500: DDPM Score Loss = 0.108822
+  Epoch 0400/1500: DDPM Score Loss = 0.139179
+  Epoch 0450/1500: DDPM Score Loss = 0.069500
+  Epoch 0500/1500: DDPM Score Loss = 0.077398
+  Epoch 0550/1500: DDPM Score Loss = 0.114992
+  Epoch 0600/1500: DDPM Score Loss = 0.129160
+  Epoch 0650/1500: DDPM Score Loss = 0.116296
+  Epoch 0700/1500: DDPM Score Loss = 0.070731
+  Epoch 0750/1500: DDPM Score Loss = 0.144050
+  Epoch 0800/1500: DDPM Score Loss = 0.123536
+  Epoch 0850/1500: DDPM Score Loss = 0.046983
+  Epoch 0900/1500: DDPM Score Loss = 0.047844
+  Epoch 0950/1500: DDPM Score Loss = 0.061803
+  Epoch 1000/1500: DDPM Score Loss = 0.100715
+  Epoch 1050/1500: DDPM Score Loss = 0.097113
+  Epoch 1100/1500: DDPM Score Loss = 0.082728
+  Epoch 1150/1500: DDPM Score Loss = 0.118697
+  Epoch 1200/1500: DDPM Score Loss = 0.070600
+  Epoch 1250/1500: DDPM Score Loss = 0.070668
+  Epoch 1300/1500: DDPM Score Loss = 0.042837
+  Epoch 1350/1500: DDPM Score Loss = 0.052154
+  Epoch 1400/1500: DDPM Score Loss = 0.050544
+  Epoch 1450/1500: DDPM Score Loss = 0.081252
+  Epoch 1500/1500: DDPM Score Loss = 0.070878
+
+Starting Inference: Reverse Diffusion conditioned on y...
+
+==========================================================
+ Single-Image DDPM SR Complete!
+ Final DDPM SR PSNR:    20.66 dB
+ Vanilla DIP Baseline:  24.74 dB
+ Diff vs DIP:           -4.08 dB
+ Baseline Bicubic PSNR: 23.10 dB
+ Gain over Bicubic:     -2.45 dB
+==========================================================
+Saved new approach HR to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_ddpm_sr/zebra_hr_with_new_approach.png
+Saved comparison figure to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_ddpm_sr/zebra_sr_comparison.png
+Saved training curve to:   /home/ee23btech11057/PlayingWithDeepImagePrior/output_single_image_ddpm_sr/zebra_sr_metrics.png
+wandb: updating run metadata
+wandb: uploading media/images/real_HR_image_1500_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_new_approach_1500_dc351b4c34ca21ef9821.png; uploading media/images/visual_comparison_1500_e62948a94d475ca16d39.png; uploading media/images/metrics_curves_1500_1d0d363301194f47237b.png; uploading output.log (+ 4 more)
+wandb: uploading media/images/real_HR_image_1500_a92b4b1a54158559bcc8.png; uploading media/images/hr_with_new_approach_1500_dc351b4c34ca21ef9821.png; uploading media/images/visual_comparison_1500_e62948a94d475ca16d39.png; uploading media/images/metrics_curves_1500_1d0d363301194f47237b.png; uploading media/images/downsampled_LR_image_1500_346c8e0110f2d86a7e42.png (+ 2 more)
+wandb: uploading media/images/hr_with_new_approach_1500_dc351b4c34ca21ef9821.png; uploading media/images/visual_comparison_1500_e62948a94d475ca16d39.png; uploading media/images/hr_with_dip_1500_4deae5dc86a5ce9a9f79.png
+wandb: uploading media/images/visual_comparison_1500_e62948a94d475ca16d39.png
+wandb: uploading history steps 1492-1500, summary, console lines 46-60
+wandb: 
+wandb: Run history:
+wandb:         epoch ▁▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▆▆▆▇▇▇███
+wandb: loss/ddpm_mse █▆▇▆▄▃▄▃▃▂▄█▅▅▃▃▅▄▄▃▂▃▄▅▃▃▄▂▂▅▆▄▂▂▃▂▃▁▁▂
+wandb: 
+wandb: Run summary:
+wandb:             epoch 1500
+wandb:     final_psnr_hr 20.65874
+wandb: gain_over_bicubic -2.44605
+wandb:     gain_over_dip -4.07893
+wandb:     loss/ddpm_mse 0.07088
+wandb:      psnr_bicubic 23.10479
+wandb:          psnr_dip 24.73767
+wandb: 
+wandb: 🚀 View run single_image_ddpm_sr_zebra_x4_seed_0 at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/runs/md70hihw
+wandb: ⭐️ View project at: https://wandb.ai/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution
+wandb: Synced 5 W&B file(s), 6 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261002_183800-md70hihw/logs

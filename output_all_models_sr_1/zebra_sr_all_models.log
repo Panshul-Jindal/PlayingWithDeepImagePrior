@@ -1,0 +1,417 @@
+======================================================================
+ Deep Image Prior: Multi-Model Super-Resolution Comparison
+======================================================================
+Device:           cuda
+Target Image:     /home/ee23btech11057/PlayingWithDeepImagePrior/src/playingwithdeepimageprior/deep-image-prior/data/sr/zebra_GT.png
+Factor:           4x
+Epochs/Steps:     6000 per model
+Input Noise Depth:32
+Models to train:  skip, unet, resnet, swin, swin_skip
+Output directory: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1
+======================================================================
+Ground Truth HR Dimensions: 576 x 384
+Downsampled LR Dimensions:  144 x 96
+Baseline Bicubic PSNR:       23.10 dB
+Baseline Nearest PSNR:       20.82 dB
+----------------------------------------------------------------------
+Saved Original HR image to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_original_HR.png
+Saved Observed LR image to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_observed_LR.png
+Saved Bicubic HR baseline:  /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_bicubic_HR.png
+
+======================================================================
+ Preparing Model: SKIP
+======================================================================
+  Architecture:           SKIP
+  Trainable parameters:   2,217,831
+  Number of input pixels: 221,184 (576 x 384)
+
+[SKIP] Starting 6000 steps...
+  Number of parameters:        2,217,831
+  Number of pixels in input:   221,184 (576 x 384)
+  Input tensor shape:          (1, 32, 384, 576) (7,077,888 elements)
+  Optimization settings:       lr=0.0005, reg_noise_std=0.03
+  [     skip] step 00001/6000 | Loss: 0.058862 | PSNR_LR: 12.30 dB | PSNR_HR: 11.84 dB | Best HR: 11.84 dB (step 1) | Elapsed: 0.5s
+  [     skip] step 00100/6000 | Loss: 0.009458 | PSNR_LR: 20.24 dB | PSNR_HR: 18.32 dB | Best HR: 18.37 dB (step 99) | Elapsed: 5.3s
+  [     skip] step 00200/6000 | Loss: 0.004334 | PSNR_LR: 23.63 dB | PSNR_HR: 20.51 dB | Best HR: 20.52 dB (step 199) | Elapsed: 10.2s
+  [     skip] step 00300/6000 | Loss: 0.002912 | PSNR_LR: 25.36 dB | PSNR_HR: 21.50 dB | Best HR: 21.62 dB (step 299) | Elapsed: 15.2s
+  [     skip] step 00400/6000 | Loss: 0.002143 | PSNR_LR: 26.69 dB | PSNR_HR: 22.16 dB | Best HR: 22.25 dB (step 393) | Elapsed: 20.3s
+  [     skip] step 00500/6000 | Loss: 0.001657 | PSNR_LR: 27.81 dB | PSNR_HR: 22.62 dB | Best HR: 22.82 dB (step 499) | Elapsed: 25.4s
+  [     skip] step 00600/6000 | Loss: 0.001281 | PSNR_LR: 28.92 dB | PSNR_HR: 23.11 dB | Best HR: 23.12 dB (step 599) | Elapsed: 30.5s
+  [     skip] step 00700/6000 | Loss: 0.001101 | PSNR_LR: 29.58 dB | PSNR_HR: 23.31 dB | Best HR: 23.40 dB (step 689) | Elapsed: 35.6s
+  [     skip] step 00800/6000 | Loss: 0.000908 | PSNR_LR: 30.42 dB | PSNR_HR: 23.54 dB | Best HR: 23.57 dB (step 783) | Elapsed: 40.7s
+  [     skip] step 00900/6000 | Loss: 0.000832 | PSNR_LR: 30.80 dB | PSNR_HR: 23.72 dB | Best HR: 23.78 dB (step 892) | Elapsed: 45.7s
+  [     skip] step 01000/6000 | Loss: 0.000727 | PSNR_LR: 31.39 dB | PSNR_HR: 23.84 dB | Best HR: 23.92 dB (step 984) | Elapsed: 50.8s
+  [     skip] step 01100/6000 | Loss: 0.000676 | PSNR_LR: 31.70 dB | PSNR_HR: 23.90 dB | Best HR: 23.98 dB (step 1096) | Elapsed: 55.9s
+  [     skip] step 01200/6000 | Loss: 0.000655 | PSNR_LR: 31.84 dB | PSNR_HR: 23.93 dB | Best HR: 24.11 dB (step 1190) | Elapsed: 61.0s
+  [     skip] step 01300/6000 | Loss: 0.000505 | PSNR_LR: 32.97 dB | PSNR_HR: 24.12 dB | Best HR: 24.20 dB (step 1294) | Elapsed: 66.1s
+  [     skip] step 01400/6000 | Loss: 0.000453 | PSNR_LR: 33.44 dB | PSNR_HR: 24.27 dB | Best HR: 24.29 dB (step 1395) | Elapsed: 71.2s
+  [     skip] step 01500/6000 | Loss: 0.000410 | PSNR_LR: 33.88 dB | PSNR_HR: 24.31 dB | Best HR: 24.34 dB (step 1485) | Elapsed: 76.3s
+  [     skip] step 01600/6000 | Loss: 0.000396 | PSNR_LR: 34.02 dB | PSNR_HR: 24.38 dB | Best HR: 24.43 dB (step 1588) | Elapsed: 81.4s
+  [     skip] step 01700/6000 | Loss: 0.000348 | PSNR_LR: 34.58 dB | PSNR_HR: 24.43 dB | Best HR: 24.48 dB (step 1683) | Elapsed: 86.4s
+  [     skip] step 01800/6000 | Loss: 0.000347 | PSNR_LR: 34.60 dB | PSNR_HR: 24.38 dB | Best HR: 24.51 dB (step 1796) | Elapsed: 91.5s
+  [     skip] step 01900/6000 | Loss: 0.000295 | PSNR_LR: 35.31 dB | PSNR_HR: 24.50 dB | Best HR: 24.56 dB (step 1876) | Elapsed: 96.6s
+  [     skip] step 02000/6000 | Loss: 0.000287 | PSNR_LR: 35.43 dB | PSNR_HR: 24.57 dB | Best HR: 24.61 dB (step 1988) | Elapsed: 101.7s
+  [     skip] step 02100/6000 | Loss: 0.000273 | PSNR_LR: 35.64 dB | PSNR_HR: 24.60 dB | Best HR: 24.69 dB (step 2085) | Elapsed: 106.8s
+  [     skip] step 02200/6000 | Loss: 0.000240 | PSNR_LR: 36.20 dB | PSNR_HR: 24.66 dB | Best HR: 24.69 dB (step 2085) | Elapsed: 111.9s
+  [     skip] step 02300/6000 | Loss: 0.000229 | PSNR_LR: 36.39 dB | PSNR_HR: 24.67 dB | Best HR: 24.72 dB (step 2274) | Elapsed: 117.0s
+  [     skip] step 02400/6000 | Loss: 0.000213 | PSNR_LR: 36.72 dB | PSNR_HR: 24.70 dB | Best HR: 24.74 dB (step 2371) | Elapsed: 122.1s
+  [     skip] step 02500/6000 | Loss: 0.000227 | PSNR_LR: 36.43 dB | PSNR_HR: 24.71 dB | Best HR: 24.77 dB (step 2487) | Elapsed: 127.2s
+  [     skip] step 02600/6000 | Loss: 0.000200 | PSNR_LR: 37.00 dB | PSNR_HR: 24.73 dB | Best HR: 24.80 dB (step 2592) | Elapsed: 132.2s
+  [     skip] step 02700/6000 | Loss: 0.000187 | PSNR_LR: 37.28 dB | PSNR_HR: 24.75 dB | Best HR: 24.81 dB (step 2638) | Elapsed: 137.3s
+  [     skip] step 02800/6000 | Loss: 0.000181 | PSNR_LR: 37.42 dB | PSNR_HR: 24.77 dB | Best HR: 24.85 dB (step 2779) | Elapsed: 142.4s
+  [     skip] step 02900/6000 | Loss: 0.000170 | PSNR_LR: 37.70 dB | PSNR_HR: 24.82 dB | Best HR: 24.87 dB (step 2817) | Elapsed: 147.5s
+  [     skip] step 03000/6000 | Loss: 0.000158 | PSNR_LR: 38.00 dB | PSNR_HR: 24.88 dB | Best HR: 24.89 dB (step 2960) | Elapsed: 152.6s
+  [     skip] step 03100/6000 | Loss: 0.000167 | PSNR_LR: 37.78 dB | PSNR_HR: 24.88 dB | Best HR: 24.91 dB (step 3087) | Elapsed: 157.7s
+  [     skip] step 03200/6000 | Loss: 0.000158 | PSNR_LR: 38.01 dB | PSNR_HR: 24.85 dB | Best HR: 24.91 dB (step 3150) | Elapsed: 162.8s
+  [     skip] step 03300/6000 | Loss: 0.000163 | PSNR_LR: 37.89 dB | PSNR_HR: 24.87 dB | Best HR: 24.92 dB (step 3278) | Elapsed: 167.9s
+  [     skip] step 03400/6000 | Loss: 0.000131 | PSNR_LR: 38.82 dB | PSNR_HR: 24.88 dB | Best HR: 24.95 dB (step 3380) | Elapsed: 173.0s
+  [     skip] step 03500/6000 | Loss: 0.000129 | PSNR_LR: 38.90 dB | PSNR_HR: 24.90 dB | Best HR: 24.96 dB (step 3441) | Elapsed: 178.1s
+  [     skip] step 03600/6000 | Loss: 0.000144 | PSNR_LR: 38.43 dB | PSNR_HR: 24.94 dB | Best HR: 24.96 dB (step 3441) | Elapsed: 183.1s
+  [     skip] step 03700/6000 | Loss: 0.000121 | PSNR_LR: 39.17 dB | PSNR_HR: 24.91 dB | Best HR: 24.97 dB (step 3687) | Elapsed: 188.2s
+  [     skip] step 03800/6000 | Loss: 0.000112 | PSNR_LR: 39.52 dB | PSNR_HR: 24.95 dB | Best HR: 24.98 dB (step 3739) | Elapsed: 193.3s
+  [     skip] step 03900/6000 | Loss: 0.000112 | PSNR_LR: 39.50 dB | PSNR_HR: 24.96 dB | Best HR: 25.01 dB (step 3878) | Elapsed: 198.4s
+  [     skip] step 04000/6000 | Loss: 0.000103 | PSNR_LR: 39.89 dB | PSNR_HR: 24.98 dB | Best HR: 25.02 dB (step 3945) | Elapsed: 203.5s
+  [     skip] step 04100/6000 | Loss: 0.000099 | PSNR_LR: 40.06 dB | PSNR_HR: 24.97 dB | Best HR: 25.02 dB (step 4087) | Elapsed: 208.6s
+  [     skip] step 04200/6000 | Loss: 0.000096 | PSNR_LR: 40.17 dB | PSNR_HR: 24.97 dB | Best HR: 25.03 dB (step 4179) | Elapsed: 213.7s
+  [     skip] step 04300/6000 | Loss: 0.000092 | PSNR_LR: 40.38 dB | PSNR_HR: 25.05 dB | Best HR: 25.05 dB (step 4300) | Elapsed: 218.8s
+  [     skip] step 04400/6000 | Loss: 0.000090 | PSNR_LR: 40.47 dB | PSNR_HR: 24.98 dB | Best HR: 25.05 dB (step 4300) | Elapsed: 223.8s
+  [     skip] step 04500/6000 | Loss: 0.000089 | PSNR_LR: 40.52 dB | PSNR_HR: 24.99 dB | Best HR: 25.05 dB (step 4300) | Elapsed: 228.9s
+  [     skip] step 04600/6000 | Loss: 0.000086 | PSNR_LR: 40.63 dB | PSNR_HR: 25.03 dB | Best HR: 25.06 dB (step 4569) | Elapsed: 234.0s
+  [     skip] step 04700/6000 | Loss: 0.000079 | PSNR_LR: 41.00 dB | PSNR_HR: 24.99 dB | Best HR: 25.07 dB (step 4680) | Elapsed: 239.1s
+  [     skip] step 04800/6000 | Loss: 0.000077 | PSNR_LR: 41.15 dB | PSNR_HR: 25.03 dB | Best HR: 25.07 dB (step 4680) | Elapsed: 244.2s
+  [     skip] step 04900/6000 | Loss: 0.000078 | PSNR_LR: 41.08 dB | PSNR_HR: 24.98 dB | Best HR: 25.08 dB (step 4895) | Elapsed: 249.3s
+  [     skip] step 05000/6000 | Loss: 0.000072 | PSNR_LR: 41.44 dB | PSNR_HR: 25.03 dB | Best HR: 25.08 dB (step 4895) | Elapsed: 254.4s
+  [     skip] step 05100/6000 | Loss: 0.000067 | PSNR_LR: 41.77 dB | PSNR_HR: 25.06 dB | Best HR: 25.08 dB (step 4895) | Elapsed: 259.5s
+  [     skip] step 05200/6000 | Loss: 0.000071 | PSNR_LR: 41.48 dB | PSNR_HR: 25.02 dB | Best HR: 25.09 dB (step 5172) | Elapsed: 264.5s
+  [     skip] step 05300/6000 | Loss: 0.000064 | PSNR_LR: 41.93 dB | PSNR_HR: 25.05 dB | Best HR: 25.09 dB (step 5172) | Elapsed: 269.6s
+  [     skip] step 05400/6000 | Loss: 0.000069 | PSNR_LR: 41.63 dB | PSNR_HR: 25.01 dB | Best HR: 25.09 dB (step 5326) | Elapsed: 274.7s
+  [     skip] step 05500/6000 | Loss: 0.000069 | PSNR_LR: 41.58 dB | PSNR_HR: 25.04 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 279.7s
+  [     skip] step 05600/6000 | Loss: 0.000063 | PSNR_LR: 42.02 dB | PSNR_HR: 25.06 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 284.8s
+  [     skip] step 05700/6000 | Loss: 0.000059 | PSNR_LR: 42.29 dB | PSNR_HR: 25.07 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 289.9s
+  [     skip] step 05800/6000 | Loss: 0.000055 | PSNR_LR: 42.58 dB | PSNR_HR: 25.08 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 295.0s
+  [     skip] step 05900/6000 | Loss: 0.000057 | PSNR_LR: 42.44 dB | PSNR_HR: 25.07 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 300.0s
+  [     skip] step 06000/6000 | Loss: 0.000052 | PSNR_LR: 42.83 dB | PSNR_HR: 25.09 dB | Best HR: 25.12 dB (step 5454) | Elapsed: 305.1s
+[SKIP] Finished in 305.1s | Final PSNR: 25.04 dB | Best: 25.12 dB
+Saved skip HR output to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_HR_skip.png
+
+======================================================================
+ Preparing Model: UNET
+======================================================================
+  Architecture:           UNET
+  Trainable parameters:   2,164,899
+  Number of input pixels: 221,184 (576 x 384)
+
+[UNET] Starting 6000 steps...
+  Number of parameters:        2,164,899
+  Number of pixels in input:   221,184 (576 x 384)
+  Input tensor shape:          (1, 32, 384, 576) (7,077,888 elements)
+  Optimization settings:       lr=0.0005, reg_noise_std=0.03
+  [     unet] step 00001/6000 | Loss: 0.049799 | PSNR_LR: 13.03 dB | PSNR_HR: 12.52 dB | Best HR: 12.52 dB (step 1) | Elapsed: 0.1s
+  [     unet] step 00100/6000 | Loss: 0.034488 | PSNR_LR: 14.62 dB | PSNR_HR: 13.93 dB | Best HR: 13.93 dB (step 100) | Elapsed: 2.9s
+  [     unet] step 00200/6000 | Loss: 0.027392 | PSNR_LR: 15.62 dB | PSNR_HR: 14.78 dB | Best HR: 14.78 dB (step 200) | Elapsed: 5.7s
+  [     unet] step 00300/6000 | Loss: 0.024034 | PSNR_LR: 16.19 dB | PSNR_HR: 15.25 dB | Best HR: 15.32 dB (step 294) | Elapsed: 8.5s
+  [     unet] step 00400/6000 | Loss: 0.018651 | PSNR_LR: 17.29 dB | PSNR_HR: 16.13 dB | Best HR: 16.13 dB (step 400) | Elapsed: 11.3s
+  [     unet] step 00500/6000 | Loss: 0.013793 | PSNR_LR: 18.60 dB | PSNR_HR: 17.14 dB | Best HR: 17.17 dB (step 498) | Elapsed: 14.1s
+  [     unet] step 00600/6000 | Loss: 0.008913 | PSNR_LR: 20.50 dB | PSNR_HR: 18.46 dB | Best HR: 18.46 dB (step 600) | Elapsed: 16.9s
+  [     unet] step 00700/6000 | Loss: 0.006246 | PSNR_LR: 22.04 dB | PSNR_HR: 19.53 dB | Best HR: 19.53 dB (step 700) | Elapsed: 19.7s
+  [     unet] step 00800/6000 | Loss: 0.005150 | PSNR_LR: 22.88 dB | PSNR_HR: 20.00 dB | Best HR: 20.15 dB (step 796) | Elapsed: 22.5s
+  [     unet] step 00900/6000 | Loss: 0.004239 | PSNR_LR: 23.73 dB | PSNR_HR: 20.58 dB | Best HR: 20.64 dB (step 890) | Elapsed: 25.3s
+  [     unet] step 01000/6000 | Loss: 0.003466 | PSNR_LR: 24.60 dB | PSNR_HR: 21.08 dB | Best HR: 21.16 dB (step 998) | Elapsed: 28.2s
+  [     unet] step 01100/6000 | Loss: 0.002823 | PSNR_LR: 25.49 dB | PSNR_HR: 21.51 dB | Best HR: 21.58 dB (step 1091) | Elapsed: 31.0s
+  [     unet] step 01200/6000 | Loss: 0.002566 | PSNR_LR: 25.91 dB | PSNR_HR: 21.83 dB | Best HR: 21.94 dB (step 1193) | Elapsed: 33.8s
+  [     unet] step 01300/6000 | Loss: 0.002111 | PSNR_LR: 26.76 dB | PSNR_HR: 22.19 dB | Best HR: 22.28 dB (step 1292) | Elapsed: 36.6s
+  [     unet] step 01400/6000 | Loss: 0.001921 | PSNR_LR: 27.17 dB | PSNR_HR: 22.47 dB | Best HR: 22.55 dB (step 1393) | Elapsed: 39.4s
+  [     unet] step 01500/6000 | Loss: 0.001748 | PSNR_LR: 27.58 dB | PSNR_HR: 22.57 dB | Best HR: 22.79 dB (step 1495) | Elapsed: 42.2s
+  [     unet] step 01600/6000 | Loss: 0.001480 | PSNR_LR: 28.30 dB | PSNR_HR: 22.92 dB | Best HR: 22.99 dB (step 1598) | Elapsed: 45.0s
+  [     unet] step 01700/6000 | Loss: 0.001299 | PSNR_LR: 28.86 dB | PSNR_HR: 23.11 dB | Best HR: 23.17 dB (step 1693) | Elapsed: 47.8s
+  [     unet] step 01800/6000 | Loss: 0.001164 | PSNR_LR: 29.34 dB | PSNR_HR: 23.24 dB | Best HR: 23.27 dB (step 1773) | Elapsed: 50.7s
+  [     unet] step 01900/6000 | Loss: 0.001133 | PSNR_LR: 29.46 dB | PSNR_HR: 23.26 dB | Best HR: 23.43 dB (step 1882) | Elapsed: 53.5s
+  [     unet] step 02000/6000 | Loss: 0.001021 | PSNR_LR: 29.91 dB | PSNR_HR: 23.44 dB | Best HR: 23.50 dB (step 1979) | Elapsed: 56.3s
+  [     unet] step 02100/6000 | Loss: 0.000920 | PSNR_LR: 30.36 dB | PSNR_HR: 23.50 dB | Best HR: 23.57 dB (step 2071) | Elapsed: 59.1s
+  [     unet] step 02200/6000 | Loss: 0.000820 | PSNR_LR: 30.86 dB | PSNR_HR: 23.70 dB | Best HR: 23.70 dB (step 2200) | Elapsed: 61.9s
+  [     unet] step 02300/6000 | Loss: 0.000819 | PSNR_LR: 30.87 dB | PSNR_HR: 23.63 dB | Best HR: 23.75 dB (step 2284) | Elapsed: 64.7s
+  [     unet] step 02400/6000 | Loss: 0.000704 | PSNR_LR: 31.52 dB | PSNR_HR: 23.81 dB | Best HR: 23.82 dB (step 2393) | Elapsed: 67.5s
+  [     unet] step 02500/6000 | Loss: 0.000692 | PSNR_LR: 31.60 dB | PSNR_HR: 23.79 dB | Best HR: 23.89 dB (step 2492) | Elapsed: 70.3s
+  [     unet] step 02600/6000 | Loss: 0.000623 | PSNR_LR: 32.06 dB | PSNR_HR: 23.86 dB | Best HR: 23.92 dB (step 2599) | Elapsed: 73.2s
+  [     unet] step 02700/6000 | Loss: 0.000612 | PSNR_LR: 32.13 dB | PSNR_HR: 23.90 dB | Best HR: 23.97 dB (step 2655) | Elapsed: 76.0s
+  [     unet] step 02800/6000 | Loss: 0.000529 | PSNR_LR: 32.77 dB | PSNR_HR: 23.98 dB | Best HR: 24.00 dB (step 2796) | Elapsed: 78.8s
+  [     unet] step 02900/6000 | Loss: 0.000525 | PSNR_LR: 32.80 dB | PSNR_HR: 23.97 dB | Best HR: 24.04 dB (step 2846) | Elapsed: 81.6s
+  [     unet] step 03000/6000 | Loss: 0.000492 | PSNR_LR: 33.08 dB | PSNR_HR: 24.06 dB | Best HR: 24.08 dB (step 2950) | Elapsed: 84.4s
+  [     unet] step 03100/6000 | Loss: 0.000466 | PSNR_LR: 33.31 dB | PSNR_HR: 24.07 dB | Best HR: 24.10 dB (step 3028) | Elapsed: 87.2s
+  [     unet] step 03200/6000 | Loss: 0.000430 | PSNR_LR: 33.67 dB | PSNR_HR: 24.11 dB | Best HR: 24.12 dB (step 3155) | Elapsed: 90.0s
+  [     unet] step 03300/6000 | Loss: 0.000406 | PSNR_LR: 33.91 dB | PSNR_HR: 24.14 dB | Best HR: 24.14 dB (step 3217) | Elapsed: 92.8s
+  [     unet] step 03400/6000 | Loss: 0.000403 | PSNR_LR: 33.94 dB | PSNR_HR: 24.17 dB | Best HR: 24.21 dB (step 3379) | Elapsed: 95.6s
+  [     unet] step 03500/6000 | Loss: 0.000372 | PSNR_LR: 34.30 dB | PSNR_HR: 24.12 dB | Best HR: 24.21 dB (step 3379) | Elapsed: 98.4s
+  [     unet] step 03600/6000 | Loss: 0.000362 | PSNR_LR: 34.41 dB | PSNR_HR: 24.11 dB | Best HR: 24.26 dB (step 3584) | Elapsed: 101.2s
+  [     unet] step 03700/6000 | Loss: 0.000337 | PSNR_LR: 34.72 dB | PSNR_HR: 24.13 dB | Best HR: 24.26 dB (step 3584) | Elapsed: 104.0s
+  [     unet] step 03800/6000 | Loss: 0.000325 | PSNR_LR: 34.88 dB | PSNR_HR: 24.14 dB | Best HR: 24.26 dB (step 3584) | Elapsed: 106.8s
+  [     unet] step 03900/6000 | Loss: 0.000320 | PSNR_LR: 34.95 dB | PSNR_HR: 24.18 dB | Best HR: 24.27 dB (step 3824) | Elapsed: 109.6s
+  [     unet] step 04000/6000 | Loss: 0.000306 | PSNR_LR: 35.14 dB | PSNR_HR: 24.19 dB | Best HR: 24.27 dB (step 3824) | Elapsed: 112.4s
+  [     unet] step 04100/6000 | Loss: 0.000282 | PSNR_LR: 35.50 dB | PSNR_HR: 24.13 dB | Best HR: 24.27 dB (step 3824) | Elapsed: 115.2s
+  [     unet] step 04200/6000 | Loss: 0.000284 | PSNR_LR: 35.47 dB | PSNR_HR: 24.18 dB | Best HR: 24.27 dB (step 3824) | Elapsed: 118.0s
+  [     unet] step 04300/6000 | Loss: 0.000260 | PSNR_LR: 35.85 dB | PSNR_HR: 24.21 dB | Best HR: 24.27 dB (step 4207) | Elapsed: 120.8s
+  [     unet] step 04400/6000 | Loss: 0.000254 | PSNR_LR: 35.95 dB | PSNR_HR: 24.17 dB | Best HR: 24.29 dB (step 4363) | Elapsed: 123.6s
+  [     unet] step 04500/6000 | Loss: 0.000244 | PSNR_LR: 36.13 dB | PSNR_HR: 24.19 dB | Best HR: 24.29 dB (step 4363) | Elapsed: 126.4s
+  [     unet] step 04600/6000 | Loss: 0.000244 | PSNR_LR: 36.12 dB | PSNR_HR: 24.22 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 129.2s
+  [     unet] step 04700/6000 | Loss: 0.000229 | PSNR_LR: 36.40 dB | PSNR_HR: 24.16 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 132.1s
+  [     unet] step 04800/6000 | Loss: 0.000220 | PSNR_LR: 36.58 dB | PSNR_HR: 24.16 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 134.9s
+  [     unet] step 04900/6000 | Loss: 0.000215 | PSNR_LR: 36.68 dB | PSNR_HR: 24.19 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 137.7s
+  [     unet] step 05000/6000 | Loss: 0.000209 | PSNR_LR: 36.79 dB | PSNR_HR: 24.20 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 140.5s
+  [     unet] step 05100/6000 | Loss: 0.000192 | PSNR_LR: 37.17 dB | PSNR_HR: 24.22 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 143.3s
+  [     unet] step 05200/6000 | Loss: 0.000194 | PSNR_LR: 37.11 dB | PSNR_HR: 24.20 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 146.1s
+  [     unet] step 05300/6000 | Loss: 0.000174 | PSNR_LR: 37.60 dB | PSNR_HR: 24.26 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 148.9s
+  [     unet] step 05400/6000 | Loss: 0.000170 | PSNR_LR: 37.70 dB | PSNR_HR: 24.18 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 151.7s
+  [     unet] step 05500/6000 | Loss: 0.000175 | PSNR_LR: 37.56 dB | PSNR_HR: 24.24 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 154.5s
+  [     unet] step 05600/6000 | Loss: 0.000167 | PSNR_LR: 37.78 dB | PSNR_HR: 24.18 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 157.3s
+  [     unet] step 05700/6000 | Loss: 0.000167 | PSNR_LR: 37.78 dB | PSNR_HR: 24.21 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 160.1s
+  [     unet] step 05800/6000 | Loss: 0.000157 | PSNR_LR: 38.04 dB | PSNR_HR: 24.21 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 162.9s
+  [     unet] step 05900/6000 | Loss: 0.000144 | PSNR_LR: 38.41 dB | PSNR_HR: 24.25 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 165.7s
+  [     unet] step 06000/6000 | Loss: 0.000152 | PSNR_LR: 38.19 dB | PSNR_HR: 24.18 dB | Best HR: 24.30 dB (step 4593) | Elapsed: 168.5s
+[UNET] Finished in 168.5s | Final PSNR: 24.09 dB | Best: 24.30 dB
+Saved unet HR output to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_HR_unet.png
+
+======================================================================
+ Preparing Model: RESNET
+======================================================================
+  Architecture:           RESNET
+  Trainable parameters:   797,123
+  Number of input pixels: 221,184 (576 x 384)
+
+[RESNET] Starting 6000 steps...
+  Number of parameters:        797,123
+  Number of pixels in input:   221,184 (576 x 384)
+  Input tensor shape:          (1, 32, 384, 576) (7,077,888 elements)
+  Optimization settings:       lr=0.0005, reg_noise_std=0.03
+  [   resnet] step 00001/6000 | Loss: 0.054683 | PSNR_LR: 12.62 dB | PSNR_HR: 11.05 dB | Best HR: 11.05 dB (step 1) | Elapsed: 0.1s
+  [   resnet] step 00100/6000 | Loss: 0.015113 | PSNR_LR: 18.21 dB | PSNR_HR: 14.64 dB | Best HR: 14.64 dB (step 100) | Elapsed: 10.0s
+  [   resnet] step 00200/6000 | Loss: 0.009024 | PSNR_LR: 20.45 dB | PSNR_HR: 15.64 dB | Best HR: 15.64 dB (step 200) | Elapsed: 20.0s
+  [   resnet] step 00300/6000 | Loss: 0.006691 | PSNR_LR: 21.75 dB | PSNR_HR: 16.05 dB | Best HR: 16.05 dB (step 300) | Elapsed: 30.0s
+  [   resnet] step 00400/6000 | Loss: 0.005464 | PSNR_LR: 22.63 dB | PSNR_HR: 16.20 dB | Best HR: 16.26 dB (step 364) | Elapsed: 40.0s
+  [   resnet] step 00500/6000 | Loss: 0.004533 | PSNR_LR: 23.44 dB | PSNR_HR: 16.43 dB | Best HR: 16.50 dB (step 484) | Elapsed: 50.0s
+  [   resnet] step 00600/6000 | Loss: 0.004121 | PSNR_LR: 23.85 dB | PSNR_HR: 16.44 dB | Best HR: 16.53 dB (step 599) | Elapsed: 60.0s
+  [   resnet] step 00700/6000 | Loss: 0.003524 | PSNR_LR: 24.53 dB | PSNR_HR: 16.51 dB | Best HR: 16.58 dB (step 692) | Elapsed: 70.1s
+  [   resnet] step 00800/6000 | Loss: 0.003252 | PSNR_LR: 24.88 dB | PSNR_HR: 16.42 dB | Best HR: 16.58 dB (step 692) | Elapsed: 80.1s
+  [   resnet] step 00900/6000 | Loss: 0.003014 | PSNR_LR: 25.21 dB | PSNR_HR: 16.36 dB | Best HR: 16.58 dB (step 692) | Elapsed: 90.1s
+  [   resnet] step 01000/6000 | Loss: 0.002710 | PSNR_LR: 25.67 dB | PSNR_HR: 16.37 dB | Best HR: 16.58 dB (step 692) | Elapsed: 100.1s
+  [   resnet] step 01100/6000 | Loss: 0.002551 | PSNR_LR: 25.93 dB | PSNR_HR: 16.33 dB | Best HR: 16.58 dB (step 692) | Elapsed: 110.1s
+  [   resnet] step 01200/6000 | Loss: 0.002408 | PSNR_LR: 26.18 dB | PSNR_HR: 16.36 dB | Best HR: 16.58 dB (step 692) | Elapsed: 120.1s
+  [   resnet] step 01300/6000 | Loss: 0.002296 | PSNR_LR: 26.39 dB | PSNR_HR: 16.31 dB | Best HR: 16.58 dB (step 692) | Elapsed: 130.1s
+  [   resnet] step 01400/6000 | Loss: 0.002174 | PSNR_LR: 26.63 dB | PSNR_HR: 16.30 dB | Best HR: 16.58 dB (step 692) | Elapsed: 140.1s
+  [   resnet] step 01500/6000 | Loss: 0.002089 | PSNR_LR: 26.80 dB | PSNR_HR: 16.37 dB | Best HR: 16.58 dB (step 692) | Elapsed: 150.1s
+  [   resnet] step 01600/6000 | Loss: 0.002024 | PSNR_LR: 26.94 dB | PSNR_HR: 16.25 dB | Best HR: 16.58 dB (step 692) | Elapsed: 160.1s
+  [   resnet] step 01700/6000 | Loss: 0.001923 | PSNR_LR: 27.16 dB | PSNR_HR: 16.18 dB | Best HR: 16.58 dB (step 692) | Elapsed: 170.1s
+  [   resnet] step 01800/6000 | Loss: 0.001821 | PSNR_LR: 27.40 dB | PSNR_HR: 16.27 dB | Best HR: 16.58 dB (step 692) | Elapsed: 180.1s
+  [   resnet] step 01900/6000 | Loss: 0.001753 | PSNR_LR: 27.56 dB | PSNR_HR: 16.26 dB | Best HR: 16.58 dB (step 692) | Elapsed: 190.1s
+  [   resnet] step 02000/6000 | Loss: 0.001676 | PSNR_LR: 27.76 dB | PSNR_HR: 16.31 dB | Best HR: 16.58 dB (step 692) | Elapsed: 200.0s
+  [   resnet] step 02100/6000 | Loss: 0.001699 | PSNR_LR: 27.70 dB | PSNR_HR: 16.17 dB | Best HR: 16.58 dB (step 692) | Elapsed: 210.0s
+  [   resnet] step 02200/6000 | Loss: 0.001612 | PSNR_LR: 27.93 dB | PSNR_HR: 16.28 dB | Best HR: 16.58 dB (step 692) | Elapsed: 220.0s
+  [   resnet] step 02300/6000 | Loss: 0.001618 | PSNR_LR: 27.91 dB | PSNR_HR: 16.31 dB | Best HR: 16.58 dB (step 692) | Elapsed: 230.1s
+  [   resnet] step 02400/6000 | Loss: 0.001479 | PSNR_LR: 28.30 dB | PSNR_HR: 16.26 dB | Best HR: 16.58 dB (step 692) | Elapsed: 240.1s
+  [   resnet] step 02500/6000 | Loss: 0.001419 | PSNR_LR: 28.48 dB | PSNR_HR: 16.28 dB | Best HR: 16.58 dB (step 692) | Elapsed: 251.9s
+  [   resnet] step 02600/6000 | Loss: 0.001488 | PSNR_LR: 28.27 dB | PSNR_HR: 16.22 dB | Best HR: 16.58 dB (step 692) | Elapsed: 262.3s
+  [   resnet] step 02700/6000 | Loss: 0.001354 | PSNR_LR: 28.69 dB | PSNR_HR: 16.26 dB | Best HR: 16.58 dB (step 692) | Elapsed: 272.3s
+  [   resnet] step 02800/6000 | Loss: 0.001449 | PSNR_LR: 28.39 dB | PSNR_HR: 16.20 dB | Best HR: 16.58 dB (step 692) | Elapsed: 282.3s
+  [   resnet] step 02900/6000 | Loss: 0.001355 | PSNR_LR: 28.68 dB | PSNR_HR: 16.32 dB | Best HR: 16.58 dB (step 692) | Elapsed: 292.3s
+  [   resnet] step 03000/6000 | Loss: 0.001333 | PSNR_LR: 28.75 dB | PSNR_HR: 16.29 dB | Best HR: 16.58 dB (step 692) | Elapsed: 302.3s
+  [   resnet] step 03100/6000 | Loss: 0.001342 | PSNR_LR: 28.72 dB | PSNR_HR: 16.32 dB | Best HR: 16.58 dB (step 692) | Elapsed: 312.3s
+  [   resnet] step 03200/6000 | Loss: 0.001298 | PSNR_LR: 28.87 dB | PSNR_HR: 16.26 dB | Best HR: 16.58 dB (step 692) | Elapsed: 322.3s
+  [   resnet] step 03300/6000 | Loss: 0.001277 | PSNR_LR: 28.94 dB | PSNR_HR: 16.23 dB | Best HR: 16.58 dB (step 692) | Elapsed: 332.3s
+  [   resnet] step 03400/6000 | Loss: 0.001279 | PSNR_LR: 28.93 dB | PSNR_HR: 16.27 dB | Best HR: 16.58 dB (step 692) | Elapsed: 342.3s
+  [   resnet] step 03500/6000 | Loss: 0.001193 | PSNR_LR: 29.23 dB | PSNR_HR: 16.25 dB | Best HR: 16.58 dB (step 692) | Elapsed: 352.3s
+  [   resnet] step 03600/6000 | Loss: 0.001192 | PSNR_LR: 29.24 dB | PSNR_HR: 16.26 dB | Best HR: 16.58 dB (step 692) | Elapsed: 362.3s
+  [   resnet] step 03700/6000 | Loss: 0.001157 | PSNR_LR: 29.37 dB | PSNR_HR: 16.28 dB | Best HR: 16.58 dB (step 692) | Elapsed: 372.3s
+  [   resnet] step 03800/6000 | Loss: 0.001152 | PSNR_LR: 29.39 dB | PSNR_HR: 16.31 dB | Best HR: 16.58 dB (step 692) | Elapsed: 382.3s
+  [   resnet] step 03900/6000 | Loss: 0.001187 | PSNR_LR: 29.26 dB | PSNR_HR: 16.19 dB | Best HR: 16.58 dB (step 692) | Elapsed: 392.3s
+  [   resnet] step 04000/6000 | Loss: 0.001152 | PSNR_LR: 29.38 dB | PSNR_HR: 16.20 dB | Best HR: 16.58 dB (step 692) | Elapsed: 402.3s
+  [   resnet] step 04100/6000 | Loss: 0.001159 | PSNR_LR: 29.36 dB | PSNR_HR: 16.12 dB | Best HR: 16.58 dB (step 692) | Elapsed: 412.3s
+  [   resnet] step 04200/6000 | Loss: 0.001149 | PSNR_LR: 29.40 dB | PSNR_HR: 16.16 dB | Best HR: 16.58 dB (step 692) | Elapsed: 422.3s
+  [   resnet] step 04300/6000 | Loss: 0.001094 | PSNR_LR: 29.61 dB | PSNR_HR: 16.22 dB | Best HR: 16.58 dB (step 692) | Elapsed: 432.4s
+  [   resnet] step 04400/6000 | Loss: 0.001068 | PSNR_LR: 29.72 dB | PSNR_HR: 16.11 dB | Best HR: 16.58 dB (step 692) | Elapsed: 442.4s
+  [   resnet] step 04500/6000 | Loss: 0.001021 | PSNR_LR: 29.91 dB | PSNR_HR: 16.22 dB | Best HR: 16.58 dB (step 692) | Elapsed: 452.4s
+  [   resnet] step 04600/6000 | Loss: 0.001025 | PSNR_LR: 29.89 dB | PSNR_HR: 16.24 dB | Best HR: 16.58 dB (step 692) | Elapsed: 462.4s
+  [   resnet] step 04700/6000 | Loss: 0.001036 | PSNR_LR: 29.85 dB | PSNR_HR: 16.19 dB | Best HR: 16.58 dB (step 692) | Elapsed: 472.4s
+  [   resnet] step 04800/6000 | Loss: 0.001000 | PSNR_LR: 30.00 dB | PSNR_HR: 16.14 dB | Best HR: 16.58 dB (step 692) | Elapsed: 482.4s
+  [   resnet] step 04900/6000 | Loss: 0.000964 | PSNR_LR: 30.16 dB | PSNR_HR: 16.25 dB | Best HR: 16.58 dB (step 692) | Elapsed: 492.4s
+  [   resnet] step 05000/6000 | Loss: 0.001022 | PSNR_LR: 29.91 dB | PSNR_HR: 16.16 dB | Best HR: 16.58 dB (step 692) | Elapsed: 502.4s
+  [   resnet] step 05100/6000 | Loss: 0.001059 | PSNR_LR: 29.75 dB | PSNR_HR: 16.10 dB | Best HR: 16.58 dB (step 692) | Elapsed: 512.4s
+  [   resnet] step 05200/6000 | Loss: 0.000931 | PSNR_LR: 30.31 dB | PSNR_HR: 16.25 dB | Best HR: 16.58 dB (step 692) | Elapsed: 522.4s
+  [   resnet] step 05300/6000 | Loss: 0.000983 | PSNR_LR: 30.07 dB | PSNR_HR: 16.21 dB | Best HR: 16.58 dB (step 692) | Elapsed: 532.4s
+  [   resnet] step 05400/6000 | Loss: 0.000946 | PSNR_LR: 30.24 dB | PSNR_HR: 16.21 dB | Best HR: 16.58 dB (step 692) | Elapsed: 542.4s
+  [   resnet] step 05500/6000 | Loss: 0.000980 | PSNR_LR: 30.09 dB | PSNR_HR: 16.15 dB | Best HR: 16.58 dB (step 692) | Elapsed: 552.4s
+  [   resnet] step 05600/6000 | Loss: 0.000941 | PSNR_LR: 30.27 dB | PSNR_HR: 16.16 dB | Best HR: 16.58 dB (step 692) | Elapsed: 562.4s
+  [   resnet] step 05700/6000 | Loss: 0.000918 | PSNR_LR: 30.37 dB | PSNR_HR: 16.25 dB | Best HR: 16.58 dB (step 692) | Elapsed: 572.4s
+  [   resnet] step 05800/6000 | Loss: 0.000931 | PSNR_LR: 30.31 dB | PSNR_HR: 16.20 dB | Best HR: 16.58 dB (step 692) | Elapsed: 582.4s
+  [   resnet] step 05900/6000 | Loss: 0.000875 | PSNR_LR: 30.58 dB | PSNR_HR: 16.20 dB | Best HR: 16.58 dB (step 692) | Elapsed: 592.4s
+  [   resnet] step 06000/6000 | Loss: 0.000932 | PSNR_LR: 30.30 dB | PSNR_HR: 16.14 dB | Best HR: 16.58 dB (step 692) | Elapsed: 602.4s
+[RESNET] Finished in 602.5s | Final PSNR: 16.49 dB | Best: 16.58 dB
+Saved resnet HR output to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_HR_resnet.png
+
+======================================================================
+ Preparing Model: SWIN
+======================================================================
+  Architecture:           SWIN
+  Trainable parameters:   2,887,303
+  Number of input pixels: 221,184 (576 x 384)
+
+[SWIN] Starting 6000 steps...
+  Number of parameters:        2,887,303
+  Number of pixels in input:   221,184 (576 x 384)
+  Input tensor shape:          (1, 32, 384, 576) (7,077,888 elements)
+  Optimization settings:       lr=0.0005, reg_noise_std=0.03
+  [     swin] step 00001/6000 | Loss: 0.048386 | PSNR_LR: 13.15 dB | PSNR_HR: 12.63 dB | Best HR: 12.63 dB (step 1) | Elapsed: 0.3s
+  [     swin] step 00100/6000 | Loss: 0.035541 | PSNR_LR: 14.49 dB | PSNR_HR: 13.82 dB | Best HR: 13.82 dB (step 100) | Elapsed: 8.4s
+  [     swin] step 00200/6000 | Loss: 0.032475 | PSNR_LR: 14.88 dB | PSNR_HR: 14.18 dB | Best HR: 14.47 dB (step 194) | Elapsed: 16.5s
+  [     swin] step 00300/6000 | Loss: 0.024873 | PSNR_LR: 16.04 dB | PSNR_HR: 15.14 dB | Best HR: 15.18 dB (step 299) | Elapsed: 24.6s
+  [     swin] step 00400/6000 | Loss: 0.021897 | PSNR_LR: 16.60 dB | PSNR_HR: 15.58 dB | Best HR: 15.80 dB (step 393) | Elapsed: 32.7s
+  [     swin] step 00500/6000 | Loss: 0.019137 | PSNR_LR: 17.18 dB | PSNR_HR: 16.04 dB | Best HR: 16.25 dB (step 498) | Elapsed: 40.9s
+  [     swin] step 00600/6000 | Loss: 0.047484 | PSNR_LR: 13.23 dB | PSNR_HR: 12.72 dB | Best HR: 16.90 dB (step 575) | Elapsed: 49.0s
+  [     swin] step 00700/6000 | Loss: 0.014400 | PSNR_LR: 18.42 dB | PSNR_HR: 16.99 dB | Best HR: 16.99 dB (step 700) | Elapsed: 57.1s
+  [     swin] step 00800/6000 | Loss: 0.011090 | PSNR_LR: 19.55 dB | PSNR_HR: 17.80 dB | Best HR: 17.82 dB (step 799) | Elapsed: 65.6s
+  [     swin] step 00900/6000 | Loss: 0.009670 | PSNR_LR: 20.15 dB | PSNR_HR: 18.23 dB | Best HR: 18.23 dB (step 900) | Elapsed: 73.4s
+  [     swin] step 01000/6000 | Loss: 0.008535 | PSNR_LR: 20.69 dB | PSNR_HR: 18.58 dB | Best HR: 18.60 dB (step 989) | Elapsed: 80.9s
+  [     swin] step 01100/6000 | Loss: 0.007540 | PSNR_LR: 21.23 dB | PSNR_HR: 18.94 dB | Best HR: 18.97 dB (step 1090) | Elapsed: 88.4s
+  [     swin] step 01200/6000 | Loss: 0.006762 | PSNR_LR: 21.70 dB | PSNR_HR: 19.25 dB | Best HR: 19.38 dB (step 1199) | Elapsed: 95.9s
+  [     swin] step 01300/6000 | Loss: 0.005978 | PSNR_LR: 22.23 dB | PSNR_HR: 19.58 dB | Best HR: 19.67 dB (step 1293) | Elapsed: 103.4s
+  [     swin] step 01400/6000 | Loss: 0.005527 | PSNR_LR: 22.58 dB | PSNR_HR: 19.80 dB | Best HR: 19.90 dB (step 1378) | Elapsed: 110.9s
+  [     swin] step 01500/6000 | Loss: 0.005152 | PSNR_LR: 22.88 dB | PSNR_HR: 20.00 dB | Best HR: 20.13 dB (step 1495) | Elapsed: 118.4s
+  [     swin] step 01600/6000 | Loss: 0.004796 | PSNR_LR: 23.19 dB | PSNR_HR: 20.19 dB | Best HR: 20.26 dB (step 1597) | Elapsed: 125.9s
+  [     swin] step 01700/6000 | Loss: 0.004416 | PSNR_LR: 23.55 dB | PSNR_HR: 20.38 dB | Best HR: 20.41 dB (step 1680) | Elapsed: 133.3s
+  [     swin] step 01800/6000 | Loss: 0.004184 | PSNR_LR: 23.78 dB | PSNR_HR: 20.52 dB | Best HR: 20.54 dB (step 1786) | Elapsed: 140.8s
+  [     swin] step 01900/6000 | Loss: 0.003992 | PSNR_LR: 23.99 dB | PSNR_HR: 20.63 dB | Best HR: 20.69 dB (step 1889) | Elapsed: 148.3s
+  [     swin] step 02000/6000 | Loss: 0.003743 | PSNR_LR: 24.27 dB | PSNR_HR: 20.81 dB | Best HR: 20.81 dB (step 2000) | Elapsed: 155.8s
+  [     swin] step 02100/6000 | Loss: 0.003632 | PSNR_LR: 24.40 dB | PSNR_HR: 20.89 dB | Best HR: 20.94 dB (step 2075) | Elapsed: 163.4s
+  [     swin] step 02200/6000 | Loss: 0.003492 | PSNR_LR: 24.57 dB | PSNR_HR: 21.00 dB | Best HR: 21.04 dB (step 2196) | Elapsed: 170.9s
+  [     swin] step 02300/6000 | Loss: 0.003319 | PSNR_LR: 24.79 dB | PSNR_HR: 21.12 dB | Best HR: 21.16 dB (step 2287) | Elapsed: 178.4s
+  [     swin] step 02400/6000 | Loss: 0.003217 | PSNR_LR: 24.93 dB | PSNR_HR: 21.14 dB | Best HR: 21.22 dB (step 2382) | Elapsed: 185.9s
+  [     swin] step 02500/6000 | Loss: 0.003052 | PSNR_LR: 25.15 dB | PSNR_HR: 21.28 dB | Best HR: 21.32 dB (step 2498) | Elapsed: 193.4s
+  [     swin] step 02600/6000 | Loss: 0.002957 | PSNR_LR: 25.29 dB | PSNR_HR: 21.35 dB | Best HR: 21.39 dB (step 2593) | Elapsed: 200.9s
+  [     swin] step 02700/6000 | Loss: 0.002879 | PSNR_LR: 25.41 dB | PSNR_HR: 21.41 dB | Best HR: 21.44 dB (step 2667) | Elapsed: 208.4s
+  [     swin] step 02800/6000 | Loss: 0.002755 | PSNR_LR: 25.60 dB | PSNR_HR: 21.48 dB | Best HR: 21.54 dB (step 2790) | Elapsed: 215.9s
+  [     swin] step 02900/6000 | Loss: 0.002581 | PSNR_LR: 25.88 dB | PSNR_HR: 21.59 dB | Best HR: 21.63 dB (step 2886) | Elapsed: 223.4s
+  [     swin] step 03000/6000 | Loss: 0.002581 | PSNR_LR: 25.88 dB | PSNR_HR: 21.59 dB | Best HR: 21.66 dB (step 2999) | Elapsed: 230.9s
+  [     swin] step 03100/6000 | Loss: 0.002481 | PSNR_LR: 26.05 dB | PSNR_HR: 21.65 dB | Best HR: 21.74 dB (step 3067) | Elapsed: 238.4s
+  [     swin] step 03200/6000 | Loss: 0.002366 | PSNR_LR: 26.26 dB | PSNR_HR: 21.72 dB | Best HR: 21.82 dB (step 3194) | Elapsed: 245.9s
+  [     swin] step 03300/6000 | Loss: 0.002246 | PSNR_LR: 26.49 dB | PSNR_HR: 21.79 dB | Best HR: 21.88 dB (step 3294) | Elapsed: 253.4s
+  [     swin] step 03400/6000 | Loss: 0.002190 | PSNR_LR: 26.60 dB | PSNR_HR: 21.85 dB | Best HR: 21.91 dB (step 3346) | Elapsed: 260.9s
+  [     swin] step 03500/6000 | Loss: 0.002118 | PSNR_LR: 26.74 dB | PSNR_HR: 21.93 dB | Best HR: 21.96 dB (step 3488) | Elapsed: 268.5s
+  [     swin] step 03600/6000 | Loss: 0.001982 | PSNR_LR: 27.03 dB | PSNR_HR: 22.01 dB | Best HR: 22.04 dB (step 3562) | Elapsed: 276.0s
+  [     swin] step 03700/6000 | Loss: 0.002020 | PSNR_LR: 26.95 dB | PSNR_HR: 21.97 dB | Best HR: 22.06 dB (step 3697) | Elapsed: 283.6s
+  [     swin] step 03800/6000 | Loss: 0.001978 | PSNR_LR: 27.04 dB | PSNR_HR: 22.01 dB | Best HR: 22.11 dB (step 3773) | Elapsed: 291.1s
+  [     swin] step 03900/6000 | Loss: 0.001946 | PSNR_LR: 27.11 dB | PSNR_HR: 21.98 dB | Best HR: 22.16 dB (step 3881) | Elapsed: 298.6s
+  [     swin] step 04000/6000 | Loss: 0.001795 | PSNR_LR: 27.46 dB | PSNR_HR: 22.17 dB | Best HR: 22.23 dB (step 3971) | Elapsed: 306.2s
+  [     swin] step 04100/6000 | Loss: 0.001790 | PSNR_LR: 27.47 dB | PSNR_HR: 22.16 dB | Best HR: 22.23 dB (step 4089) | Elapsed: 313.7s
+  [     swin] step 04200/6000 | Loss: 0.001697 | PSNR_LR: 27.70 dB | PSNR_HR: 22.22 dB | Best HR: 22.29 dB (step 4172) | Elapsed: 321.2s
+  [     swin] step 04300/6000 | Loss: 0.001614 | PSNR_LR: 27.92 dB | PSNR_HR: 22.28 dB | Best HR: 22.32 dB (step 4257) | Elapsed: 328.8s
+  [     swin] step 04400/6000 | Loss: 0.001562 | PSNR_LR: 28.06 dB | PSNR_HR: 22.33 dB | Best HR: 22.34 dB (step 4372) | Elapsed: 336.3s
+  [     swin] step 04500/6000 | Loss: 0.001577 | PSNR_LR: 28.02 dB | PSNR_HR: 22.31 dB | Best HR: 22.39 dB (step 4490) | Elapsed: 343.8s
+  [     swin] step 04600/6000 | Loss: 0.001493 | PSNR_LR: 28.26 dB | PSNR_HR: 22.38 dB | Best HR: 22.42 dB (step 4559) | Elapsed: 351.4s
+  [     swin] step 04700/6000 | Loss: 0.001508 | PSNR_LR: 28.21 dB | PSNR_HR: 22.36 dB | Best HR: 22.47 dB (step 4658) | Elapsed: 358.9s
+  [     swin] step 04800/6000 | Loss: 0.001389 | PSNR_LR: 28.57 dB | PSNR_HR: 22.44 dB | Best HR: 22.50 dB (step 4781) | Elapsed: 366.4s
+  [     swin] step 04900/6000 | Loss: 0.001442 | PSNR_LR: 28.41 dB | PSNR_HR: 22.40 dB | Best HR: 22.52 dB (step 4859) | Elapsed: 373.9s
+  [     swin] step 05000/6000 | Loss: 0.001341 | PSNR_LR: 28.73 dB | PSNR_HR: 22.50 dB | Best HR: 22.55 dB (step 4972) | Elapsed: 381.3s
+  [     swin] step 05100/6000 | Loss: 0.001332 | PSNR_LR: 28.76 dB | PSNR_HR: 22.48 dB | Best HR: 22.58 dB (step 5095) | Elapsed: 388.8s
+  [     swin] step 05200/6000 | Loss: 0.001317 | PSNR_LR: 28.80 dB | PSNR_HR: 22.52 dB | Best HR: 22.59 dB (step 5189) | Elapsed: 396.2s
+  [     swin] step 05300/6000 | Loss: 0.001234 | PSNR_LR: 29.09 dB | PSNR_HR: 22.62 dB | Best HR: 22.64 dB (step 5242) | Elapsed: 403.7s
+  [     swin] step 05400/6000 | Loss: 0.001244 | PSNR_LR: 29.05 dB | PSNR_HR: 22.57 dB | Best HR: 22.65 dB (step 5376) | Elapsed: 411.2s
+  [     swin] step 05500/6000 | Loss: 0.001166 | PSNR_LR: 29.33 dB | PSNR_HR: 22.68 dB | Best HR: 22.70 dB (step 5425) | Elapsed: 418.6s
+  [     swin] step 05600/6000 | Loss: 0.001139 | PSNR_LR: 29.43 dB | PSNR_HR: 22.69 dB | Best HR: 22.70 dB (step 5584) | Elapsed: 426.1s
+  [     swin] step 05700/6000 | Loss: 0.001105 | PSNR_LR: 29.57 dB | PSNR_HR: 22.67 dB | Best HR: 22.74 dB (step 5638) | Elapsed: 433.6s
+  [     swin] step 05800/6000 | Loss: 0.001090 | PSNR_LR: 29.63 dB | PSNR_HR: 22.70 dB | Best HR: 22.77 dB (step 5787) | Elapsed: 441.0s
+  [     swin] step 05900/6000 | Loss: 0.001065 | PSNR_LR: 29.72 dB | PSNR_HR: 22.71 dB | Best HR: 22.78 dB (step 5866) | Elapsed: 448.5s
+  [     swin] step 06000/6000 | Loss: 0.001014 | PSNR_LR: 29.94 dB | PSNR_HR: 22.78 dB | Best HR: 22.82 dB (step 5960) | Elapsed: 456.0s
+[SWIN] Finished in 456.0s | Final PSNR: 23.06 dB | Best: 22.82 dB
+Saved swin HR output to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_HR_swin.png
+
+======================================================================
+ Preparing Model: SWIN_SKIP
+======================================================================
+  Architecture:           SWIN_SKIP
+  Trainable parameters:   4,687,663
+  Number of input pixels: 221,184 (576 x 384)
+
+[SWIN_SKIP] Starting 6000 steps...
+  Number of parameters:        4,687,663
+  Number of pixels in input:   221,184 (576 x 384)
+  Input tensor shape:          (1, 32, 384, 576) (7,077,888 elements)
+  Optimization settings:       lr=0.0005, reg_noise_std=0.03
+  [swin_skip] step 00001/6000 | Loss: 0.075505 | PSNR_LR: 11.22 dB | PSNR_HR: 10.87 dB | Best HR: 10.87 dB (step 1) | Elapsed: 0.2s
+  [swin_skip] step 00100/6000 | Loss: 0.023542 | PSNR_LR: 16.28 dB | PSNR_HR: 15.34 dB | Best HR: 15.34 dB (step 100) | Elapsed: 8.8s
+  [swin_skip] step 00200/6000 | Loss: 0.014698 | PSNR_LR: 18.33 dB | PSNR_HR: 16.94 dB | Best HR: 16.94 dB (step 200) | Elapsed: 17.6s
+  [swin_skip] step 00300/6000 | Loss: 0.011537 | PSNR_LR: 19.38 dB | PSNR_HR: 17.70 dB | Best HR: 17.70 dB (step 300) | Elapsed: 26.4s
+  [swin_skip] step 00400/6000 | Loss: 0.009506 | PSNR_LR: 20.22 dB | PSNR_HR: 18.27 dB | Best HR: 18.27 dB (step 400) | Elapsed: 35.1s
+  [swin_skip] step 00500/6000 | Loss: 0.008127 | PSNR_LR: 20.90 dB | PSNR_HR: 18.71 dB | Best HR: 18.78 dB (step 497) | Elapsed: 43.9s
+  [swin_skip] step 00600/6000 | Loss: 0.006968 | PSNR_LR: 21.57 dB | PSNR_HR: 19.13 dB | Best HR: 19.28 dB (step 595) | Elapsed: 52.6s
+  [swin_skip] step 00700/6000 | Loss: 0.006083 | PSNR_LR: 22.16 dB | PSNR_HR: 19.51 dB | Best HR: 19.59 dB (step 691) | Elapsed: 61.3s
+  [swin_skip] step 00800/6000 | Loss: 0.005586 | PSNR_LR: 22.53 dB | PSNR_HR: 19.74 dB | Best HR: 19.97 dB (step 795) | Elapsed: 70.0s
+  [swin_skip] step 00900/6000 | Loss: 0.005185 | PSNR_LR: 22.85 dB | PSNR_HR: 19.95 dB | Best HR: 20.15 dB (step 888) | Elapsed: 78.7s
+  [swin_skip] step 01000/6000 | Loss: 0.004567 | PSNR_LR: 23.40 dB | PSNR_HR: 20.28 dB | Best HR: 20.38 dB (step 999) | Elapsed: 87.4s
+  [swin_skip] step 01100/6000 | Loss: 0.004134 | PSNR_LR: 23.84 dB | PSNR_HR: 20.52 dB | Best HR: 20.54 dB (step 1085) | Elapsed: 96.0s
+  [swin_skip] step 01200/6000 | Loss: 0.003941 | PSNR_LR: 24.04 dB | PSNR_HR: 20.64 dB | Best HR: 20.73 dB (step 1199) | Elapsed: 104.7s
+  [swin_skip] step 01300/6000 | Loss: 0.003565 | PSNR_LR: 24.48 dB | PSNR_HR: 20.84 dB | Best HR: 20.89 dB (step 1294) | Elapsed: 113.3s
+  [swin_skip] step 01400/6000 | Loss: 0.003453 | PSNR_LR: 24.62 dB | PSNR_HR: 20.90 dB | Best HR: 20.99 dB (step 1380) | Elapsed: 121.9s
+  [swin_skip] step 01500/6000 | Loss: 0.003250 | PSNR_LR: 24.88 dB | PSNR_HR: 21.05 dB | Best HR: 21.08 dB (step 1448) | Elapsed: 130.6s
+  [swin_skip] step 01600/6000 | Loss: 0.003181 | PSNR_LR: 24.97 dB | PSNR_HR: 21.11 dB | Best HR: 21.20 dB (step 1579) | Elapsed: 139.0s
+  [swin_skip] step 01700/6000 | Loss: 0.003061 | PSNR_LR: 25.14 dB | PSNR_HR: 21.19 dB | Best HR: 21.29 dB (step 1632) | Elapsed: 147.7s
+  [swin_skip] step 01800/6000 | Loss: 0.002817 | PSNR_LR: 25.50 dB | PSNR_HR: 21.36 dB | Best HR: 21.41 dB (step 1776) | Elapsed: 156.4s
+  [swin_skip] step 01900/6000 | Loss: 0.002759 | PSNR_LR: 25.59 dB | PSNR_HR: 21.39 dB | Best HR: 21.50 dB (step 1881) | Elapsed: 165.0s
+  [swin_skip] step 02000/6000 | Loss: 0.002594 | PSNR_LR: 25.86 dB | PSNR_HR: 21.53 dB | Best HR: 21.56 dB (step 1969) | Elapsed: 173.7s
+  [swin_skip] step 02100/6000 | Loss: 0.024435 | PSNR_LR: 16.12 dB | PSNR_HR: 15.24 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 182.4s
+  [swin_skip] step 02200/6000 | Loss: 0.008825 | PSNR_LR: 20.54 dB | PSNR_HR: 18.53 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 191.1s
+  [swin_skip] step 02300/6000 | Loss: 0.005809 | PSNR_LR: 22.36 dB | PSNR_HR: 19.71 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 199.7s
+  [swin_skip] step 02400/6000 | Loss: 0.004923 | PSNR_LR: 23.08 dB | PSNR_HR: 20.11 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 208.4s
+  [swin_skip] step 02500/6000 | Loss: 0.004191 | PSNR_LR: 23.78 dB | PSNR_HR: 20.53 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 217.1s
+  [swin_skip] step 02600/6000 | Loss: 0.003621 | PSNR_LR: 24.41 dB | PSNR_HR: 20.86 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 225.8s
+  [swin_skip] step 02700/6000 | Loss: 0.003390 | PSNR_LR: 24.70 dB | PSNR_HR: 21.03 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 234.5s
+  [swin_skip] step 02800/6000 | Loss: 0.003126 | PSNR_LR: 25.05 dB | PSNR_HR: 21.19 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 243.3s
+  [swin_skip] step 02900/6000 | Loss: 0.002933 | PSNR_LR: 25.33 dB | PSNR_HR: 21.30 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 252.0s
+  [swin_skip] step 03000/6000 | Loss: 0.002861 | PSNR_LR: 25.43 dB | PSNR_HR: 21.37 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 260.7s
+  [swin_skip] step 03100/6000 | Loss: 0.002798 | PSNR_LR: 25.53 dB | PSNR_HR: 21.38 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 269.5s
+  [swin_skip] step 03200/6000 | Loss: 0.002580 | PSNR_LR: 25.88 dB | PSNR_HR: 21.58 dB | Best HR: 21.63 dB (step 2054) | Elapsed: 278.3s
+  [swin_skip] step 03300/6000 | Loss: 0.002502 | PSNR_LR: 26.02 dB | PSNR_HR: 21.60 dB | Best HR: 21.65 dB (step 3292) | Elapsed: 287.0s
+  [swin_skip] step 03400/6000 | Loss: 0.002535 | PSNR_LR: 25.96 dB | PSNR_HR: 21.59 dB | Best HR: 21.69 dB (step 3397) | Elapsed: 295.8s
+  [swin_skip] step 03500/6000 | Loss: 0.002557 | PSNR_LR: 25.92 dB | PSNR_HR: 21.61 dB | Best HR: 21.71 dB (step 3411) | Elapsed: 304.5s
+  [swin_skip] step 03600/6000 | Loss: 0.002400 | PSNR_LR: 26.20 dB | PSNR_HR: 21.71 dB | Best HR: 21.77 dB (step 3594) | Elapsed: 313.3s
+  [swin_skip] step 03700/6000 | Loss: 0.002242 | PSNR_LR: 26.49 dB | PSNR_HR: 21.81 dB | Best HR: 21.81 dB (step 3695) | Elapsed: 322.0s
+  [swin_skip] step 03800/6000 | Loss: 0.002190 | PSNR_LR: 26.60 dB | PSNR_HR: 21.88 dB | Best HR: 21.88 dB (step 3800) | Elapsed: 330.8s
+  [swin_skip] step 03900/6000 | Loss: 0.002204 | PSNR_LR: 26.57 dB | PSNR_HR: 21.85 dB | Best HR: 21.93 dB (step 3844) | Elapsed: 339.5s
+  [swin_skip] step 04000/6000 | Loss: 0.002127 | PSNR_LR: 26.72 dB | PSNR_HR: 21.92 dB | Best HR: 21.98 dB (step 3948) | Elapsed: 348.2s
+  [swin_skip] step 04100/6000 | Loss: 0.002071 | PSNR_LR: 26.84 dB | PSNR_HR: 21.94 dB | Best HR: 22.04 dB (step 4062) | Elapsed: 357.2s
+  [swin_skip] step 04200/6000 | Loss: 0.001917 | PSNR_LR: 27.17 dB | PSNR_HR: 22.06 dB | Best HR: 22.06 dB (step 4200) | Elapsed: 365.9s
+  [swin_skip] step 04300/6000 | Loss: 0.001923 | PSNR_LR: 27.16 dB | PSNR_HR: 22.08 dB | Best HR: 22.12 dB (step 4276) | Elapsed: 374.7s
+  [swin_skip] step 04400/6000 | Loss: 0.002031 | PSNR_LR: 26.92 dB | PSNR_HR: 21.99 dB | Best HR: 22.12 dB (step 4276) | Elapsed: 383.4s
+  [swin_skip] step 04500/6000 | Loss: 0.001873 | PSNR_LR: 27.27 dB | PSNR_HR: 22.10 dB | Best HR: 22.14 dB (step 4493) | Elapsed: 392.2s
+  [swin_skip] step 04600/6000 | Loss: 0.001838 | PSNR_LR: 27.36 dB | PSNR_HR: 22.13 dB | Best HR: 22.18 dB (step 4564) | Elapsed: 400.9s
+  [swin_skip] step 04700/6000 | Loss: 0.001748 | PSNR_LR: 27.57 dB | PSNR_HR: 22.22 dB | Best HR: 22.27 dB (step 4679) | Elapsed: 409.6s
+  [swin_skip] step 04800/6000 | Loss: 0.001718 | PSNR_LR: 27.65 dB | PSNR_HR: 22.25 dB | Best HR: 22.27 dB (step 4724) | Elapsed: 418.4s
+  [swin_skip] step 04900/6000 | Loss: 0.001656 | PSNR_LR: 27.81 dB | PSNR_HR: 22.31 dB | Best HR: 22.33 dB (step 4899) | Elapsed: 427.1s
+  [swin_skip] step 05000/6000 | Loss: 0.001593 | PSNR_LR: 27.98 dB | PSNR_HR: 22.37 dB | Best HR: 22.38 dB (step 4988) | Elapsed: 435.9s
+  [swin_skip] step 05100/6000 | Loss: 0.001562 | PSNR_LR: 28.06 dB | PSNR_HR: 22.38 dB | Best HR: 22.40 dB (step 5089) | Elapsed: 444.6s
+  [swin_skip] step 05200/6000 | Loss: 0.001542 | PSNR_LR: 28.12 dB | PSNR_HR: 22.39 dB | Best HR: 22.43 dB (step 5199) | Elapsed: 453.3s
+  [swin_skip] step 05300/6000 | Loss: 0.009326 | PSNR_LR: 20.30 dB | PSNR_HR: 18.32 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 462.1s
+  [swin_skip] step 05400/6000 | Loss: 0.003882 | PSNR_LR: 24.11 dB | PSNR_HR: 20.71 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 470.9s
+  [swin_skip] step 05500/6000 | Loss: 0.002754 | PSNR_LR: 25.60 dB | PSNR_HR: 21.45 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 479.7s
+  [swin_skip] step 05600/6000 | Loss: 0.002262 | PSNR_LR: 26.46 dB | PSNR_HR: 21.80 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 488.4s
+  [swin_skip] step 05700/6000 | Loss: 0.002088 | PSNR_LR: 26.80 dB | PSNR_HR: 21.93 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 497.1s
+  [swin_skip] step 05800/6000 | Loss: 0.001913 | PSNR_LR: 27.18 dB | PSNR_HR: 22.06 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 505.9s
+  [swin_skip] step 05900/6000 | Loss: 0.001823 | PSNR_LR: 27.39 dB | PSNR_HR: 22.14 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 514.6s
+  [swin_skip] step 06000/6000 | Loss: 0.001739 | PSNR_LR: 27.60 dB | PSNR_HR: 22.19 dB | Best HR: 22.44 dB (step 5201) | Elapsed: 523.3s
+[SWIN_SKIP] Finished in 523.3s | Final PSNR: 22.62 dB | Best: 22.44 dB
+Saved swin_skip HR output to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_HR_swin_skip.png
+
+Writing iteration metrics to CSV...
+Saved metric CSV to: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_sr_metrics.csv
+Saved visual comparison montage: /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_all_models_visual_comparison.png
+Saved training curves plot:    /home/ee23btech11057/PlayingWithDeepImagePrior/output_all_models_sr_1/zebra_all_models_training_curves.png
+
+=====================================================================================
+ EXPERIMENT SUMMARY TABLE
+=====================================================================================
+Model        | Params       | Input Pixels   | Final Loss   | Final PSNR   | Best PSNR    | Gain vs Bicubic
+------------------------------------------------------------------------------------------------------
+Bicubic      | N/A          | 221,184        | N/A          | 23.10        | 23.10        | Baseline       
+skip         | 2,217,831    | 221,184        | 0.000052     | 25.04        | 25.12        | +1.94 dB       
+unet         | 2,164,899    | 221,184        | 0.000152     | 24.09        | 24.30        | +0.99 dB       
+resnet       | 797,123      | 221,184        | 0.000932     | 16.49        | 16.58        | -6.61 dB       
+swin         | 2,887,303    | 221,184        | 0.001014     | 23.06        | 22.82        | -0.04 dB       
+swin_skip    | 4,687,663    | 221,184        | 0.001739     | 22.62        | 22.44        | -0.48 dB       
+======================================================================================================
