@@ -16,7 +16,7 @@
 
 ## The Full Report
 For the complete technical paper, mathematical formulations, comprehensive benchmark tables across Set14, and deep takeaways, read:  
-👉 **[RESEARCH_EXPERIMENTS.md](RESEARCH_EXPERIMENTS.md)**
+👉 **[REPORT.md](REPORT.md)**
 
 ---
 

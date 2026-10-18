@@ -1,4 +1,4 @@
-# Super-Resolution Research by playing with Deep Image Prior 
+# Super-Resolution by playing with Deep Image Prior 
 [Github Project Repositary](https://github.com/Panshul-Jindal/PlayingWithDeepImagePrior)
 [Wandb Project Repositary](https://forge.coreweave.com/wandb/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/)
 
@@ -6,6 +6,19 @@ Authors: Varun, Panshul
 
 We choose super resolution as the task due to it's complexity and with works still being published as discussed in the class. 
 
+> *We bent the losses, warped the space,*  
+> *Tested transformers in the race,*  
+> *Pushed priors through the gradient maze—*  
+> *To see what truly makes them blaze.*  
+>  
+> *And in that quest, one truth stood tall:*  
+> *You don't need million weights at all.*  
+> *A slim **ConvNeXt** stepped in the light,*  
+> *Stripped down in size, yet twice as bright—*  
+> *Matching the classic DIP stride for stride,*  
+> *With tiny parameters on its side!*  
+
+---
 
 ## Abstract
 
@@ -90,7 +103,7 @@ Explored models are
 
 * unet (models.unet.UNet): Classic U-Net encoder-decoder (~2.16M parameters).
 * resnet (models.resnet.ResNet): Deep Residual Network prior with 10 residual blocks (~797k parameters).
-* swin (models.swin.swin): Vision Transformer prior using Swin Transformer shifted window attention (~2.88M parameters).
+* swin (models.swin.swin): Vision Transformer prior using Swin Transformer shifted window attention (~2.88M parameters).[7]
 * swin_skip (models.swin_skip.swin_skip): Recursive Swin Transformer equipped with multi-scale skip connections (~4.68M parameters).
 * Dpwise-346K,100K: DIP[1] Architecture with 3d conv replaced with depth wise seperable convolutions.  (Note : 2500 iterations were used in this case)
 
@@ -267,9 +280,6 @@ A novel Super-Resolution loss function that operates in the discrete wavelet tra
   2. **Directional Cross-Band Mutual Exclusivity**:
      Physical stripes are purely horizontal ($LH \gg 0, HL \approx 0$) or purely vertical ($HL \gg 0, LH \approx 0$). Spurious DIP checkerboard artifacts create simultaneous energy in both ($|LH| \cdot |HL| \gg 0$).
      $$\mathcal{L}_{\text{cross}} = \| |LH| \odot |HL| \|_1$$
-- **Artifacts Saved**: [`output_dip_wavelet/`](output_dip_wavelet/)
-- **W&B Run**: `dip_wavelet_sr_zebra_x4_seed_0`
-
 ---
 
 #### Euler's Elastica Level-Line Curvature Regularized DIP (Elastica-DIP)
@@ -315,25 +325,25 @@ Optimizer and learning rate was kept same as DIP[1] which is ADAM optimizer.
 ## Results on Single Image 
 ### 6000 Steps
 
-| Experiment     | What changed?  | Method                                           | Parameters | PSNR vs Real HR (dB) | Gain vs Bicubic (dB) | Gain vs Vanilla DIP (dB) | Artifact Directory               | W&B Run                              |
-| -------------- | -------------- | ------------------------------------------------ | ---------- | -------------------- | -------------------- | ------------------------ | -------------------------------- | ------------------------------------ |
-| Baseline       | Baseline       | Nearest Neighbor                                 | 0          | 20.82 dB             | -2.28                | -3.92                    | output_dip_sr/                   | -                                    |
-| Baseline       | Baseline       | Bicubic Interpolation                            | 0          | 23.10 dB             | 0                    | -1.64                    | output_dip_sr/                   | -                                    |
-| Baseline       | Baseline       | Vanilla DIP (Skip UNet)                          | 2217831    | 24.74 dB             | 1.64                 | 0                        | output_dip_sr/                   | dip_sr_zebra_x4_seed_0               |
-| Regularization | Regularization | DIP + Regularization by Denoising (Deep Red)     |            | 24.81 dB             | 1.71                 | 0.07                     | output_dip_red/                  | dip_red_sr_zebra_x4_seed_0           |
-| Loss Function  | Loss Function  | L1                                               |            | 25.08                | 1.98                 | 0.34                     | output_dip_losses_sr             | skip_losses_zebra                    |
-| Loss Function  | Loss Function  | TV                                               |            | 25.14                | 2.04                 | 0.4                      | output_dip_losses_sr             | skip_losses_zebra                    |
-| Loss Function  | Loss Function  | Internal ZSSR UNet                               |            | 20.96 dB             | -2.14                | -3.78                    | output_single_image_internal_sr/ | zssr_internal_sr_zebra_x4_seed_0     |
-| Loss Function  | Loss Function  | Single-Image Conditional DDPM                    |            | 20.66 dB             | -2.44                | -4.08                    | output_single_image_ddpm_sr/     | single_image_ddpm_sr_zebra_x4_seed_0 |
-| Loss Function  | Loss Function  | Edge-Guided Null-Space & Contour DIP (EGNC-DIP)  |            | 24.88 dB             | 1.78                 | 0.14                     | output_dip_contour_sr/           | dip_egnc_sr_zebra_x4_seed_0          |
-| Loss Function  | Loss Function  | Structure Tensor Coherence DIP (ST-DIP)          |            | 25.06 dB             | 1.96                 | 0.32                     | output_dip_structure_tensor/     | dip_st_sr_zebra_x4_seed_0            |
-| Loss Function  | Loss Function  | Wavelet Sparsity & Directional DIP (Wavelet-DIP) |            | 23.64 dB             | 0.54                 | -1.1                     | output_dip_wavelet/              | dip_wavelet_sr_zebra_x4_seed_0       |
-| Loss Function  | Loss Function  | Euler's Elastica Curvature DIP (Elastica-DIP)    |            | 24.87 dB             | 1.77                 | 0.13                     | output_dip_elastica/             | dip_elastica_sr_zebra_x4_seed_0      |
-| Loss Function  | Loss Function  | Spectral Power-Law Decay DIP (Spectral-DIP)      |            | 24.71 dB             | 1.61                 | -0.03                    | output_dip_spectral/             | dip_spectral_sr_zebra_x4_seed_0      |
-| Architecture   | Architecture   | U-Net                                            | 2164899    | 24.09                | 0.99                 | -0.65                    | output_all_models_sr_1           | all_models_sr_zebra_x4               |
-| Architecture   | Architecture   | ResNet                                           | 797123     | 16.49                | -6.61                | -8.25                    | output_all_models_sr_2           | all_models_sr_zebra_x5               |
-| Architecture   | Architecture   | Swin Transformer                                 | 2887303    | 23.06                | -0.04                | -1.68                    | output_all_models_sr_3           | all_models_sr_zebra_x6               |
-| Architecture   | Architecture   | Swin + Skip                                      | 4687663    | 22.62                | -0.48                | -2.12                    | output_all_models_sr_4           | all_models_sr_zebra_x7               |
+ What changed?  | Method                                           | Parameters | PSNR vs Real HR (dB) | Gain vs Bicubic (dB) | Gain vs Vanilla DIP (dB) | Artifact Directory               | W&B Run                              |
+ -------------- | ------------------------------------------------ | ---------- | -------------------- | -------------------- | ------------------------ | -------------------------------- | ------------------------------------ |
+ Baseline       | Nearest Neighbor                                 | 0          | 20.82 dB             | -2.28                | -3.92                    | output_dip_sr/                   | -                                    |
+| Baseline       | Bicubic Interpolation                            | 0          | 23.10 dB             | 0                    | -1.64                    | output_dip_sr/                   | -                                    |
+| Baseline       | Vanilla DIP (Skip UNet)                          | 2217831    | 24.74 dB             | 1.64                 | 0                        | output_dip_sr/                   | dip_sr_zebra_x4_seed_0               |
+| Regularization | DIP + Regularization by Denoising (Deep Red)     |            | 24.81 dB             | 1.71                 | 0.07                     | output_dip_red/                  | dip_red_sr_zebra_x4_seed_0           |
+|  Loss Function  | L1                                               |            | 25.08                | 1.98                 | 0.34                     | output_dip_losses_sr             | skip_losses_zebra                    |
+| Loss Function  | TV                                               |            | 25.14                | 2.04                 | 0.4                      | output_dip_losses_sr             | skip_losses_zebra                    |
+|  Loss Function  | Internal ZSSR UNet                               |            | 20.96 dB             | -2.14                | -3.78                    | output_single_image_internal_sr/ | zssr_internal_sr_zebra_x4_seed_0     |
+| Loss Function  | Single-Image Conditional DDPM                    |            | 20.66 dB             | -2.44                | -4.08                    | output_single_image_ddpm_sr/     | single_image_ddpm_sr_zebra_x4_seed_0 |
+| Loss Function  | Edge-Guided Null-Space & Contour DIP (EGNC-DIP)  |            | 24.88 dB             | 1.78                 | 0.14                     | output_dip_contour_sr/           | dip_egnc_sr_zebra_x4_seed_0          |
+|  Loss Function  | Structure Tensor Coherence DIP (ST-DIP)          |            | 25.06 dB             | 1.96                 | 0.32                     | output_dip_structure_tensor/     | dip_st_sr_zebra_x4_seed_0            |
+| Loss Function  | Wavelet Sparsity & Directional DIP (Wavelet-DIP) |            | 23.64 dB             | 0.54                 | -1.1                     | output_dip_wavelet/              | dip_wavelet_sr_zebra_x4_seed_0       |
+| Loss Function  | Euler's Elastica Curvature DIP (Elastica-DIP)    |            | 24.87 dB             | 1.77                 | 0.13                     | output_dip_elastica/             | dip_elastica_sr_zebra_x4_seed_0      |
+|  Loss Function  | Spectral Power-Law Decay DIP (Spectral-DIP)      |            | 24.71 dB             | 1.61                 | -0.03                    | output_dip_spectral/             | dip_spectral_sr_zebra_x4_seed_0      |
+|  Architecture   | U-Net                                            | 2164899    | 24.09                | 0.99                 | -0.65                    | output_all_models_sr_1           | all_models_sr_zebra_x4               |
+|  Architecture   | ResNet                                           | 797123     | 16.49                | -6.61                | -8.25                    | output_all_models_sr_2           | all_models_sr_zebra_x5               |
+| Architecture   | Swin Transformer                                 | 2887303    | 23.06                | -0.04                | -1.68                    | output_all_models_sr_3           | all_models_sr_zebra_x6               |
+| Architecture   | Swin + Skip                                      | 4687663    | 22.62                | -0.48                | -2.12                    | output_all_models_sr_4           | all_models_sr_zebra_x7               |
 
 ### 2500 Steps
 
