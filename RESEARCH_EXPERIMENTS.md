@@ -37,7 +37,6 @@ The dimentions of all images in Set 14 dataset are available
 
 We use PSNR as the metric for comparision calculated with using checkpoint of model with best psnr during the whole run.(Average PSNR in the case of Set 14 Dataset) as followed by [1][4].
 
-
 ## Models
 
 ### Conventional Baseline 
@@ -71,7 +70,8 @@ For more details refer to DIP[1].
 
 ---
 
-## Changing the architecture 
+### Changing the architecture 
+
 It was carried out to explore how different neural network architectures perform as the generative prior in the Deep Image Prior (DIP) framework for 4x Super-Resolution to investigates which architectural inductive bias works best when optimizing on a single image without any external dataset training.
 
 Explored models are 
@@ -148,9 +148,9 @@ Traditional regression models suffer from the "regression to the mean" problem (
 ### Changing the Regularization 
 #### Edge-Guided Null-Space & Contour DIP (EGNC-DIP)
 
-## A Novel Super-Resolution-Specific Regularization Framework for Deep Image Prior
+A Novel Super-Resolution-Specific Regularization Framework for Deep Image Prior
 
-### Motivation and SR-Specific Physics
+**Motivation and SR-Specific Physics**
 
 In super-resolution (SR), the forward degradation operator \(A: \mathrm{HR} \rightarrow \mathrm{LR}\) maps a high-resolution (HR) image to a low-resolution (LR) image. Its null space is defined as
 
@@ -168,9 +168,13 @@ Any high-frequency artifact \(h\) in the null space incurs approximately zero ad
 
 Vanilla Deep Image Prior (DIP) can introduce spurious high-frequency noise and checkerboard artifacts in this null space during late optimization (typically beyond 3,000 steps).
 
-### Proposed SR-Specific Regularizer
+### 
 
-#### 1. Flat-Region Null-Space Suppression
+**Proposed SR-Specific Regularizer**
+
+#### 
+
+1. **Flat-Region Null-Space Suppression**
 
 In flat regions of the LR image, where the gradient magnitude of the upsampled image is small, high-frequency content that is unsupported by the observations may correspond to spurious noise.
 
@@ -190,10 +194,11 @@ f_\theta(z)-\operatorname{Bicubic}(A(f_\theta(z)))
 
 Here, \(M_{\mathrm{edge}}\) is an edge mask, and \(\odot\) denotes element-wise multiplication.
 
-#### 2. Edge-Contour Tangential Continuity
+#### 
+
+2. **Edge-Contour Tangential Continuity**
 
 In natural images, true edges—such as zebra stripes—often form locally continuous contours with relatively small intensity variation along the tangent direction. Given the image gradient \(\nabla f_\theta(z)=(f_x,f_y)\), define the tangent direction as
-
 \[
 t=(-f_y,f_x).
 \]
