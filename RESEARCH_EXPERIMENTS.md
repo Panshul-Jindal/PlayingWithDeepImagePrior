@@ -1,5 +1,16 @@
 # Super-Resolution Research by playing with Deep Image Prior 
+[Github Project Repositary](https://github.com/Panshul-Jindal/PlayingWithDeepImagePrior)
+[Wandb Project Repositary](https://forge.coreweave.com/wandb/shakunavetisaisriramvarun-indian-institute-of-technology/dip-super-resolution/)
+
+Authors: Varun, Panshul
+
 We choose super resolution as the task due to it's complexity and with works still being published as discussed in the class. 
+
+## Abstract
+
+Deep Image Prior (DIP) demonstrated that an untrained convolutional network acts as an implicit natural image prior, enabling zero-shot restoration without external training data. In this work, we systematically investigate the boundaries of this inductive bias for 4x single-image super-resolution across three dimensions: **architectural priors**, **objective and geometric regularizers**, and **learning paradigms**.
+
+First, by evaluating diverse network families (U-Net, ResNet, Swin Transformer, ConvNeXt, and Depthwise-Separable Skip), we reveal that DIP's representational power is governed by **multi-scale hierarchical topology** rather than raw parameter volume: replacing standard convolutions with depthwise-separable convolutions slashes parameters by 84% (from 2.22M down to 346K) while preserving over 70% of DIP's performance gain on the Set14 benchmark. Furthermore, we modernize the architecture with ConvNeXt-Skip dB. Second, we show that orientation-aware geometric regularizers (Structure Tensor ST-DIP at 25.06 dB and Euler's Elastica at 24.87 dB) alongside L1/TV objectives selectively eliminate late-stage null-space checkerboards and contour wiggles, outperforming generic isotropic denoisers like DeepRED. Finally, we demonstrate that architectural generator priors vastly outperform internal patch recurrence (ZSSR and single-image DDPM), and confirm that the fundamental 'noise impedance' property fitting coherent natural structures faster than noise generalizes beyond CNNs to Vision Transformers.
 
 ## Problem Formulation 
 The goal of super-resolution is to take a low resolution (LR) image x0 ∈ R3×H×W and upsampling factor t, and generate a corresponding high resolution (HR) version x ∈ R3×tH×tW .
@@ -363,16 +374,6 @@ Artifact Directory 	output_convnext_multi_image, output_multi_image_sr
 | img_014   | 23.1             | 24.94 (+1.84)    | 25.01 (+1.91)         | 24.49 (+1.39)      | 24.52 (+1.42)           | 24.90 (+1.80)        | 24.90 (+1.80)         |
 | Average   | 24.4             | 25.67            | 25.68                 | 25.28              | 25.24                   | 25.69                | 25.69                 |
 
-### Key Research Findings:
-1. **Structure Tensor Coherence DIP (ST-DIP)** establishes the state-of-the-art with **$25.06\text{ dB}$**, outperforming Vanilla DIP by $+0.32\text{ dB}$, DeepRED by $+0.25\text{ dB}$, and Bicubic by $+1.96\text{ dB}$.
-   - **Why ST-DIP excels**: Penalizing the minor eigenvalue $\mu_2$ of the smoothed structure tensor suppresses non-directional noise and null-space checkerboards while allowing the dominant eigenvalue $\mu_1$ along natural edge normals to sharpen without restriction.
-2. **Edge-Guided Null-Space & Contour DIP (EGNC-DIP)** achieves **$24.88\text{ dB}$** ($+0.14\text{ dB}$ over DIP), proving that suppressing null-space variance $(1 - M_{\text{edge}}) \|\hat{X} - \text{Bicubic}(A(\hat{X}))\|^2$ in non-edge regions successfully mitigates DIP overfitting.
-3. **Euler's Elastica Curvature DIP (Elastica-DIP)** achieves **$24.87\text{ dB}$** ($+0.13\text{ dB}$ over DIP, $+0.06\text{ dB}$ over DeepRED), proving that level-line bending energy $\kappa^2 |\nabla I|_\epsilon$ effectively penalizes high-frequency contour wiggles and oscillations without blunting edge contrast.
-4. **Spectral Power-Law Decay DIP (Spectral-DIP)** reaches $24.71\text{ dB}$ ($+1.61\text{ dB}$ over Bicubic). Because DIP naturally follows a decaying spectrum until late-stage overfitting, the Fourier power-law prior bounds late-stage noise blowup but does not actively sharpen spatial edges.
-5. **Wavelet Besov Sparsity Tradeoff (Wavelet-DIP)**: Reached $23.64\text{ dB}$ ($+0.53\text{ dB}$ over Bicubic). While it eliminated checkerboard artifacts, global L1 Besov sparsity on all wavelet subbands indiscriminately suppresses high-frequency detail along with noise. This demonstrates why *orientation-aware* regularizers (Structure Tensor and Euler's Elastica) vastly outperform generic transform-domain sparsity for super-resolution!
-6. **DIP + Regularization by Denoising (DeepRED)**: Achieves $24.81\text{ dB}$ by applying generic bilateral filtering, which smooths isotropic noise but does not account for directional edge geometry.
-7. **Single-Image Internal Learning (ZSSR & DDPM)**: Training strictly on cross-scale patches extracted from $y$ learns the internal self-similarity of $y$. When downsampling $y$ (already low-res) to create 4x sub-patches ($16\times$ downsampled relative to the original HR $X$), the high-frequency spectrum is heavily attenuated. Consequently, while the networks fit their internal patch distributions with high fidelity, generalizing across scales to reconstruct unseen high frequencies without an explicit image prior results in lower PSNR ($20.96\text{ dB}$ for ZSSR, $20.66\text{ dB}$ for DDPM).
-8. **The Inductive Bias of the Generator Network (DIP)** remains the strongest single-image prior for super-resolution because its multi-scale skip architecture naturally resists high-frequency noise while favoring natural image statistics.
 
 
 
@@ -402,6 +403,66 @@ NOISE_SIGMA = 25.0 / 255.0
 
 The test of noise impedance almost holds the same as the test shown in the paper. So the initial part is not quite in the same order, but at the end, the order remains the same. This was a Transformer. So this also shows that it is not just an inherent property of CNN; it is also an inherent property of Transformers too. But Transformers have no locality bias. The fact that it is still able to do that is still a very big thing. And so, there is no deep doubt on why such noise impedance property gets exhibited, since which is still unknown. This was not expected for the transformer.
 
+### Key Research Findings & Takeaways:
+
+1. **Topology & Multi-Scale Hierarchy Over Parameter Volume (The Depthwise-Separable Discovery)**:
+   - Slashing the parameter count by **84%** (from 2,217,831 down to 346,171) by replacing standard 3x3 convolutions with Depthwise-Separable Convolutions (`dpwise_skip`) causes negligible performance loss.
+   - Across the 12-image Set14 benchmark, `DPwise-L2` achieves an average of **25.28 dB** compared to full DIP's **25.67 dB** (+0.88 dB over Bicubic), preserving over **70% of DIP's gain** with only 1/6th of the parameter footprint.
+   - Scaling depthwise width to 1.01M parameters (`width=224`) closes the gap on zebra to within **0.15 dB** of the full 2.2M baseline (24.59 dB vs 24.74 dB).
+   - **Core Takeaway**: DIP's implicit natural image prior is primarily governed by the **multi-scale Hourglass/U-Net topology and spatial downsampling/upsampling pyramid**, NOT by dense channel-to-channel weight volume. The network can be drastically compressed for real-time single-image inverse problems without collapsing the image prior.
+
+2. **Architectural Inductive Hierarchy: Modern ConvNeXt >~ Skip UNet > Vision Transformers >> Flat ResNets**:
+  
+On zerbra image, Modern ConvNeXt achieves 24.9
+, DIP achieves 24.74 dB, Swin transformer 23.06 and 22.62 with skip connections and resnet achieves 16.49 db. 
+
+   - **Vision Transformers (Swin & Swin+Skip)** lag significantly behind CNNs (~22.6–23.0 dB, ~1.7–2.1 dB below Skip). Despite self-attention and up to 4.69M parameters, Transformers lack the built-in local translational equivariance and multi-scale receptive field hierarchy that make convolutional networks converge rapidly on single images.
+   - **Flat ResNet completely fails (16.49 dB, -6.61 dB below Bicubic)**: Without multi-scale down/upsampling pyramids, flat residual blocks cannot translate random spatial noise into multi-frequency natural image statistics.
+
+Note: Though the experiment has been conducted only for one image
+
+ConNext and Skip Unet (DIP) achieves same average PSNR on 12 images. So no method is superior. 
+3. **Loss Function Geometry: Orientation-Aware & L1/TV Losses  Outperform Generic Denoising**:
+   - Switching from L2/MSE to **Total Variation (25.14 dB)** or **L1 Loss (25.08 dB)** yields an immediate +0.34 to +0.40 dB boost over Vanilla DIP because L1/TV penalties do not over-penalize sharp step discontinuities (edges).
+   - **Structure Tensor Coherence (ST-DIP, 25.06 dB)** and **Euler's Elastica (Elastica-DIP, 24.87 dB)** selectively eliminate spurious null-space checkerboards and high-curvature isophote wiggles without blunting directional stripe edges.
+   - In contrast, generic bilateral denoisers (**DeepRED, 24.81 dB**) and transform sparsity (**Wavelet-DIP, 23.64 dB**) hit a ceiling because isotropic smoothing blunts fine directional textures.
+  
+Note: Though the experiment has been conducted only for one image
+4. **Limits of Internal Self-Similarity (ZSSR & DDPM) vs. Architectural Prior**:
+   - Single-image patch recurrence models (ZSSR UNet at 20.96 dB and DDPM SR at 20.66 dB) severely underperform DIP (24.74+ dB).
+   - **Why**: Extracting patches from an already degraded LR input heavily attenuates the high-frequency spectrum. The networks learn the degraded patch distribution accurately, but lack the structural inductive prior necessary to extrapolate unseen high frequencies. An untrained multi-scale generator network (DIP) is far more effective as a single-image prior than cross-scale patch recurrence.
+Note: Though the experiment has been conducted only for one image
+5. **Noise Impedance is an Inherent Deep Network Property, Not Just CNN Locality**:
+[Noise Impedence Experiment](#experiment-testing-of-noise-impedence-property)
+   - Experiments on the Swin Transformer confirm that the noise impedance property (fitting natural images orders of magnitude faster than scrambled or pure Gaussian noise) holds for self-attention architectures as well.
+   - This demonstrates that spectral bias toward low-entropy, coherent visual structures is a universal property of deep parameterized models, rather than an artifact exclusive to convolutional weight sharing.
+   - Though the time of converagance is much higher for transformer as comapred to CNN but it shouldn't effect the analysis of noise impedence property. (Best to our knowledge)
+
+
+## Limitations
+
+- Most of the analysis was conducted on a single image thus the results might not be statistically significant
+- For overall results on Set 14 dataset, we weren't able to find a method that outperforms DIP.
+- No hyperparameter tuning was performed for any kind. 
+
+
+
+## Conclusion
+Most crucial thing that we are able to experimentally prove is that noise impedance is an inherent deep network property, not just CNN Locality. 
+
+Secondly, showing that image fitting is independent of the number of parameters rather it depends on architecture as evident in depth wise seperable experiments. 
+
+We experimented by changing the architecture, loss function and combination of both of them, which also includes experimenting novel loss funtions. 
+Though we weren't able to achieve any significant improvement over DIP which was also limited by experimental approach we did on just 1 image, but overall the findings are beneficial for in pursuit of producing a possible better method. 
+
+## Future Work
+
+* For the configuration with most promising results and also easy to understand  which we ConvNext with L2 loss, we aim to do hyperparameter tuning. 
+
+
+
+## Decleration of AI use 
+AI particularly Gemini has been used in writing the code for the experiments. DIP[1] code is borrowed from the authors themselves using exactly as it is. 
 
 ## References
 
