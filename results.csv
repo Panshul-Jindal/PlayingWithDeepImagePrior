@@ -1,0 +1,68 @@
+,6000 Steps ,6000,,,,,,
+Experiment,What changed? ,Method,Parameters ,PSNR vs Real HR (dB),Gain vs Bicubic (dB),Gain vs Vanilla DIP (dB),Artifact Directory,W&B Run
+,Baseline,Nearest Neighbor,0,20.82 dB,-2.28,-3.92,output_dip_sr/,-
+,Baseline,Bicubic Interpolation,0,23.10 dB,0,-1.64,output_dip_sr/,-
+,Baseline,Vanilla DIP (Skip UNet),2217831,24.74 dB,1.64,0,output_dip_sr/,dip_sr_zebra_x4_seed_0
+,Regularization,DIP + Regularization by Denoising (Deep Red),,24.81 dB,1.71,0.07,output_dip_red/,dip_red_sr_zebra_x4_seed_0
+,Loss Function,L1,,25.08,1.98,0.34,output_dip_losses_sr,skip_losses_zebra
+,Loss Function,TV,,25.14,2.04,0.4,output_dip_losses_sr,skip_losses_zebra
+,Loss Function,Internal ZSSR UNet,,20.96 dB,-2.14,-3.78,output_single_image_internal_sr/,zssr_internal_sr_zebra_x4_seed_0
+,Loss Function,Single-Image Conditional DDPM,,20.66 dB,-2.44,-4.08,output_single_image_ddpm_sr/,single_image_ddpm_sr_zebra_x4_seed_0
+,Loss Function,Edge-Guided Null-Space & Contour DIP (EGNC-DIP),,24.88 dB,1.78,0.14,output_dip_contour_sr/,dip_egnc_sr_zebra_x4_seed_0
+,Loss Function,Structure Tensor Coherence DIP (ST-DIP),,25.06 dB,1.96,0.32,output_dip_structure_tensor/,dip_st_sr_zebra_x4_seed_0
+,Loss Function,Wavelet Sparsity & Directional DIP (Wavelet-DIP),,23.64 dB,0.54,-1.1,output_dip_wavelet/,dip_wavelet_sr_zebra_x4_seed_0
+,Loss Function,Euler's Elastica Curvature DIP (Elastica-DIP),,24.87 dB,1.77,0.13,output_dip_elastica/,dip_elastica_sr_zebra_x4_seed_0
+,Loss Function,Spectral Power-Law Decay DIP (Spectral-DIP),,24.71 dB,1.61,-0.03,output_dip_spectral/,dip_spectral_sr_zebra_x4_seed_0
+,Architecture ,U-Net,2164899,24.09,0.99,-0.65,output_all_models_sr_1,all_models_sr_zebra_x4
+,Architecture ,ResNet,797123,16.49,-6.61,-8.25,output_all_models_sr_2,all_models_sr_zebra_x5
+,Architecture ,Swin Transformer,2887303,23.06,-0.04,-1.68,output_all_models_sr_3,all_models_sr_zebra_x6
+,Architecture ,Swin + Skip,4687663,22.62,-0.48,-2.12,output_all_models_sr_4,all_models_sr_zebra_x7
+,,,,,,,,
+,,,,,,,,
+,2500 Steps ,2500 Iteration,,,,,,
+,Architecture ,Dpwise-346K,346171,23.88,0.78,-0.86,output_zebra_scaling/,dip-zebra-scaling
+,Architecture + Loss Function,Dpwise-346K-DeepRED,346171,24.04,0.94,-0.7,output_zebra_scaling/,dip-zebra-scaling
+,Architecture ,Dpwise-1M,1013851,24.59,1.49,-0.15,output_zebra_scaling/,dip-zebra-scaling
+,Architecture + Loss Function,Dpwise-1M-DeepRED,1013851,24.56,1.46,-0.18,output_zebra_scaling/,dip-zebra-scaling
+,,,,,,,,
+,,,,,,,,
+,4000 iterations ,,,,,,,
+,Architecture ,Convnext ,,24.9,1.8,0.16,output_convnext_multi_image,dip-convnext-multi
+,Architecture + Loss Function , Convnext + Red Loss Function ,,24.9,1.8,0.16,output_convnext_multi_image,dip-convnext-multi
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,4000 iterations ,,,,,,,
+,Artifact Directory ,"output_convnext_multi_image, output_multi_image_sr",,,,,,
+Image,Bicubic (dB),Skip-L2 (dB),Skip-DeepRED (dB),DPwise-L2 (dB),DPwise-DeepRED (dB),ConvNeXt-L2 (dB),ConvNeXt-RED (dB),ConvNeXt-RED (dB)
+img_001,20.31,20.44 (+0.13),20.45 (+0.14),20.29 (−0.02),20.23 (−0.08),20.51 (+0.20),20.52 (+0.21),20.52 (+0.21)
+img_002,23.58,23.91 (+0.33),23.91 (+0.33),23.53 (−0.05),23.51 (−0.07),23.94 (+0.36),23.95 (+0.37),23.95 (+0.37)
+img_004,24.05,24.55 (+0.50),24.60 (+0.55),24.57 (+0.52),24.54 (+0.49),24.61 (+0.56),24.65 (+0.60),24.65 (+0.60)
+img_005,20.27,21.14 (+0.87),21.17 (+0.90),20.93 (+0.66),20.90 (+0.63),21.04 (+0.77),21.00 (+0.73),21.00 (+0.73)
+img_006,28.83,29.13 (+0.30),29.10 (+0.27),29.03 (+0.20),29.05 (+0.22),29.23 (+0.40),29.29 (+0.46),29.29 (+0.47)
+img_007,23.78,25.05 (+1.27),25.07 (+1.29),24.74 (+0.96),24.77 (+0.99),24.97 (+1.19),24.86 (+1.08),24.86 (+1.08)
+img_008,26.12,28.19 (+2.07),28.30 (+2.18),27.61 (+1.49),27.07 (+0.95),28.24 (+2.12),28.42 (+2.30),28.42 (+2.30)
+img_009,28.56,29.52 (+0.96),29.54 (+0.98),29.14 (+0.58),29.07 (+0.51),29.52 (+0.96),29.57 (+1.01),29.57 (+1.01)
+img_011,26.54,29.35 (+2.81),29.29 (+2.75),28.56 (+2.02),28.79 (+2.25),29.15 (+2.61),29.04 (+2.50),29.04 (+2.51)
+img_012,27.34,28.56 (+1.22),28.40 (+1.06),27.51 (+0.17),27.52 (+0.18),28.65 (+1.31),28.62 (+1.28),28.62 (+1.28)
+img_013,20.31,23.24 (+2.93),23.37 (+3.06),22.96 (+2.65),22.88 (+2.57),23.41 (+3.10),23.51 (+3.20),23.51 (+3.20)
+img_014,23.1,24.94 (+1.84),25.01 (+1.91),24.49 (+1.39),24.52 (+1.42),24.90 (+1.80),24.90 (+1.80),24.90 (+1.79)
+Average,24.4,25.67,25.68,25.28,25.24,25.69,25.69,25.69

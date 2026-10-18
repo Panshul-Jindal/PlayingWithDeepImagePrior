@@ -1,6 +1,6 @@
 """Experiment 6: Structure Tensor Coherence Regularized DIP (ST-DIP).
 
-A novel Super-Resolution loss function that exploits the eigensystem of the local Structure Tensor
+A novel Super-Resolution loss functi that exploits the eigensystem of the local Structure Tensor
 to eliminate multi-directional high-frequency noise and checkerboard artifacts without blurring edges.
 
 Mathematical Foundation:
