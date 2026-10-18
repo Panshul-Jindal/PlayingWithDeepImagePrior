@@ -375,6 +375,34 @@ Artifact Directory 	output_convnext_multi_image, output_multi_image_sr
 8. **The Inductive Bias of the Generator Network (DIP)** remains the strongest single-image prior for super-resolution because its multi-scale skip architecture naturally resists high-frequency noise while favoring natural image statistics.
 
 
+
+## Experiment: Testing of Noise Impedence Property 
+
+The most intersting part is test of noise impedence property which shows that architecture inherently inhibits bias about images. 
+
+
+We tested with SWIN Transformer [7] and it's variant by adding similar to DIP multi-scale skip connections. Explicit 1x1 Conv + BatchNorm + LeakyReLU skip pathways at each scale, matching classic DIP.In terms of parameter size it was 1.6x larger than the former. This was designed to test whether giving the Swin Transformer the exact multi-scale skip inductive bias of Ulyanov's convolutional DIP network would improve its natural image prior.
+
+
+hyperparameters used,
+STEPS = 8000
+INPUT_DEPTH = 32
+PATCH_SIZE = 4
+EMBED_DIM = 32
+SWIN_DEPTH = 2
+NUM_HEADS = 4
+WINDOW_SIZE = 8
+LEARNING_RATE = 0.0001
+NOISE_SIGMA = 25.0 / 255.0
+
+
+![SWIN Noise Impedence Test](swin_loss_comparison.png)
+![SWIN Skip Noise Impedence Test](swin_skip_similar_to_dip.png)
+
+
+The test of noise impedance almost holds the same as the test shown in the paper. So the initial part is not quite in the same order, but at the end, the order remains the same. This was a Transformer. So this also shows that it is not just an inherent property of CNN; it is also an inherent property of Transformers too. But Transformers have no locality bias. The fact that it is still able to do that is still a very big thing. And so, there is no deep doubt on why such noise impedance property gets exhibited, since which is still unknown. This was not expected for the transformer.
+
+
 ## References
 
 [1] Ulyanov, D., Vedaldi, A., & Lempitsky, V. (2017). Deep Image Prior. ArXiv. https://doi.org/10.1007/s11263-020-01303-4
@@ -389,6 +417,9 @@ Artifact Directory 	output_convnext_multi_image, output_multi_image_sr
 
 
 [6] Song, J., Meng, C., & Ermon, S. (2020). Denoising Diffusion Implicit Models. ArXiv. https://arxiv.org/abs/2010.02502
+
+
+[7] Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., & Guo, B. (2021). Swin Transformer: Hierarchical Vision Transformer using Shifted Windows. ArXiv. https://arxiv.org/abs/2103.14030
 
 ## Appendix 
 
