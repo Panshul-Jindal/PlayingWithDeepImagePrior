@@ -6,6 +6,7 @@ Authors: Varun, Panshul
 
 We choose super resolution as the task due to it's complexity and with works still being published as discussed in the class. 
 
+
 ## Abstract
 
 Deep Image Prior (DIP) demonstrated that an untrained convolutional network acts as an implicit natural image prior, enabling zero-shot restoration without external training data. In this work, we systematically investigate the boundaries of this inductive bias for 4x single-image super-resolution across three dimensions: **architectural priors**, **objective and geometric regularizers**, and **learning paradigms**.
@@ -179,11 +180,9 @@ Any high-frequency artifact \(h\) in the null space incurs approximately zero ad
 
 Vanilla Deep Image Prior (DIP) can introduce spurious high-frequency noise and checkerboard artifacts in this null space during late optimization (typically beyond 3,000 steps).
 
-### 
 
 **Proposed SR-Specific Regularizer**
 
-#### 
 
 1. **Flat-Region Null-Space Suppression**
 
@@ -235,7 +234,7 @@ This regularizer encourages smooth, continuous edge contours while preserving sh
 Replacing L2 Loss with L1 Loss
 
 #### TV
-Replacing L2 Loss with TV Loss
+L2 Loss complemented with TV Loss
 
 #### Structure Tensor Coherence Regularized DIP (ST-DIP)
 
@@ -442,8 +441,11 @@ Note: Though the experiment has been conducted only for one image
 ## Limitations
 
 - Most of the analysis was conducted on a single image thus the results might not be statistically significant
+- Only Quantitative Analysis was carried out. Qualitative Analysis might be important part that could add more analysis and justify the super resolution task in a better way. 
 - For overall results on Set 14 dataset, we weren't able to find a method that outperforms DIP.
 - No hyperparameter tuning was performed for any kind. 
+- The diffusion experiment, adding attention experiment and some of loss function experiments such as spectral loss, elastica, structured tensor were completely outsourced to Gemini, to check if we might get some meaningful results which could be explain.
+- The learning rate tuning should have been done from the start, but we strongly believe the results we achieved will hold.
 
 
 
@@ -452,12 +454,18 @@ Most crucial thing that we are able to experimentally prove is that noise impeda
 
 Secondly, showing that image fitting is independent of the number of parameters rather it depends on architecture as evident in depth wise seperable experiments. 
 
-We experimented by changing the architecture, loss function and combination of both of them, which also includes experimenting novel loss funtions. 
-Though we weren't able to achieve any significant improvement over DIP which was also limited by experimental approach we did on just 1 image, but overall the findings are beneficial for in pursuit of producing a possible better method. 
+Addition of a good regularizer i.e specific to the task would always help in improving the performance, such as addition of RED and structued tensor regularization.
+
+We experimented by changing the architecture, loss function and combination of both of them, which also includes experimenting novel loss funtions. Though we weren't able to achieve any significant improvement over DIP which was also limited by experimental approach we did on just 1 image, but overall the findings are beneficial for in pursuit of producing a possible better method. 
+
+The key takeaway from our experiments is, though if we might not be able  beat DIP by some margin, we can always bargain a small amount of performance for fraction of parameters. (Depthwise + pointwise, ConvNext).
+
+Addition of attention wouldn't help in any sense, since the most important part of the architecture is locality itself. (local similarities win over global similarities).
 
 ## Future Work
 
 * For the configuration with most promising results and also easy to understand  which we ConvNext with L2 loss, we aim to do hyperparameter tuning. 
+
 
 
 
